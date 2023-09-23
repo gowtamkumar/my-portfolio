@@ -2,17 +2,17 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { PiCircle, PiListDashesFill, PiListDashesLight } from "react-icons/pi";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 export default function Header() {
+  const [dark, setDark] = useState(false);
   return (
     <div className="flex justify-between">
-      <div className="top-16  text-right">
-        <Menu as="div" className="relative inline-block text-left">
-          <div>
-            <Menu.Button className="bg-gray-900 inline-flex w-full justify-center rounded-md  bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-white focus-visible:ring-opacity-75">
-              <PiListDashesFill />
-            </Menu.Button>
-          </div>
+      <div className="top-16 text-right">
+        <Menu as="div" className="relative inline-block text-left z-10">
+          <Menu.Button className="text-[24px] bg-gray-900 inline-flex w-full justify-center rounded-md  bg-opacity-40 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-white focus-visible:ring-opacity-75">
+            <PiListDashesFill />
+          </Menu.Button>
           <Transition
             as={Fragment}
             enter="transition ease-out duration-100"
@@ -22,7 +22,7 @@ export default function Header() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute backdrop-filter-sm bg-gray-900 bg-opacity-75 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute backdrop-filter-sm bg-gray-900 bg-opacity-100 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div className="px-1 py-1 ">
                 <Menu.Item>
                   {({ active }) => (
@@ -119,7 +119,11 @@ export default function Header() {
           </Transition>
         </Menu>
       </div>
-      <div>aa</div>
+      <div>
+        <button onClick={() => setDark(!dark)} className="text-[22px]">
+          {dark ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+        </button>
+      </div>
     </div>
   );
 }

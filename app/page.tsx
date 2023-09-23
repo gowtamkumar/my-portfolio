@@ -10,12 +10,10 @@ import {
 } from "react-icons/ai";
 export default function Home() {
   return (
-    <main className="container mx-auto p-4">
-      <Header />
-
+    <main className="p-4">
       <section
         className="flex items-center justify-center"
-        style={{ height: "90vh" }}
+        style={{ height: "88vh" }}
       >
         <div className="text-center ">
           <h1 className="text-6xl">Hey 👋 I'm Gowtam,</h1>
