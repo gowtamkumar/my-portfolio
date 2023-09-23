@@ -10,7 +10,7 @@ export default function Header() {
     <div className="flex justify-between">
       <div className="top-16 text-right">
         <Menu as="div" className="relative inline-block text-left z-10">
-          <Menu.Button className="text-[24px] bg-gray-900 inline-flex w-full justify-center rounded-md  bg-opacity-40 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="text-[26px] bg-gray-900 inline-flex w-full justify-center rounded-md  bg-opacity-40 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-white focus-visible:ring-opacity-75">
             <PiListDashesFill />
           </Menu.Button>
           <Transition
