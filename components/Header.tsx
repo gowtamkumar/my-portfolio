@@ -13,7 +13,40 @@ import {
 import { menu } from "@/mockData/route";
 
 export default function Header() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState("light");
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("theme") === null) {
+  //     localStorage.setItem("theme", "light");
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    // select html elem
+    if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "light");
+    }
+    const html = document.querySelector("html");
+    //add or remove class dark in html elem according to theme in localstorage.
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+      setDark("dark");
+    } else {
+      html.classList.remove("dark");
+      setDark("light");
+    }
+  }, [dark]);
+
+  const handleDarkLight = () => {
+    if (localStorage.getItem("theme") === "light") {
+      setDark("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      setDark("light");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   return (
     <div className="flex justify-between">
       <div className="top-16 text-right">
@@ -57,8 +90,8 @@ export default function Header() {
         </Menu>
       </div>
       <div>
-        <button onClick={() => setDark(!dark)} className="text-[22px]">
-          {dark ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+        <button onClick={handleDarkLight} className="text-[22px]">
+          {dark === "dark" ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
         </button>
       </div>
     </div>

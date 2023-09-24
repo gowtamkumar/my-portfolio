@@ -15,6 +15,7 @@ export default function About() {
         "TypeScript",
         "React.js",
         "Next.js",
+        "React Native",
       ],
     },
     {
