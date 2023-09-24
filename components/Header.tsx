@@ -3,6 +3,31 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { PiCircle, PiListDashesFill, PiListDashesLight } from "react-icons/pi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import Link from "next/link";
+import { AiOutlineEdit, AiOutlineFundProjectionScreen, AiOutlineHome, AiOutlineProfile } from "react-icons/ai";
+
+const menu = [
+  {
+    name: "Home",
+    url: "/",
+    icon: <AiOutlineHome className="mr-2 h-5 w-5" />,
+  },
+  {
+    name: "Projects",
+    url: "/projects",
+    icon: <AiOutlineFundProjectionScreen  className="mr-2 h-5 w-5" />,
+  },
+  {
+    name: "About",
+    url: "/about",
+    icon: <AiOutlineProfile className="mr-2 h-5 w-5" />,
+  },
+  {
+    name: "Blog",
+    url: "/blogs",
+    icon: <AiOutlineEdit className="mr-2 h-5 w-5" />,
+  },
+];
 
 export default function Header() {
   const [dark, setDark] = useState(false);
@@ -23,41 +48,53 @@ export default function Header() {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items className="absolute backdrop-filter-sm bg-gray-900 bg-opacity-100 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-              <div className="px-1 py-1 ">
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      className={`${
-                        active ? "bg-violet-500 text-gray-900" : " text-white"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    >
-                      {active ? (
-                        <PiCircle className="mr-2 h-5 w-5" aria-hidden="true" />
-                      ) : (
-                        <PiCircle className="mr-2 h-5 w-5" aria-hidden="true" />
+              {menu.map((item, idx) => {
+                return (
+                  <div className="px-1 py-1" key={idx}>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <Link
+                          href={`${item.url}`}
+                          className={`${
+                            active
+                              ? "bg-violet-500 text-gray-900"
+                              : " text-white"
+                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? item.icon : item.icon}
+                          {item.name}
+                        </Link>
                       )}
-                      Home
-                    </button>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      className={`${
-                        active ? "bg-violet-500 text-gray-900" : " text-white"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    >
-                      {active ? (
-                        <PiCircle className="mr-2 h-5 w-5" aria-hidden="true" />
-                      ) : (
-                        <PiCircle className="mr-2 h-5 w-5" aria-hidden="true" />
+                    </Menu.Item>
+                    {/* <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${
+                            active
+                              ? "bg-violet-500 text-gray-900"
+                              : " text-white"
+                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <PiCircle
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <PiCircle
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Projects
+                        </button>
                       )}
-                      Projects
-                    </button>
-                  )}
-                </Menu.Item>
-              </div>
-              <div className="px-1 py-1">
+                    </Menu.Item> */}
+                  </div>
+                );
+              })}
+
+              {/* <div className="px-1 py-1">
                 <Menu.Item>
                   {({ active }) => (
                     <button
@@ -114,7 +151,7 @@ export default function Header() {
                     </button>
                   )}
                 </Menu.Item>
-              </div>
+              </div> */}
             </Menu.Items>
           </Transition>
         </Menu>

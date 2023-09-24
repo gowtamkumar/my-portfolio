@@ -16,6 +16,7 @@ export default function Home() {
         className="flex items-center justify-center"
         style={{ height: "87vh" }}
       >
+
         <div className="text-center">
           {/* <Image
             src={img}
