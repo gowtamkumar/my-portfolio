@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { menu } from "@/mockData/route";
 import Link from "next/link";
 import {
   AiOutlineEdit,
@@ -34,41 +35,49 @@ export default function Home() {
             I am a Javascript Developer & Mobile Application developer
           </p>
           <div className="md:flex mx-auto mt-2 items-center justify-around gap-2">
-            <div className="bg-slate-900 ring-offset-2 ring-1 hover:bg-slate-400 rounded p-2  bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
-              <Link href="/">
-                <span className="flex items-center justify-center gap-1">
-                  <AiOutlineHome /> Home
-                </span>
-              </Link>
-            </div>
-            <div className="bg-slate-900 p-2 ring-offset-2 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
+            {menu.map((item, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className="bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2  bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5"
+                >
+                  <Link href={`${item.url}`}>
+                    <span className="flex items-center justify-center">
+                      {item.icon} {item.name}
+                    </span>
+                  </Link>
+                </div>
+              );
+            })}
+
+            {/* <div className="bg-slate-900 p-2 ring-offset-1 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
               <Link href="/projects">
                 <span className="flex items-center justify-center gap-1">
                   <AiOutlineFundProjectionScreen /> Projects
                 </span>
               </Link>
             </div>
-            <div className="bg-slate-900 p-2 ring-offset-2 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
+            <div className="bg-slate-900 p-2 ring-offset-1 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
               <Link href="/about">
                 <span className="flex items-center justify-center gap-1">
                   <AiOutlineProfile /> About
                 </span>
               </Link>
             </div>
-            <div className="bg-slate-900 p-2 ring-offset-2 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
+            <div className="bg-slate-900 p-2 ring-offset-1 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
               <Link href="/blogs">
                 <span className="flex items-center justify-center gap-1">
                   <AiOutlineEdit /> Blog
                 </span>
               </Link>
             </div>
-            <div className="bg-slate-900 p-2 ring-offset-2 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
-              <Link href="https://github.com/Gowtamkumar">
+            <div className="bg-slate-900 p-2 ring-offset-1 ring-1 hover:bg-slate-400 rounded bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200  default-transition default-focus mt-5">
+              <Link href="">
                 <span className="flex items-center justify-center gap-1">
                   <AiOutlineGithub /> GitHub
                 </span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
