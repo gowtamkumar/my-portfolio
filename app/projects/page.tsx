@@ -27,12 +27,12 @@ export default function Projects() {
                 })}
               </div>
 
-              <div className="gap-2 flex mt-3 justify-items-stretch">
-                <button className="bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 p-2 flex items-center gap-1 text-white">
+              <div className="gap-2 flex my-4 justify-items-stretch">
+                <button className="flex items-center gap-1 dark:text-white dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
                   <span>Source Code</span>
                   <FiExternalLink />
                 </button>
-                <button className="text-white bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 p-2 flex items-center gap-1">
+                <button className="flex items-center gap-1 dark:text-white dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
                   <span>Preview</span>
                   <FiExternalLink />
                 </button>

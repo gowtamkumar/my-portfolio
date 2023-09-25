@@ -45,10 +45,12 @@ export default function About() {
       </div>
       <div className="flex-1">
         <article>
-          <h5 className="text-4xl">Hey 👋 I,m Gowtam,</h5>
-          <p className="text-4xl my-4">
+          <h5 className="text-4xl text-black dark:text-white">
+            Hey 👋 I,m Gowtam,
+          </h5>
+          <p className="text-4xl my-4 dark:text-white">
             a
-            <span className="bg-purple-900 p-1 m-4 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
+            <span className="dark:bg-slate-900 bg-slate-400 p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
               developer
             </span>
           </p>

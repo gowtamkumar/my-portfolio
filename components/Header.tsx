@@ -13,29 +13,31 @@ import {
 import { menu } from "@/mockData/route";
 
 export default function Header() {
-  const [dark, setDark] = useState<string>("light");
+  const [darkLight, setDarkLight] = useState<string>("dark");
 
   useEffect(() => {
     if (localStorage.getItem("theme") === null) {
       localStorage.setItem("theme", "light");
     }
+  }, []);
+
+  useEffect(() => {
     const newHtml = document.querySelector("html") as HTMLHtmlElement | null;
-    // add or remove class dark in html elem according to theme in localstorage.
     if (localStorage.getItem("theme") === "dark") {
       newHtml?.classList.add("dark");
-      setDark("dark");
+      setDarkLight("dark");
     } else {
       newHtml?.classList.remove("dark");
-      setDark("light");
+      setDarkLight("light");
     }
-  }, [dark]);
+  }, [darkLight]);
 
   const handleDarkLight = () => {
     if (localStorage.getItem("theme") === "light") {
-      setDark("dark");
+      setDarkLight("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      setDark("light");
+      setDarkLight("light");
       localStorage.setItem("theme", "light");
     }
   };
@@ -43,8 +45,8 @@ export default function Header() {
   return (
     <div className="flex justify-between">
       <div className="top-16 text-right">
-        <Menu as="div" className="relative inline-block text-left z-10">
-          <Menu.Button className="text-[26px] bg-slate-900 hover:bg-slate-400 inline-flex w-full justify-center rounded-md bg-opacity-40 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-white focus-visible:ring-opacity-75">
+        <Menu as="div" className="relative inline-block text-left">
+          <Menu.Button className="dark:text-white dark:bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
             <PiListDashesFill className="text-2xl" />
           </Menu.Button>
           <Transition
@@ -84,7 +86,11 @@ export default function Header() {
       </div>
       <div>
         <button onClick={handleDarkLight} className="text-[22px]">
-          {dark === "dark" ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+          {darkLight === "dark" ? (
+            <MdOutlineDarkMode className="text-white" />
+          ) : (
+            <MdOutlineLightMode />
+          )}
         </button>
       </div>
     </div>

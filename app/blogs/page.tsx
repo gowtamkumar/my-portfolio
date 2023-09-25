@@ -3,30 +3,31 @@ import React from "react";
 import image from "../../public/gowtamkumar.jpeg";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
+import { getUsers } from "@/lib/getAllUsers";
 
-export default function Blog() {
+interface Users {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export default async function Blog() {
+  const users = await getUsers();
+  console.log("users", users);
+
   return (
     <div className="mt-5 w-3/4 mx-auto">
-      {[1, 2, 3].map((item, idx) => {
+      {users.map((item: Users) => {
         return (
           <div
             className="md:flex bg-slate-900 text-black justify-center rounded-sm gap-2 mt-4"
-            key={idx}
+            key={item.id}
           >
             <Image src={image} width={300} height={100} alt="Gowtam kumar" />
             <div className="p-1">
-              <h6 className="text-white mb-3">Cafe</h6>
-              <article className="text-slate-400">
-                Trust Home Clener is cleaner service holder. Project have to
-                auth login system and you can get home cleaner service Trust
-                Home Clener is cleaner service holder. Project have to auth
-                login system and you can get home cleaner service Trust Home
-                Clener is cleaner service holder. Project have to auth login
-                system and you can get home cleaner service Trust Home Clener is
-                cleaner service holder. Project have to auth login system and
-                you can get home cleaner service Trust Home Clener is cleaner
-                service holder.
-              </article>
+              <h6 className="text-white mb-3">{item.title}</h6>
+              <article className="text-slate-400">{item.body}</article>
 
               <div className="flex gap-2 flex-wrap rounded-sm">
                 {[
