@@ -1,20 +1,12 @@
-/* eslint-disable react/no-unescaped-entities */
 import { menu } from "@/mockData/route";
 import Link from "next/link";
-import {
-  AiOutlineEdit,
-  AiOutlineFundProjectionScreen,
-  AiOutlineGithub,
-  AiOutlineHome,
-  AiOutlineProfile,
-} from "react-icons/ai";
 
 export default function Home() {
   return (
-    <main className="p-4">
+    <main className="p-4 lg:min-h-[calc(85vh-_347px)]">
       <section
         className="flex items-center justify-center"
-        style={{ height: "85vh" }}
+        // style={{ height: "85vh" }}
       >
         <div className="text-center">
           <h1 className="text-6xl dark:text-black">Hey 👋 I'm Gowtam,</h1>

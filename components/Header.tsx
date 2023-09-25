@@ -13,7 +13,7 @@ import {
 import { menu } from "@/mockData/route";
 
 export default function Header() {
-  const [dark, setDark] = useState("light");
+  const [dark, setDark] = useState<string>("light");
 
   // useEffect(() => {
   //   if (localStorage.getItem("theme") === null) {
@@ -22,17 +22,17 @@ export default function Header() {
   // }, []);
 
   useEffect(() => {
-    // select html elem
     if (localStorage.getItem("theme") === null) {
       localStorage.setItem("theme", "light");
     }
-    const html = document.querySelector("html");
-    //add or remove class dark in html elem according to theme in localstorage.
+    const newHtml = document.querySelector("html") as HTMLHtmlElement | null;
+
+    // add or remove class dark in html elem according to theme in localstorage.
     if (localStorage.getItem("theme") === "dark") {
-      html.classList.add("dark");
+      newHtml?.classList.add("dark");
       setDark("dark");
     } else {
-      html.classList.remove("dark");
+      newHtml?.classList.remove("dark");
       setDark("light");
     }
   }, [dark]);
