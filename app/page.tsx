@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="p-4">
       <section
-        className="flex items-center justify-center dark:bg-slate-800"
+        className="flex items-center justify-center"
         style={{ height: "85vh" }}
       >
         <div className="text-center">
@@ -42,8 +42,6 @@ export default function Home() {
                 </div>
               );
             })}
-
-
           </div>
         </div>
       </section>

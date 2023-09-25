@@ -18,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      {/* dark:bg-slate-800 */}
+      <body className="dark:bg-slate-800">
         <div className="container mx-auto mt-3">
           <Header />
           {children}
