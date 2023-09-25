@@ -15,18 +15,11 @@ import { menu } from "@/mockData/route";
 export default function Header() {
   const [dark, setDark] = useState<string>("light");
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("theme") === null) {
-  //     localStorage.setItem("theme", "light");
-  //   }
-  // }, []);
-
   useEffect(() => {
     if (localStorage.getItem("theme") === null) {
       localStorage.setItem("theme", "light");
     }
     const newHtml = document.querySelector("html") as HTMLHtmlElement | null;
-
     // add or remove class dark in html elem according to theme in localstorage.
     if (localStorage.getItem("theme") === "dark") {
       newHtml?.classList.add("dark");
@@ -63,7 +56,7 @@ export default function Header() {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute backdrop-filter-sm bg-slate-900 bg-opacity-100 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute backdrop-filter-sm dark:bg-slate-900 bg-slate-300 dark:text-white text-black bg-opacity-100 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               {menu.map((item, idx) => {
                 return (
                   <div className="px-1 py-1" key={idx}>
@@ -73,8 +66,8 @@ export default function Header() {
                           href={`${item.url}`}
                           className={`${
                             active
-                              ? "hover:bg-slate-400 text-gray-900"
-                              : " text-white"
+                              ? "hover:bg-slate-400 dark:text-gray-900"
+                              : " text-dark dark:text-white"
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                         >
                           {active ? item.icon : item.icon}
