@@ -43,7 +43,7 @@ export default function Header() {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between px-3">
       <div className="top-16 text-right">
         <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="dark:text-white dark:bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">

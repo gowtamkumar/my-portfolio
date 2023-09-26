@@ -2,7 +2,7 @@
 import { menu } from "@/mockData/route";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion-3d"
+import { motion } from "framer-motion-3d";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
           <p className="text-6xl my-4 dark:text-white">
             a
-            <span className="dark:bg-slate-900 bg-slate-400 p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
+            <span className="dark:bg-slate-900 bg-slate-400 text-[50px] p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
               <Typewriter
                 words={["JavaScript Developer", "Mobile App Developer"]}
                 loop={Infinity}
@@ -47,7 +47,6 @@ export default function Home() {
                 </div>
               );
             })}
-
           </div>
         </div>
       </section>
