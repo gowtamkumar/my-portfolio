@@ -43,7 +43,7 @@ export const projects = [
     sourceCode: "",
     url: "",
     description:
-      "Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder",
+      "Trust Home Clener is cleaner service holder.",
     tech: [
       "HTML",
       "CSS",
@@ -60,7 +60,24 @@ export const projects = [
     sourceCode: "",
     url: "",
     description:
-      "Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder. Project have to auth login system and you can get home cleaner service Trust Home Clener is cleaner service holder",
+      "Trust Home Clener is cleaner service holder.",
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+    ],
+  },
+  {
+    name: "Project Heading 3",
+    img: image,
+    sourceCode: "",
+    url: "",
+    description:
+      "Trust Home Clener is cleaner service holder.",
     tech: [
       "HTML",
       "CSS",
