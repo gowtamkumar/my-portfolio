@@ -47,7 +47,7 @@ export default function Header() {
       <div className="top-16 text-right">
         <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="dark:text-white dark:bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
-            <PiListDashesFill className="text-2xl" />
+            <PiListDashesFill  />
           </Menu.Button>
           <Transition
             as={Fragment}
@@ -84,15 +84,13 @@ export default function Header() {
           </Transition>
         </Menu>
       </div>
-      <div>
-        <button onClick={handleDarkLight} className="text-[22px]">
-          {darkLight === "dark" ? (
-            <MdOutlineDarkMode className="text-white" />
-          ) : (
-            <MdOutlineLightMode />
-          )}
-        </button>
-      </div>
+      <button onClick={handleDarkLight}>
+        {darkLight === "dark" ? (
+          <MdOutlineDarkMode className="text-white text-[25px] md:text-[25px]" />
+        ) : (
+          <MdOutlineLightMode className="text-[25px] md:text-[25px]" />
+        )}
+      </button>
     </div>
   );
 }

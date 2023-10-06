@@ -34,31 +34,6 @@ export default function Home() {
             I am a Javascript Developer & React Native developer
           </p>
 
-          {/* <div className="flex gap-2 mt-3">
-          <Link
-            href="https://www.linkedin.com/in/gowtamkumar/"
-            className="bg-slate-900 hover:bg-slate-400 p-2 text-white"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin className="text-[25px]" />
-          </Link>
-          <Link
-            href="https://github.com/Gowtamkumar"
-            className="bg-slate-900 hover:bg-slate-400 p-2 text-white"
-            target="blank"
-          >
-            <AiFillGithub className="text-[25px]" />
-          </Link>
-          <Link
-            href="https://www.facebook.com/Gowtamkumar17"
-            className="bg-slate-900 hover:bg-slate-400 p-2 text-white"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillFacebook className="text-[25px]" />
-          </Link>
-        </div> */}
           <div className="md:flex mx-auto mt-2 items-center justify-center gap-2">
             {menu.map((item, idx) => {
               return (
