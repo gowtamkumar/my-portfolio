@@ -78,13 +78,14 @@ export default function About() {
             I am a Javascript Developer & React Native developer. I have 2 years
             Experience. I have completed one more project. I,m genuinely
             passionate about web development. I can continually learn and adapt
-            to new challenges
+            to new challenges. Feel free contract with me, E-mail:
+            gowtampaul0@gmail.com
           </p>
           <div className="py-3">
             {newData.map((item, idx) => {
               return (
                 <div key={idx} className="gap-1 text-slate-400 ">
-                  {item.name}:{" "}
+                  <strong>{item.name}</strong>:{" "}
                   <span className="me-2 text-slate-400">
                     {item.skills + "," + " "}
                   </span>

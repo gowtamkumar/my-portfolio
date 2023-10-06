@@ -1,15 +1,9 @@
 "use client";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
-import { PiCircle, PiListDashesFill, PiListDashesLight } from "react-icons/pi";
+import { PiListDashesFill, PiListDashesLight } from "react-icons/pi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import Link from "next/link";
-import {
-  AiOutlineEdit,
-  AiOutlineFundProjectionScreen,
-  AiOutlineHome,
-  AiOutlineProfile,
-} from "react-icons/ai";
 import { menu } from "@/mockData/route";
 
 export default function Header() {
@@ -17,7 +11,7 @@ export default function Header() {
 
   useEffect(() => {
     if (localStorage.getItem("theme") === null) {
-      localStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 
@@ -47,7 +41,7 @@ export default function Header() {
       <div className="top-16 text-right">
         <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="dark:text-white dark:bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
-            <PiListDashesFill  />
+            <PiListDashesFill />
           </Menu.Button>
           <Transition
             as={Fragment}

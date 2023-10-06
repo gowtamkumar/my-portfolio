@@ -34,11 +34,11 @@ export default function Projects() {
               </div>
 
               <div className="gap-2 flex my-4 justify-center md:justify-start ">
-                <button className="flex items-center gap-1 dark:text-slate-400 dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-1 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
+                <button className="flex items-center gap-1 dark:text-white dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-1 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
                   <span>Source Code</span>
                   <FiExternalLink />
                 </button>
-                <button className="flex items-center gap-1 dark:text-slate-400 dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-1 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
+                <button className="flex items-center gap-1 dark:text-white dark:bg-slate-900 bg-white ring-offset-1 ring-1 hover:bg-slate-400 rounded p-1 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
                   <span>Preview</span>
                   <FiExternalLink />
                 </button>

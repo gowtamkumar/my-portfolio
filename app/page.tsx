@@ -2,8 +2,6 @@
 import { menu } from "@/mockData/route";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion-3d";
-import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Home() {
   return (

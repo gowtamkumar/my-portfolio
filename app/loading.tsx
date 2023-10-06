@@ -1,7 +1,6 @@
 import React from "react";
 
-function Loading() {
+function loading() {
   return <div>loading</div>;
 }
-
-export default Loading;
+export default loading;
