@@ -14,9 +14,9 @@ export default function Home() {
           <h1 className="text-6xl text-black dark:text-white">
             Hey 👋 I,m Gowtam,
           </h1>
-          <p className="text-6xl my-4 dark:text-white">
+          <p className="my-4 text-[40px] dark:text-white">
             a
-            <span className="dark:bg-slate-900 bg-slate-400 text-[50px] p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
+            <span className="text-[40px] p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
               <Typewriter
                 words={["JavaScript Developer", "React Native Developer"]}
                 loop={Infinity}
