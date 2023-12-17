@@ -8,14 +8,12 @@ export default function About() {
     {
       name: "Front-End",
       skills: [
-        "Html5",
-        "CSS3",
         "JavaScript",
         "ES6",
         "TypeScript",
         "React.js",
         "Next.js",
-        "React Native",
+        "WordPress",
       ],
     },
     {
@@ -24,9 +22,7 @@ export default function About() {
         "Node.js",
         "Nest.js",
         "Express.js",
-        "PostgreSQL.js",
-        "MYSQL",
-        "MongoDB",
+        "PostgreSQL"
       ],
     },
     {
@@ -75,8 +71,8 @@ export default function About() {
             Hey 👋 I,m Gowtam, a Developer
           </h5>
           <p className="justify-center text-slate-400">
-            I am a Javascript Developer & React Native developer. I have 2 years
-            Experience. I have completed one more project. I,m genuinely
+            I am a Javascript Developer & Web developer. I have 2 years
+            experience. I have completed one more project. I,m genuinely
             passionate about web development. I can continually learn and adapt
             to new challenges. Feel free contract with me, E-mail:
             gowtampaul0@gmail.com

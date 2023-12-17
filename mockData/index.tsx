@@ -24,16 +24,16 @@ export const menu = [
     url: "/about",
     icon: <AiOutlineProfile className="me-2 h-5 w-5 text-2xl" />,
   },
-  {
-    name: "Blog",
-    url: "/blogs",
-    icon: <AiOutlineEdit className="me-2 h-5 w-5 text-2xl" />,
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/Gowtamkumar",
-    icon: <AiOutlineGithub className="me-2 h-5 w-5 text-2xl" />,
-  },
+  // {
+  //   name: "Blog",
+  //   url: "/blogs",
+  //   icon: <AiOutlineEdit className="me-2 h-5 w-5 text-2xl" />,
+  // },
+  // {
+  //   name: "GitHub",
+  //   url: "https://github.com/Gowtamkumar",
+  //   icon: <AiOutlineGithub className="me-2 h-5 w-5 text-2xl" />,
+  // },
 ];
 
 export const projects = [

@@ -1,4 +1,4 @@
-import { projects } from "@/mockData/route";
+import { projects } from "@/mockData";
 import Image from "next/image";
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";

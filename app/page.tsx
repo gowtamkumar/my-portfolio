@@ -1,5 +1,5 @@
 "use client";
-import { menu } from "@/mockData/route";
+import { menu } from "@/mockData";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -18,7 +18,7 @@ export default function Home() {
             a
             <span className="text-[40px] p-1 m-4 bg-opacity-100 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 rounded-2xl default-transition default-focus">
               <Typewriter
-                words={["JavaScript Developer", "React Native Developer"]}
+                words={["JavaScript Developer", "Web Developer"]}
                 loop={Infinity}
                 cursor
                 cursorStyle="_"
@@ -29,7 +29,7 @@ export default function Home() {
             </span>
           </p>
           <p className="mt-4 dark:text-slate-400">
-            I am a Javascript Developer & React Native developer
+            I’m a Javascript Developer & Web developer
           </p>
 
           <div className="md:flex mx-auto mt-2 items-center justify-center gap-2">
