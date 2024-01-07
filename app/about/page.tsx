@@ -33,12 +33,12 @@ export default function About() {
 
   return (
     <div
-      className="md:flex md:w-3/5 p-3 md:m-0 md:mx-auto items-center"
+      className="md:flex md:w-3/5 p-3 md:m-0 md:mx-auto items-center "
       style={{ height: "88vh" }}
     >
-      <div className="md:w-1/5">
-        <Image src={image} width={400} height={300} alt="Gowtam kumar" />
-        <div className="flex gap-2 mt-3 items-center ">
+      <div className="md:w-1/5 text-center">
+        <Image src={image} placeholder="blur" alt="Gowtam kumar" />
+        <div className="flex gap-2 mt-3 items-center justify-around">
           <Link
             href="https://www.linkedin.com/in/gowtamkumar/"
             className="bg-slate-900 hover:bg-slate-400 p-2 text-white"
@@ -61,6 +61,11 @@ export default function About() {
             rel="noreferrer"
           >
             <AiFillFacebook className="text-[22px]" />
+          </Link>
+        </div>
+        <div className="bg-slate-900 dark:text-slate-400 text-white rounded-lg mt-3">
+          <Link href="/Gowtam-kumar-(JavaScript developer).pdf" download={true} target="_blank">
+            Download CV
           </Link>
         </div>
       </div>
@@ -89,12 +94,6 @@ export default function About() {
               );
             })}
           </div>
-
-          {/* <div className="mt-1">
-              <Link to="{resume}" target="_blank" download>
-                <button className="btn banner-button text-light">Download Resume</button>
-              </Link>&nbsp;&nbsp;
-            </div> */}
         </article>
       </div>
     </div>

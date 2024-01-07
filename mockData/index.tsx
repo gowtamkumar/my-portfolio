@@ -24,6 +24,7 @@ export const menu = [
     url: "/about",
     icon: <AiOutlineProfile className="me-2 h-5 w-5 text-2xl" />,
   },
+
   // {
   //   name: "Blog",
   //   url: "/blogs",
