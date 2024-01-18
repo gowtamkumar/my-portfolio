@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 
 import image from "../public/gowtamkumar.jpeg";
+import carDealer from "../public/projects/car-dealer.png";
 
 export const menu = [
   {
@@ -39,18 +40,18 @@ export const menu = [
 
 export const projects = [
   {
-    name: "Project Heading",
-    img: image,
-    sourceCode: "",
+    name: "Car Dealer",
+    img: carDealer,
+    sourceCode: "https://github.com/gowtamkumar/car-dealer",
     url: "",
     description:
-      "Trust Home Clener is cleaner service holder.",
+      "The Car Enthusiast Hub is a web application designed for automotive enthusiasts to explore, share, and engage with their passion for cars. This platform provides a central hub for users to access a variety of features related to cars, including information about different car models.",
     tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Next.js",
+      "Nextjs",
+      "Tailwind CSS",
+      "Ant Design",
       "Node.js",
+      "Nest.js",
       "PostgreSQL",
     ],
   },
@@ -59,24 +60,15 @@ export const projects = [
     img: image,
     sourceCode: "",
     url: "",
-    description:
-      "Trust Home Clener is cleaner service holder.",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Next.js",
-      "Node.js",
-      "PostgreSQL",
-    ],
+    description: "Trust Home Clener is cleaner service holder.",
+    tech: ["HTML", "CSS", "JavaScript", "Next.js", "Node.js", "PostgreSQL"],
   },
   {
     name: "Project Heading 3",
     img: image,
     sourceCode: "",
     url: "",
-    description:
-      "Trust Home Clener is cleaner service holder.",
+    description: "Trust Home Clener is cleaner service holder.",
     tech: [
       "HTML",
       "CSS",

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import image from "../../public/gowtamkumar.jpeg";
 import Link from "next/link";
@@ -18,12 +19,7 @@ export default function About() {
     },
     {
       name: "Back-End",
-      skills: [
-        "Node.js",
-        "Nest.js",
-        "Express.js",
-        "PostgreSQL"
-      ],
+      skills: ["Node.js", "Nest.js", "Express.js", "PostgreSQL"],
     },
     {
       name: "Tools",
@@ -32,7 +28,7 @@ export default function About() {
   ];
 
   return (
-    <div
+    <section
       className="md:flex md:w-3/5 p-3 md:m-0 md:mx-auto items-center "
       style={{ height: "88vh" }}
     >
@@ -64,24 +60,42 @@ export default function About() {
           </Link>
         </div>
         <div className="bg-slate-900 dark:text-slate-400 text-white rounded-lg mt-3">
-          <Link href="/Gowtam-kumar-(JavaScript developer).pdf" download={true} target="_blank">
+          <Link
+            href="/Gowtam-kumar-(JavaScript developer).pdf"
+            download={true}
+            target="_blank"
+          >
             Download CV
           </Link>
         </div>
       </div>
 
       <div className="md:w-4/5 md:px-3 overflow-auto">
+        <h2 className="text-3xl font-bold mb-3 text-slate-400">About Me</h2>
+
+        <h5 className="text-slate-400 font-bold">
+          {" "}
+          Hey 👋 I,m Gowtam Kumar, JavaScript Developer
+        </h5>
+
         <article>
-          <h5 className="text-2xl text-black dark:text-white">
-            Hey 👋 I,m Gowtam, a Developer
-          </h5>
           <p className="justify-center text-slate-400">
-            I am a Javascript Developer & Web developer. I have 2 years
-            experience. I have completed one more project. I,m genuinely
-            passionate about web development. I can continually learn and adapt
-            to new challenges. Feel free contract with me, E-mail:
-            gowtampaul0@gmail.com
+            Hello! I'm a passionate JavaScript developer with experience in
+            building web applications. I enjoy solving problems and creating
+            efficient, scalable, and user-friendly solutions.
           </p>
+          <p className="text-slate-400">
+            My expertise includes React, Node.js, and other modern technologies.
+            I'm always eager to learn new things and stay updated with the
+            latest trends in web development.
+          </p>
+          <p className="text-slate-400 font-bold">
+            Feel free contract with me, E-mail:
+            <Link href="mailto:gowtampaul0@gmail.com">
+              gowtampaul0@gmail.com
+            </Link>
+          </p>
+
           <div className="py-3">
             {newData.map((item, idx) => {
               return (
@@ -96,6 +110,6 @@ export default function About() {
           </div>
         </article>
       </div>
-    </div>
+    </section>
   );
 }
