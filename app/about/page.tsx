@@ -60,13 +60,16 @@ export default function About() {
           </Link>
         </div>
         <div className="bg-slate-900 dark:text-slate-400 text-white rounded-lg mt-3">
-          <Link
+          <Link href={"/resume"} className="p-2">
+            Resume
+          </Link>
+          {/* <Link
             href="/Gowtam-kumar-(JavaScript developer).pdf"
             download={true}
             target="_blank"
           >
             Download CV
-          </Link>
+          </Link> */}
         </div>
       </div>
 
