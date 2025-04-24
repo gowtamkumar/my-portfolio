@@ -5,3 +5,11 @@
 body {
   background-image: url("../public/pattern-dark.20747baf.svg");
 }
+
+html, body {
+  overflow-x: hidden;
+}
+.page-break {
+  break-after: page;
+  page-break-after: always;
+}
