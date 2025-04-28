@@ -5,10 +5,9 @@ export default function Experience() {
     <section className="mb-6">
       <h2 className="text-xl font-semibold border-b pb-1 mb-2">EXPERIENCE</h2>
 
-
       <div className="mb-4">
-        <h3 className="font-semibold text-lg">Web Developer — 123 Co</h3>
-        <p className="text-sm text-gray-600">2015 – 2017 | New York, NY</p>
+        <h3 className="font-semibold text-lg">Web Developer — Semicolon It Solutions</h3>
+        <p className="text-sm text-gray-600">2021 – Present | On-site</p>
         <ul className="list-disc ml-5 text-sm mt-1 space-y-1">
           <li>
             Developed and maintained responsive websites for multiple clients

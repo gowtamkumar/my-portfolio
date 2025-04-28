@@ -78,19 +78,20 @@ export default function Resume() {
     <div ref={printRef} className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800">
       <button
         onClick={handleDownloadPdf}
-        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+        className=" bg-blue-600 text-white p-1 rounded-lg"
       >
         Download PDF
       </button>
       <Header />
       <Summary />
+      <ProjectsSection />
       <Experience />
+      
       <Education />
       <Language />
       <Strengths />
       <Skill />
       {/* <div className="page-break" /> */}
-      <ProjectsSection />
       <Achievement />
       <Awards />
     </div>
