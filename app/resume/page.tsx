@@ -21,12 +21,12 @@ export default function Resume() {
   const handleDownloadPdf = async () => {
     const element = printRef.current as any;
     const canvas = await html2canvas(element, {
-      scale: 2,
+      scale: 1.5,
       useCORS: true,
     });
 
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF('p', 'mm', 'a4');
+    const imgData = canvas.toDataURL('image/jpeg', 0.7);
+    const pdf = new jsPDF('p', 'mm', 'a4', true); // true = compress
 
     const pageWidth = 210;
     const pageHeight = 297;
@@ -38,7 +38,7 @@ export default function Resume() {
     const totalPages = Math.ceil(imgHeight / pageHeight);
     const pageCanvas = document.createElement('canvas');
     const pageCtx = pageCanvas.getContext('2d')!;
-    const scale = 2;
+    const scale = 1.5;
     const pagePixelHeight = (pageHeight * imgProps.height) / imgHeight;
 
     pageCanvas.width = canvas.width;
@@ -47,10 +47,8 @@ export default function Resume() {
     for (let page = 0; page < totalPages; page++) {
       const startY = page * pagePixelHeight;
 
-      // Clear canvas
       pageCtx.clearRect(0, 0, pageCanvas.width, pageCanvas.height);
 
-      // Draw slice
       pageCtx.drawImage(
         canvas,
         0,
@@ -63,10 +61,10 @@ export default function Resume() {
         pagePixelHeight
       );
 
-      const pageData = pageCanvas.toDataURL('image/png');
+      const pageData = pageCanvas.toDataURL('image/jpeg', 0.7);
 
       if (page > 0) pdf.addPage();
-      pdf.addImage(pageData, 'PNG', 0, 0, imgWidth, pageHeight);
+      pdf.addImage(pageData, 'JPEG', 0, 0, imgWidth, pageHeight, '', 'FAST');
     }
 
     pdf.save('multi-page.pdf');
