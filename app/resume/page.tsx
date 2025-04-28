@@ -86,14 +86,15 @@ export default function Resume() {
       <Summary />
       <ProjectsSection />
       <Experience />
-      
-      <Education />
-      <Language />
-      <Strengths />
+
       <Skill />
+
+      {/* <Language /> */}
+      <Strengths />
       {/* <div className="page-break" /> */}
       <Achievement />
-      <Awards />
+      {/* <Awards /> */}
+      <Education />
     </div>
   );
 }

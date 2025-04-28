@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export default function Skill() {
   return (
     <section className="mb-6">
       <h2 className="text-xl font-semibold border-b pb-1 mb-2">SKILLS</h2>
-      <p className="text-sm">UI/UX design, Frontend development, JavaScript frameworks, Agile methodologies, Responsive design, Cross-browser compatibility, Version control systems</p>
+      <p className="text-sm">
+        JavaScript, ES6, Typescript, ReactJs, NextJs, Redux.js Tailwindcss,
+        NodeJs, Nestjs, Expressjs, PostgreSQL, redis, Git, Docker, VPS server,
+      </p>
     </section>
-  )
+  );
 }
