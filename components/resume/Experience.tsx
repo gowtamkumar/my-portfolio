@@ -3,7 +3,7 @@ import React from "react";
 export default function Experience() {
   return (
     <section className="my-2">
-      <h2 className="text-xl font-semibold border-b">EXPERIENCE</h2>
+      <h2 className="text-xl font-semibold border-b my-2">EXPERIENCE</h2>
       <div className="my-2">
         <h3 className="font-semibold text-lg">Web Developer — Semicolon It Solutions <small className="text-sm text-gray-600">(2021 – Present | On-site)</small></h3>
         {/* <p className="text-sm text-gray-600">2021 – Present | On-site</p> */}

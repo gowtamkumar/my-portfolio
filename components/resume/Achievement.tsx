@@ -3,7 +3,7 @@ import React from "react";
 export default function Achievement() {
   return (
     <section className="my-2">
-      <h2 className="text-xl font-semibold border-b">ACHIEVEMENTS</h2>
+      <h2 className="text-xl font-semibold border-b my-2">ACHIEVEMENTS</h2>
       <ul className="list-disc ml-5 text-sm space-y-1">
         <li>
           <strong>Developing a High-Traffic E-commerce Website:</strong>{" "}
