@@ -2,13 +2,12 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <section className="mb-6">
-      <h2 className="text-xl font-semibold border-b pb-1 mb-2">EXPERIENCE</h2>
-
-      <div className="mb-4">
-        <h3 className="font-semibold text-lg">Web Developer — Semicolon It Solutions</h3>
-        <p className="text-sm text-gray-600">2021 – Present | On-site</p>
-        <ul className="list-disc ml-5 text-sm mt-1 space-y-1">
+    <section className="my-2">
+      <h2 className="text-xl font-semibold border-b">EXPERIENCE</h2>
+      <div className="my-2">
+        <h3 className="font-semibold text-lg">Web Developer — Semicolon It Solutions <small className="text-sm text-gray-600">(2021 – Present | On-site)</small></h3>
+        {/* <p className="text-sm text-gray-600">2021 – Present | On-site</p> */}
+        <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
             Developed and maintained responsive websites for multiple clients
             resulting in a 15% increase in website traffic.

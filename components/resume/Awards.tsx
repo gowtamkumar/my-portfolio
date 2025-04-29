@@ -3,7 +3,7 @@ import React from 'react'
 export default function Awards() {
   return (
     <section>
-        <h2 className="text-xl font-semibold border-b pb-1 mb-2">AWARDS</h2>
+        <h2 className="text-xl font-semibold border-b">AWARDS</h2>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
             <strong>Best UI Design:</strong> Awarded for designing and

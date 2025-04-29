@@ -65,33 +65,36 @@ export default function Resume() {
       pdf.addImage(pageData, "JPEG", 0, 0, imgWidth, pageHeight, "", "FAST");
     }
 
-    pdf.save("multi-page.pdf");
+    pdf.save("gowtamkumar(Web Developer).pdf");
   };
 
   return (
-    <div
-      ref={printRef}
-      className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800"
-    >
+    <div>
       <button
         onClick={handleDownloadPdf}
-        className=" bg-blue-600 text-white p-1 rounded-lg"
+        className=" bg-blue-600 text-whiterounded-lg"
       >
         Download PDF
       </button>
-      <Header />
-      <Summary />
-      <ProjectsSection />
-      <Experience />
 
-      <Skill />
+      <div
+        ref={printRef}
+        className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800"
+      >
+        <Header />
+        <Summary />
+        <ProjectsSection />
+        <Experience />
 
-      {/* <Language /> */}
-      <Strengths />
-      {/* <div className="page-break" /> */}
-      <Achievement />
-      {/* <Awards /> */}
-      <Education />
+        <Skill />
+
+        {/* <Language /> */}
+        <Strengths />
+        {/* <div className="page-break" /> */}
+        <Achievement />
+        {/* <Awards /> */}
+        <Education />
+      </div>
     </div>
   );
 }

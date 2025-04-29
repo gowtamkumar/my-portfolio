@@ -2,13 +2,12 @@ import React from "react";
 
 export default function Achievement() {
   return (
-    <section className="mb-6">
-      <h2 className="text-xl font-semibold border-b pb-1 mb-2">ACHIEVEMENTS</h2>
+    <section className="my-2">
+      <h2 className="text-xl font-semibold border-b">ACHIEVEMENTS</h2>
       <ul className="list-disc ml-5 text-sm space-y-1">
         <li>
           <strong>Developing a High-Traffic E-commerce Website:</strong>{" "}
-          frontend development team in building a robust e-commerce website that
-          handled over 1700 user/sec{" "}
+          frontend that can support over 1700 users per second.
         </li>
         <li>
           <strong>Mentoring Junior Developers:</strong> Provided guidance and

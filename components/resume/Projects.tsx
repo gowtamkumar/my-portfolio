@@ -1,15 +1,13 @@
 // components/ProjectsSection.tsx
 export default function ProjectsSection() {
   return (
-    <section className="mb-6">
-      <h2 className="text-xl font-semibold border-b pb-1 mb-2">PROJECTS</h2>
-
+    <section className="my-2">
+      <h2 className="text-xl font-semibold border-b">PROJECTS</h2>
       <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — E-commerce Application
+          Full Stack Developer — E-commerce Application <small className="text-sm text-gray-600">(2024 – Present)</small>
         </h3>
-        <p className="text-sm text-gray-600">2024 – Present | Remote</p>
-        <ul className="list-disc ml-5 text-sm mt-1 space-y-1">
+        <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
             Currently developing an e-commerce application using Next.js,
             Express.js, and PostgreSQL.
@@ -32,12 +30,11 @@ export default function ProjectsSection() {
         </ul>
       </div>
 
-      <div className="mb-4">
+      <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — Inventory
+          Full Stack Developer — Inventory <small className="text-sm text-gray-600">(2023 – 2024)</small>
         </h3>
-        <p className="text-sm text-gray-600">2023 – 2024</p>
-        <ul className="list-disc ml-5 text-sm mt-1 space-y-1">
+        <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
             Developed a full-stack Inventory application using React.js,
             Nest.js, and PostgreSQL.
