@@ -13,17 +13,15 @@ export default function About() {
         "ES6",
         "TypeScript",
         "React.js",
-        "Next.js",
-        "WordPress",
-      ],
+        "Next.js"],
     },
     {
       name: "Back-End",
-      skills: ["Node.js", "Nest.js", "Express.js", "PostgreSQL"],
+      skills: ["Node.js", "Nest.js", "Express.js", "PostgreSQL", "Docker", "VPS Server"],
     },
     {
       name: "Tools",
-      skills: ["Git", "GitHub", "NPM", "Postman", "Chrome dev tool", "VsCode"],
+      skills: ["Git", "GitHub", "Postman", "Chrome dev tool", "VsCode"],
     },
   ];
 
