@@ -70,12 +70,15 @@ export default function Resume() {
 
   return (
     <div>
-      <button
-        onClick={handleDownloadPdf}
-        className=" bg-blue-600 text-whiterounded-lg"
-      >
-        Download PDF
-      </button>
+      <div className="container">
+        <button
+          onClick={handleDownloadPdf}
+          className=" bg-blue-600 text-whiterounded-lg"
+        >
+          Download PDF
+        </button>
+      </div>
+
 
       <div
         ref={printRef}
