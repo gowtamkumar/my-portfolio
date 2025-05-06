@@ -1,4 +1,4 @@
-import { projects } from "@/mockData";
+import { projects } from "@/lib/mock-data/menu";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { PiListDashesFill, PiListDashesLight } from "react-icons/pi";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import Link from "next/link";
-import { menu } from "@/mockData";
+import { menu } from "@/lib/mock-data/menu";
 
 export default function Header() {
   const [darkLight, setDarkLight] = useState<string>("dark");

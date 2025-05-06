@@ -3,28 +3,9 @@ import Image from "next/image";
 import image from "../../public/gowtamkumar.jpeg";
 import Link from "next/link";
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { skills } from "@/lib/mock-data/skill";
 
 export default function About() {
-  const newData = [
-    {
-      name: "Front-End",
-      skills: [
-        "JavaScript",
-        "ES6",
-        "TypeScript",
-        "React.js",
-        "Next.js"],
-    },
-    {
-      name: "Back-End",
-      skills: ["Node.js", "Nest.js", "Express.js", "PostgreSQL", "Docker", "VPS Server"],
-    },
-    {
-      name: "Tools",
-      skills: ["Git", "GitHub", "Postman", "Chrome dev tool", "VsCode"],
-    },
-  ];
-
   return (
     <section
       className="md:flex md:w-3/5 p-3 md:m-0 md:mx-auto items-center "
@@ -98,7 +79,7 @@ export default function About() {
           </p>
 
           <div className="py-3">
-            {newData.map((item, idx) => {
+            {skills.map((item, idx) => {
               return (
                 <div key={idx} className="gap-1 text-slate-400 ">
                   <strong>{item.name}</strong>:{" "}

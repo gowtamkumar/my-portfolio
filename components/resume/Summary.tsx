@@ -3,7 +3,7 @@ import React from "react";
 export default function Summary() {
   return (
     <section className="my-2">
-      <h2 className="text-xl font-semibold border-b my-2">SUMMARY</h2>
+      <h2 className="text-xl font-semibold border-b my-1">SUMMARY</h2>
       <p className="text-sm">
         Hi there! I am a skilled JavaScript developer with a passion for creating
         innovative web applications. I have 3 years of experience in the field

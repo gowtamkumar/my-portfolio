@@ -1,5 +1,5 @@
 "use client";
-import { menu } from "@/mockData";
+import { menu } from "@/lib/mock-data/menu";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
