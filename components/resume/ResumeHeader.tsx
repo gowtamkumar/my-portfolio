@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function Header() {
+export default function ResumeHeader() {
   return (
     <header>
       <h1 className="text-4xl font-bold text-gray-900">Gowtam Kumar</h1>

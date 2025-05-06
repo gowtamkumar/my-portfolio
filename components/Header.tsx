@@ -1,9 +1,7 @@
 "use client";
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useRef, useState } from "react";
-import { PiListDashesFill, PiListDashesLight } from "react-icons/pi";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { menu } from "@/lib/mock-data/menu";
 
 export default function Header() {
@@ -16,12 +14,12 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const newHtml = document.querySelector("html") as HTMLHtmlElement | null;
+    const html = document.querySelector("html");
     if (localStorage.getItem("theme") === "dark") {
-      newHtml?.classList.add("dark");
+      html?.classList.add("dark");
       setDarkLight("dark");
     } else {
-      newHtml?.classList.remove("dark");
+      html?.classList.remove("dark");
       setDarkLight("light");
     }
   }, [darkLight]);
@@ -37,54 +35,29 @@ export default function Header() {
   };
 
   return (
-    <div className="flex justify-between px-3">
-      <div className="top-16 text-right">
-        <Menu as="div" className="relative inline-block text-left">
-          <Menu.Button className="dark:text-white dark:bg-slate-900 ring-offset-1 ring-1 hover:bg-slate-400 rounded p-2 bg-opacity-15 backdrop-filter backdrop-blur-sm filter saturate-200 text-primary-200 default-transition default-focus">
-            <PiListDashesFill />
-          </Menu.Button>
-          <Transition
-            as={Fragment}
-            enter="transition ease-out duration-100"
-            enterFrom="transform opacity-0 scale-95"
-            enterTo="transform opacity-100 scale-100"
-            leave="transition ease-in duration-75"
-            leaveFrom="transform opacity-100 scale-100"
-            leaveTo="transform opacity-0 scale-95"
+    <header className="flex justify-between items-center px-6 py-4 bg-slate-200 dark:bg-slate-900">
+      {/* Horizontal Menu */}
+      <nav className="flex gap-6">
+        {menu.map((item, idx) => (
+          <Link
+            key={idx}
+            href={item.url}
+            className="flex items-center gap-1 text-sm text-black dark:text-white hover:text-blue-500 transition"
           >
-            <Menu.Items className="absolute backdrop-filter-sm dark:bg-slate-900 bg-slate-300 dark:text-white text-black bg-opacity-100 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-              {menu.map((item, idx) => {
-                return (
-                  <div className="px-1 py-1" key={idx}>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href={`${item.url}`}
-                          className={`${
-                            active
-                              ? "hover:bg-slate-400 dark:text-gray-900"
-                              : " text-dark dark:text-white"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          {active ? item.icon : item.icon}
-                          {item.name}
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                );
-              })}
-            </Menu.Items>
-          </Transition>
-        </Menu>
-      </div>
+            {item.icon}
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+
+      {/* Theme Toggle */}
       <button onClick={handleDarkLight}>
         {darkLight === "dark" ? (
-          <MdOutlineDarkMode className="text-white text-[25px] md:text-[25px]" />
+          <MdOutlineDarkMode className="text-white text-[25px]" />
         ) : (
-          <MdOutlineLightMode className="text-[25px] md:text-[25px]" />
+          <MdOutlineLightMode className="text-black text-[25px]" />
         )}
       </button>
-    </div>
+    </header>
   );
 }

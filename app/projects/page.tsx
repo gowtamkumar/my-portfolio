@@ -1,4 +1,4 @@
-import { projects } from "@/lib/mock-data/menu";
+import { projects } from "@/lib/mock-data/project";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,9 +16,9 @@ export default function Projects() {
             <div className="md:w-1/4 flex md:text-start justify-center">
               <Image
                 src={item.img}
-                placeholder="blur"
-                // width={200}
-                // height={100}
+                // placeholder="blur"
+                width={200}
+                height={100}
                 alt="Gowtam kumar"
               />
             </div>

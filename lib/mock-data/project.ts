@@ -1,9 +1,8 @@
 import image from "/gowtamkumar.jpeg";
-import carDealer from "/car-dealer.png";
 export const projects = [
   {
     name: "Car Dealer",
-    img: carDealer,
+    img: '/car-dealer.png',
     sourceCode: "https://github.com/gowtamkumar/car-dealer",
     url: "",
     description:
@@ -19,7 +18,7 @@ export const projects = [
   },
   {
     name: "Project Heading 1",
-    img: image,
+    img: '/gowtamkumar.jpeg',
     sourceCode: "",
     url: "",
     description: "Trust Home Clener is cleaner service holder.",
@@ -27,7 +26,7 @@ export const projects = [
   },
   {
     name: "Project Heading 3",
-    img: image,
+    img: '/gowtamkumar.jpeg',
     sourceCode: "",
     url: "",
     description: "Trust Home Clener is cleaner service holder.",

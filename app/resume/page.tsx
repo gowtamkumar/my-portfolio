@@ -3,7 +3,7 @@ import Achievement from "@/components/resume/Achievement";
 import Awards from "@/components/resume/Awards";
 import Education from "@/components/resume/Education";
 import Experience from "@/components/resume/Experience";
-import Header from "@/components/resume/Header";
+import Header from "@/components/resume/ResumeHeader";
 import Language from "@/components/resume/Language";
 import ProjectsSection from "@/components/resume/Projects";
 import Skill from "@/components/resume/Skill";
@@ -70,15 +70,14 @@ export default function Resume() {
 
   return (
     <div>
-      <div className="max-w-4xl mx-auto flex justify-end">
+      <div className="max-w-4xl mx-auto flex justify-end py-2">
         <button
           onClick={handleDownloadPdf}
-          className=" bg-blue-600 text-white rounded-sm p-1 mb-2"
+          className=" bg-blue-600 text-white rounded-sm p-1 "
         >
-          Download PDF
+          Resume Download
         </button>
       </div>
-
 
       <div
         ref={printRef}
@@ -88,9 +87,7 @@ export default function Resume() {
         <Summary />
         <ProjectsSection />
         <Experience />
-
         <Skill />
-
         {/* <Language /> */}
         <Strengths />
         {/* <div className="page-break" /> */}
