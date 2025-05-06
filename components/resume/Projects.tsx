@@ -5,35 +5,36 @@ export default function ProjectsSection() {
       <h2 className="text-xl font-semibold border-b my-1">PROJECTS</h2>
       <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — E-commerce Application <small className="text-sm text-gray-600">(2024 – Present)</small>
+          Full Stack Developer — E-commerce Application{" "}
+          <small className="text-sm text-gray-600">(2024 – Present)</small>
         </h3>
+        <address className="text-sm">
+          Tech Stack: Next.js, Express.js, PostgreSQL, SSLCOMMERZ
+        </address>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Currently developing an e-commerce application using Next.js,
-            Express.js, and PostgreSQL.
+            Developed a responsive, full-featured e-commerce platform (80%
+            complete)
           </li>
           <li>
-            Implemented core e-commerce functionalities including product
-            management, cart, checkout, and order tracking.
+            Implemented cart, checkout, order tracking, and payment integration.
           </li>
           <li>
-            Integrated discount features such as global, category, brand-level,
-            and promotional offers.
+            Designed dynamic discount modules (global, category, brand-level
+            promotions).
           </li>
-          <li>
-            Integrated SSLCOMMERZ payment gateway for secure transactions.
-          </li>
-          <li>
-            Project is 80% complete with responsive UI and optimized
-            performance.
-          </li>
+          <li>Optimized the UI for performance and scalability.</li>
         </ul>
       </div>
 
       <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — Inventory <small className="text-sm text-gray-600">(2023 – 2024)</small>
+          Full Stack Developer — Inventory{" "}
+          <small className="text-sm text-gray-600">(2023 – 2024)</small>
         </h3>
+        <address className="text-sm">
+          Tech Stack: React.js, Nest.js, PostgreSQL
+        </address>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
             Developed a full-stack Inventory application using React.js,

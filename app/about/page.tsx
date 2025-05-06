@@ -23,7 +23,7 @@ export default function About() {
             <AiFillLinkedin className="text-[22px]" />
           </Link>
           <Link
-            href="https://github.com/Gowtamkumar"
+            href="https://github.com/gowtamkumar"
             className="bg-slate-900 hover:bg-slate-400 p-2 text-white"
             target="blank"
           >

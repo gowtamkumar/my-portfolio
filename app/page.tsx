@@ -28,10 +28,10 @@ export default function Home() {
               />
             </span>
           </p>
-          <p className="mt-4 dark:text-slate-400">
+          {/* <p className="mt-4 dark:text-slate-400">
             I’m a Javascript Developer & Web developer
-          </p>
-
+          </p> */}
+          {/* 
           <div className="md:flex mx-auto mt-2 items-center justify-center gap-2">
             {menu.map((item, idx) => {
               return (
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </section>
     </main>

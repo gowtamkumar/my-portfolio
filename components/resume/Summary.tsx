@@ -5,12 +5,13 @@ export default function Summary() {
     <section className="my-2">
       <h2 className="text-xl font-semibold border-b my-1">SUMMARY</h2>
       <p className="text-sm">
-        Hi there! I am a skilled JavaScript developer with a passion for creating
-        innovative web applications. I have 3 years of experience in the field
-        and specialize in working with React.js and Node.js. My expertise lies
-        in developing intuitive user interfaces and robust server-side
-        solutions. I am excited to connect with you and collaborate on exciting
-        projects!
+        Skilled JavaScript developer with over 3 years of experience building
+        scalable web applications. Proficient in both front-end and back-end
+        development using technologies like React.js, Next.js, Node.js, and
+        PostgreSQL. Passionate about clean code, performance optimization, and
+        delivering high-quality solutions. Adept at collaborating with teams and
+        mentoring junior developers. Open to exciting new opportunities and
+        challenges
       </p>
     </section>
   );

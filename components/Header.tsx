@@ -35,7 +35,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-slate-200 dark:bg-slate-900">
+    <header className="flex justify-between w-full mb-5  items-center px-6 py-4 bg-slate-200 dark:bg-slate-800 border-b-[1px]">
       {/* Horizontal Menu */}
       <nav className="flex gap-6">
         {menu.map((item, idx) => (
