@@ -1,4 +1,4 @@
-import { projects } from "@/lib/mock-data/menu";
+import { projects } from "@/lib/mock-data/project";
 import Image from "next/image";
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";
