@@ -11,10 +11,27 @@ import Strengths from "@/components/resume/Strengths";
 import Summary from "@/components/resume/Summary";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  Link,
+  StyleSheet,
+  PDFViewer,
+} from "@react-pdf/renderer";
+
+const styles = StyleSheet.create({
+  page: { padding: 30, fontSize: 12, fontFamily: "Helvetica" },
+  section: { marginBottom: 12 },
+  heading: { fontSize: 16, marginBottom: 4 },
+  link: { color: "blue", textDecoration: "underline" },
+});
 
 export default function Resume() {
   const printRef = useRef(null);
+  const [showPdf, setShowPdf] = useState(false);
 
   const handleDownloadPdf = async () => {
     const element = printRef.current as any;
@@ -68,30 +85,64 @@ export default function Resume() {
     pdf.save("gowtamkumar(Web Developer).pdf");
   };
 
+  const PdfResume = () => (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.section}>
+          <Text style={styles.heading}>Gowtam Kumar</Text>
+          <Text>
+            Website:{" "}
+            <Link src="https://gowtamkumar.vercel.app" style={styles.link}>
+              gowtamkumar.vercel.app
+            </Link>
+          </Text>
+          <Text>
+            GitHub:{" "}
+            <Link src="https://github.com/gowtamkumar" style={styles.link}>
+              github.com/gowtamkumar
+            </Link>
+          </Text>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.heading}>Projects</Text>
+          <Text>• Influencer Marketing Platform (React + Nest.js)</Text>
+          <Text>• Portfolio Website with Tailwind & Next.js</Text>
+        </View>
+      </Page>
+    </Document>
+  );
+
   return (
     <div>
-      <div className="max-w-4xl mx-auto flex justify-end py-2">
-        <button
-          onClick={handleDownloadPdf}
-          className=" bg-blue-600 text-white rounded-sm p-1 "
-        >
-          Resume Download
-        </button>
-      </div>
+      <div className="p-4">
+        <div className="max-w-4xl mx-auto flex justify-end py-2 gap-4">
+          <button
+            onClick={() => setShowPdf(!showPdf)}
+            className="bg-green-600 text-white px-4 py-1 rounded-sm"
+          >
+            {showPdf ? "Hide PDF" : "View PDF (Clickable)"}
+          </button>
+        </div>
 
-      <div
-        ref={printRef}
-        className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800"
-      >
-        <Header />
-        <Summary />
-        <ProjectsSection />
-        <Experience />
-        <Skill />
-        {/* <Language /> */}
-        <Strengths />
-        <Achievement />
-        <Education />
+        {showPdf ? (
+          <div className="mt-4 border shadow-lg">
+            <PDFViewer width="100%" height={800}>
+              <PdfResume />
+            </PDFViewer>
+          </div>
+        ) : (
+          <div className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800">
+            <Header />
+            <Summary />
+            <ProjectsSection />
+            <Experience />
+            <Skill />
+            <Strengths />
+            <Achievement />
+            <Education />
+          </div>
+        )}
       </div>
     </div>
   );
