@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { projects } from "@/lib/mock-data/project";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,8 @@ import { FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
   return (
+    <>
+    <Header />
     <div className="mt-5 md:w-4/6 mx-auto">
       {projects.map((item, idx) => {
         return (
@@ -66,5 +69,6 @@ export default function Projects() {
         );
       })}
     </div>
+    </>
   );
 }

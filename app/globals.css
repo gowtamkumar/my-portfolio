@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   background-image: url("../public/pattern-dark.20747baf.svg");
-}
+} */
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 .page-break {
