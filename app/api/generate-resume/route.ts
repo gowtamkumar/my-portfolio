@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 // The GET function is used for handling the API request
 export async function GET() {
   try {
-    const url = `http://localhost:3000/download-resume?print=true`; // Replace with your live URL in production
+    const url = `https://gowtamkumar.vercel.app/download-resume?print=true`; // Replace with your live URL in production
 
     console.log("Launching Puppeteer...");
     const browser = await puppeteer.launch({
