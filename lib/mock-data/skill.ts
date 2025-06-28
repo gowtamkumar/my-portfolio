@@ -16,10 +16,14 @@ export const skills = [
   },
   {
     name: "DevOps & Tools",
-    skills: ["Docker", "Git", "GitHub", "Postman", "Chrome dev tool", "VsCode"],
-  },
-  {
-    name: "Deployment",
-    skills: ["Nginx (Dockerized)", "VPS Server"],
+    skills: [
+      "Docker",
+      "Nginx",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Chrome dev tool",
+      "VsCode",
+    ],
   },
 ];
