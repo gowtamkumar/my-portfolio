@@ -2,7 +2,7 @@ import image from "/gowtamkumar.jpeg";
 export const projects = [
   {
     name: "Car Dealer",
-    img: '/car-dealer.png',
+    img: "/car-dealer.png",
     sourceCode: "https://github.com/gowtamkumar/car-dealer",
     url: "",
     description:
@@ -16,28 +16,28 @@ export const projects = [
       "PostgreSQL",
     ],
   },
-  {
-    name: "Project Heading 1",
-    img: '/gowtamkumar.jpeg',
-    sourceCode: "",
-    url: "",
-    description: "Trust Home Clener is cleaner service holder.",
-    tech: ["HTML", "CSS", "JavaScript", "Next.js", "Node.js", "PostgreSQL"],
-  },
-  {
-    name: "Project Heading 3",
-    img: '/gowtamkumar.jpeg',
-    sourceCode: "",
-    url: "",
-    description: "Trust Home Clener is cleaner service holder.",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "PostgreSQL",
-    ],
-  },
+  // {
+  //   name: "Project Heading 1",
+  //   img: '/gowtamkumar.jpeg',
+  //   sourceCode: "",
+  //   url: "",
+  //   description: "Trust Home Clener is cleaner service holder.",
+  //   tech: ["HTML", "CSS", "JavaScript", "Next.js", "Node.js", "PostgreSQL"],
+  // },
+  // {
+  //   name: "Project Heading 3",
+  //   img: '/gowtamkumar.jpeg',
+  //   sourceCode: "",
+  //   url: "",
+  //   description: "Trust Home Clener is cleaner service holder.",
+  //   tech: [
+  //     "HTML",
+  //     "CSS",
+  //     "JavaScript",
+  //     "React.js",
+  //     "Next.js",
+  //     "Node.js",
+  //     "PostgreSQL",
+  //   ],
+  // },
 ];
