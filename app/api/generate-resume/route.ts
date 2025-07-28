@@ -1,7 +1,7 @@
 // app/api/generate-resume/route.js
-import chromium from '@sparticuz/chromium';
-import puppeteer from 'puppeteer-core';
-import { NextResponse } from 'next/server';
+import chromium from "@sparticuz/chromium";
+import { NextResponse } from "next/server";
+import puppeteer from "puppeteer-core";
 
 export async function GET() {
   try {
@@ -16,10 +16,10 @@ export async function GET() {
 
     const page = await browser.newPage();
     console.log("Navigating to the page...");
-    await page.goto(url, { waitUntil: 'networkidle0' });
+    await page.goto(url, { waitUntil: "networkidle0" });
 
     const pdfBuffer = await page.pdf({
-      format: 'A4',
+      format: "A4",
       printBackground: true,
     });
 
@@ -29,16 +29,19 @@ export async function GET() {
     return new NextResponse(Buffer.from(pdfBuffer), {
       status: 200,
       headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="gowtamkumar(Javascript Developer).pdf"',
+        "Content-Type": "application/pdf",
+        "Content-Disposition":
+          'attachment; filename="gowtamkumar(Javascript Developer).pdf"',
       },
     });
-
   } catch (error) {
     console.error("Error generating PDF:", error);
-    return new NextResponse(JSON.stringify({ error: "Failed to generate PDF" }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return new NextResponse(
+      JSON.stringify({ error: "Failed to generate PDF" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
 }

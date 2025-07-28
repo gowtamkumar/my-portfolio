@@ -1,4 +1,3 @@
-// components/ProjectsSection.tsx
 export default function ProjectsSection() {
   return (
     <section className="my-2">

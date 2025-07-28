@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Experience() {
   return (
     <section className="my-2">
@@ -14,18 +12,35 @@ export default function Experience() {
         {/* <p className="text-sm text-gray-600">2021 – Present | On-site</p> */}
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Developed and maintained responsive websites for multiple clients
-            resulting in a 15% increase in website traffic.
-          </li>
-          <li>Developed websites using HTML, CSS, JavaScript.</li>
-          <li>
-            Implemented responsive design and cross-browser compatibility.
+            Developed and maintained scalable, responsive web applications using
+            React.js, Next.js, and JavaScript, leading to a 15% increase in
+            website traffic across multiple client projects.
           </li>
           <li>
-            Conducted performance optimization resulting in a 20% increase in
-            page load speed.
+            Built and integrated RESTful APIs and backend services using Node.js
+            and PostgreSQL, ensuring robust data management and performance.
           </li>
-          <li>Provided ongoing maintenance and support to clients.</li>
+          <li>
+            Implemented responsive design, ensuring seamless cross-browser and
+            cross-device compatibility for modern user experiences.
+          </li>
+          <li>
+            Conducted code and performance optimizations, reducing average page
+            load times by 20% through efficient component structuring and lazy
+            loading techniques.
+          </li>
+          <li>
+            Collaborated with UI/UX designers and QA engineers in an Agile
+            development environment, ensuring timely delivery and continuous
+            improvement.
+          </li>
+          <li>
+            Handled DevOps tasks, including Docker setup production
+          </li>
+          <li>
+            Provided technical support and ongoing maintenance to clients,
+            addressing bugs, performance issues, and feature updates.
+          </li>
         </ul>
       </div>
     </section>
