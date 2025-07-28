@@ -97,8 +97,8 @@ export default function About() {
                       turning ideas into reality through clean and efficient code.
                     </p>
                     <p>
-                      My expertise lies in the MERN stack (MongoDB, Express.js,
-                      React, Node.js), and I'm always excited to explore new
+                      My expertise lies in the JavaScript ecosystem (React, Node.js,
+                      Express.js) with a strong focus on PostgreSQL, and I'm always excited to explore new
                       technologies and stay ahead of the curve in the ever-evolving
                       world of web development.
                     </p>
