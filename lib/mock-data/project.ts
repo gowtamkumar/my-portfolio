@@ -1,4 +1,3 @@
-import image from "/gowtamkumar.jpeg";
 export const projects = [
   {
     name: "Car Dealer",
@@ -16,28 +15,24 @@ export const projects = [
       "PostgreSQL",
     ],
   },
-  // {
-  //   name: "Project Heading 1",
-  //   img: '/gowtamkumar.jpeg',
-  //   sourceCode: "",
-  //   url: "",
-  //   description: "Trust Home Clener is cleaner service holder.",
-  //   tech: ["HTML", "CSS", "JavaScript", "Next.js", "Node.js", "PostgreSQL"],
-  // },
-  // {
-  //   name: "Project Heading 3",
-  //   img: '/gowtamkumar.jpeg',
-  //   sourceCode: "",
-  //   url: "",
-  //   description: "Trust Home Clener is cleaner service holder.",
-  //   tech: [
-  //     "HTML",
-  //     "CSS",
-  //     "JavaScript",
-  //     "React.js",
-  //     "Next.js",
-  //     "Node.js",
-  //     "PostgreSQL",
-  //   ],
-  // },
+  {
+    name: "E-commerce Platform",
+    img: "/ecommerce.png",
+    sourceCode: "https://github.com/gowtamkumar/ecommerce-application",
+    url: "",
+    description:
+      "An advanced, scalable e-commerce platform built with a modern tech stack. It features a secure and seamless shopping experience with robust product and order management, an intuitive seller dashboard for tracking sales and profitability, and comprehensive systems for discounts, coupons, and promotions. The platform also includes a customer review system, detailed user profiles, real-time order tracking, and secure payment processing. The entire application is containerized with Docker and deployed behind an Nginx reverse proxy for high performance and reliability.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "Typeorm",
+      "PostgreSQL",
+      "Docker",
+      "Nginx",
+      "SSLCOMMERZ",
+    ],
+  },
 ];
