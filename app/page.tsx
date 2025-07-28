@@ -18,7 +18,7 @@ export default function Home() {
       >
         <div className="text-center z-10 -mt-20">
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
-            Hey 👋 I'm Gowtam,
+            Hey 👋 I am Gowtam,
           </h1>
           <div className="my-6 text-3xl md:text-5xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
             a{" "}
