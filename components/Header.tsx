@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { menu } from "@/lib/mock-data/menu";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { menu } from "@/lib/mock-data/menu";
 
 export default function Header() {
   const [darkLight, setDarkLight] = useState<string>("dark");
@@ -42,18 +42,18 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.url}
-                className={`relative flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`}>
+                className={`relative flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white'}`}>
                 {item.icon}
                 <span className="hidden sm:inline">{item.name}</span>
                 {isActive && (
-                  <div className="absolute inset-0 bg-white/10 rounded-full -z-10" />
+                  <div className="absolute inset-0 bg-gray-300/50 dark:bg-white/10 rounded-full -z-10" />
                 )}
               </Link>
             );
           })}
         </nav>
-        <button 
-          onClick={handleDarkLight} 
+        <button
+          onClick={handleDarkLight}
           className="relative flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-yellow-400 dark:text-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white">
           {darkLight === "dark" ? <MdOutlineDarkMode className="text-xl" /> : <MdOutlineLightMode className="text-xl" />}
         </button>

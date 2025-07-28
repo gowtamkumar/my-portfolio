@@ -43,7 +43,8 @@ export default function Resume() {
         <div className="max-w-4xl mx-auto flex justify-end py-2">
           <button
             onClick={downloadPDF}
-            className="bg-blue-600 text-white rounded-sm p-1"
+            // className="bg-blue-600 text-white rounded-sm p-1"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
           >
             Download PDF
           </button>
