@@ -32,9 +32,6 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
       <div className="relative flex items-center gap-8 px-3 py-2 bg-gray-800/50 dark:bg-gray-900/50 backdrop-blur-lg border border-white/10 rounded-full shadow-2xl">
-        <Link href="/" className="text-white text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 w-10 h-10 flex items-center justify-center rounded-full">
-          GK
-        </Link>
         <nav className="flex items-center">
           {menu.map((item) => {
             const isActive = pathname === item.url;
