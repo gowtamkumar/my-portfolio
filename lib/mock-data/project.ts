@@ -35,4 +35,24 @@ export const projects = [
       "SSLCOMMERZ",
     ],
   },
+  {
+    name: "Chat Application",
+    img: "/chat.png",
+    sourceCode: "https://github.com/gowtamkumar/chat-application",
+    url: "",
+    description:
+      "A real-time chat application designed for seamless communication. It supports one-to-one and group messaging with features like media sharing, message reactions, online/offline indicators, and real-time typing status. Built with a modern tech stack, the app ensures secure authentication, persistent conversations, and fast message delivery using WebSockets. The system is containerized with Docker and deployed behind an Nginx reverse proxy for scalability, reliability, and high performance.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Redux",
+      "Node.js",
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "Docker",
+      "Nginx",
+      "Socket.IO",
+    ],
+  },
 ];

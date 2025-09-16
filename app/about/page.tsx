@@ -4,7 +4,7 @@ import { skills } from "@/lib/mock-data/skill";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { FaCode, FaPaintBrush, FaServer } from "react-icons/fa";
+import { FaCode, FaServer } from "react-icons/fa";
 import image from "../../public/gowtamkumar.jpeg";
 
 // Reusable Card Component
@@ -25,7 +25,7 @@ export default function About() {
   const whatIDo = [
     { icon: <FaCode className="text-4xl text-blue-500" />, title: "Frontend Development", description: "Crafting beautiful and responsive user interfaces with modern technologies like React and Next.js." },
     { icon: <FaServer className="text-4xl text-green-500" />, title: "Backend Development", description: "Building robust and scalable server-side applications with Node.js, Express, and PostgreSQL." },
-    { icon: <FaPaintBrush className="text-4xl text-purple-500" />, title: "UI/UX Design", description: "Designing intuitive and engaging user experiences with a focus on clean aesthetics and usability." },
+    // { icon: <FaPaintBrush className="text-4xl text-purple-500" />, title: "UI/UX Design", description: "Designing intuitive and engaging user experiences with a focus on clean aesthetics and usability." },
   ];
 
   return (

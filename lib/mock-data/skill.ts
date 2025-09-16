@@ -12,7 +12,14 @@ export const skills = [
   },
   {
     name: "Back-End",
-    skills: ["Node.js", "Express.js", "Nest.js", "PostgreSQL", "Redis"],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Nest.js",
+      "PostgreSQL",
+      "Redis",
+      "WebSocket",
+    ],
   },
   {
     name: "DevOps & Tools",
