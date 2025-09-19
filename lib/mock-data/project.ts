@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     name: "Chat Application",
-    img: "/chat.png",
+    img: "/chat-application.png",
     sourceCode: "https://github.com/gowtamkumar/chat-application",
     url: "",
     description:
