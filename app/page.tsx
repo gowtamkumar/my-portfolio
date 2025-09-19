@@ -36,10 +36,10 @@ export default function Home() {
             I specialize in building exceptional, high-quality websites and applications.
             Currently exploring the world of AI and building cool things with it.
           </p>
-          <div className="flex justify-center gap-4 mb-10">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-10">
             <Link
               href="/projects"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className=" bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               View My Work
             </Link>
