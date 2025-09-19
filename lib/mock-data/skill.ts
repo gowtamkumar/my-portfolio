@@ -1,36 +1,41 @@
 export const skills = [
   {
-    name: "Front-End",
+    name: "Programming Languages",
+    skills: ["JavaScript", "TypeScript"],
+  },
+  {
+    name: "Web Development",
     skills: [
-      "JavaScript (ES6+)",
-      "TypeScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
       "React.js",
       "Next.js",
       "Redux",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    name: "Back-End",
-    skills: [
       "Node.js",
       "Express.js",
       "Nest.js",
-      "PostgreSQL",
-      "Redis",
       "WebSocket",
     ],
   },
   {
+    name: "Database Management",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+  },
+  {
     name: "DevOps & Tools",
     skills: [
-      "Docker",
-      "Nginx",
       "Git",
       "GitHub",
+      "Docker",
+      "Nginx",
       "Postman",
-      "Chrome dev tool",
-      "VsCode",
+      "Chrome Dev Tools",
+      "VSCode",
     ],
+  },
+  {
+    name: "Other",
+    skills: ["React Native"],
   },
 ];

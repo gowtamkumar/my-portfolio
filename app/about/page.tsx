@@ -24,7 +24,7 @@ const SkillBadge = ({ skill }: { skill: string }) => (
 export default function About() {
   const whatIDo = [
     { icon: <FaCode className="text-4xl text-blue-500" />, title: "Frontend Development", description: "Crafting beautiful and responsive user interfaces with modern technologies like React and Next.js." },
-    { icon: <FaServer className="text-4xl text-green-500" />, title: "Backend Development", description: "Building robust and scalable server-side applications with Node.js, Express, and PostgreSQL." },
+    { icon: <FaServer className="text-4xl text-green-500" />, title: "Backend Development", description: "Building robust and scalable server-side applications with Node.js, Express, Nest.js, and PostgreSQL, MongoDB" },
     // { icon: <FaPaintBrush className="text-4xl text-purple-500" />, title: "UI/UX Design", description: "Designing intuitive and engaging user experiences with a focus on clean aesthetics and usability." },
   ];
 
@@ -138,10 +138,10 @@ export default function About() {
                   <div className="space-y-8">
                     {skills.map((skillSet, idx) => (
                       <div key={idx}>
-                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                           {skillSet.name}
                         </h3>
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-1">
                           {skillSet.skills.map((skill, sIdx) => (
                             <SkillBadge key={sIdx} skill={skill} />
                           ))}
