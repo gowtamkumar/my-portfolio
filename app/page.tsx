@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <main
-        className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 pt-32"
+        className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 pt-52 md:pt-32"
       // style={{
       //   backgroundImage: "url(/pattern-dark.20747baf.svg)",
       //   backgroundSize: "cover",
