@@ -1,9 +1,7 @@
 import {
-  AiOutlineEdit,
   AiOutlineFundProjectionScreen,
-  AiOutlineGithub,
   AiOutlineHome,
-  AiOutlineProfile,
+  AiOutlineProfile
 } from "react-icons/ai";
 
 

@@ -23,7 +23,12 @@ export default function Home() {
           <div className="my-6 text-3xl md:text-5xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
             a{" "}
             <Typewriter
-              words={["JavaScript Developer", "Full-Stack Engineer", "Web Developer", "Problem Solver"]}
+              words={[
+                "JavaScript Developer",
+                "Full-Stack Engineer",
+                "Web Developer",
+                "Problem Solver",
+              ]}
               loop={Infinity}
               cursor
               cursorStyle="_"
@@ -33,8 +38,9 @@ export default function Home() {
             />
           </div>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-10">
-            I specialize in building exceptional, high-quality websites and applications.
-            Currently exploring the world of AI and building cool things with it.
+            I specialize in building exceptional, high-quality websites and
+            applications. Currently exploring the world of AI and building cool
+            things with it.
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-10">
             <Link
@@ -51,13 +57,28 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex justify-center space-x-6">
-            <Link href="https://github.com/gowtamkumar" target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 transform hover:scale-125">
+            <Link
+              href="https://github.com/gowtamkumar"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 transform hover:scale-125"
+            >
               <AiFillGithub className="text-4xl" />
             </Link>
-            <Link href="https://www.linkedin.com/in/gowtamkumar/" target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-300 transform hover:scale-125">
+            <Link
+              href="https://www.linkedin.com/in/gowtamkumar/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-300 transform hover:scale-125"
+            >
               <AiFillLinkedin className="text-4xl" />
             </Link>
-            <Link href="https://www.facebook.com/Gowtamkumar17" target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-600 transition-colors duration-300 transform hover:scale-125">
+            <Link
+              href="https://www.facebook.com/Gowtamkumar17"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-500 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-600 transition-colors duration-300 transform hover:scale-125"
+            >
               <AiFillFacebook className="text-4xl" />
             </Link>
           </div>

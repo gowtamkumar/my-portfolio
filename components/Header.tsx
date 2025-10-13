@@ -49,6 +49,12 @@ export default function Header() {
             );
           })}
         </nav>
+        <Link
+          href="/contact"
+          className="hidden sm:inline bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300 hover:scale-105 shadow-lg"
+        >
+          Hire me
+        </Link>
         <button
           onClick={handleDarkLight}
           className="relative flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-yellow-400 dark:text-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white">
