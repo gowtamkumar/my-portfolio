@@ -1,5 +1,6 @@
 "use client";
 import Header from "@/components/Header";
+import SocialMedia from "@/components/SocialMedia";
 import { useState } from "react";
 
 export default function Contact() {
@@ -47,8 +48,9 @@ export default function Contact() {
                 gowtampaul0@gmail.com
               </a>
             </p>
+            <SocialMedia />
           </div>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          {/* <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
@@ -95,7 +97,7 @@ export default function Contact() {
                 Send Message
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
       </main>
     </>
