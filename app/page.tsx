@@ -25,7 +25,7 @@ export default function Home() {
             <Typewriter
               words={[
                 "JavaScript Developer",
-                "Full-Stack Engineer",
+                "Full-Stack Developer",
                 "Web Developer",
                 "Problem Solver",
               ]}
