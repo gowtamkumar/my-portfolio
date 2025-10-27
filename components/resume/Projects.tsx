@@ -12,8 +12,7 @@ export default function ProjectsSection() {
         </address>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Developed a responsive, full-featured e-commerce platform (80%
-            complete)
+            Developed a responsive, full-featured e-commerce platform
           </li>
           <li>
             Implemented cart, checkout, order tracking, and payment integration.

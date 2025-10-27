@@ -1,10 +1,10 @@
 import Link from "next/link";
 import {
+  FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
-  FaPhone,
   FaMapMarkerAlt,
+  FaPhone,
 } from "react-icons/fa";
 
 export default function ResumeHeader() {
@@ -21,7 +21,7 @@ export default function ResumeHeader() {
         </div>
         <div className="flex items-center gap-2">
           <FaPhone />
-          <p>+880 1234-567890</p>
+          <p>+880 1767-163576</p>
         </div>
         <div className="flex items-center gap-2">
           <FaMapMarkerAlt />
