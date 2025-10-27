@@ -1,7 +1,6 @@
 
 export default function Strengths() {
   return (
-
     <section className="my-2">
       <h2 className="text-xl font-semibold border-b my-1">Strengths</h2>
       <ul className="list-disc ml-5 text-sm space-y-1">
@@ -10,6 +9,5 @@ export default function Strengths() {
         <li><strong>Problem Solving:</strong> Proactively identifies and solves complex technical problems, resulting in a reduction in project bugs.</li>
       </ul>
     </section>
-
   )
 }
