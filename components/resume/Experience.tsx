@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
     <section className="my-2">
-      <h2 className="text-xl font-semibold border-b my-1">EXPERIENCE</h2>
+      <h2 className="text-xl font-semibold border-b my-1">Experience</h2>
       <div>
         <h3 className="font-semibold text-lg">
           Web Developer — Semicolon It Solutions{" "}

@@ -1,7 +1,7 @@
 export default function ProjectsSection() {
   return (
     <section className="my-2">
-      <h2 className="text-xl font-semibold border-b my-1">PROJECTS</h2>
+      <h2 className="text-xl font-semibold border-b my-1">Projects</h2>
       <div>
         <h3 className="font-semibold text-lg">
           Full Stack Developer — E-commerce Application{" "}

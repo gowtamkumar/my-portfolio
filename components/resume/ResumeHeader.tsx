@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function ResumeHeader() {
@@ -11,9 +10,10 @@ export default function ResumeHeader() {
         <div className="flex items-center gap-2">
           <p>
             <Link href="mailto:gowtampaul0@gmail.com">
-              📧 gowtampaul0@gmail.com
+              gowtampaul0@gmail.com
             </Link>
           </p>
+
           <Link href="https://www.linkedin.com/in/gowtamkumar">
             <FaLinkedin />
           </Link>
@@ -21,7 +21,7 @@ export default function ResumeHeader() {
             <FaGithub />
           </Link>
         </div>
-        <p className="text-sm">📍 Jashore, Bangladesh</p>
+        <p className="text-sm">Jashore, Bangladesh</p>
       </div>
     </header>
   );

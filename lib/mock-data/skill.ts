@@ -1,7 +1,7 @@
 export const skills = [
   {
     name: "Programming Languages",
-    skills: ["JavaScript", "TypeScript", "Python"],
+    skills: ["JavaScript", "TypeScript"],
   },
   {
     name: "Web Development",
