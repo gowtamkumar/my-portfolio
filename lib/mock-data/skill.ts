@@ -6,8 +6,6 @@ export const skills = [
   {
     name: "Web Development",
     skills: [
-      "HTML",
-      "CSS",
       "Tailwind CSS",
       "React.js",
       "Next.js",
@@ -29,6 +27,8 @@ export const skills = [
       "GitHub",
       "Docker",
       "Nginx",
+      "Railway",
+      "Linux",
       "Postman",
       "Chrome Dev Tools",
       "VSCode",
