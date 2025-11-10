@@ -91,10 +91,10 @@ export default function Projects() {
       >
         <main className="container mx-auto px-4 pt-32 pb-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">
               My Creations
             </h1>
-            <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mt-4">
+            <p className="max-w-2xl mx-auto text-xl md:text-xl text-gray-700 dark:text-gray-300 mt-4">
               A collection of my favorite projects. Each one is a testament to
               my passion for building beautiful and functional web experiences.
             </p>

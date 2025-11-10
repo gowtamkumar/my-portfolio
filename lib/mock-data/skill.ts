@@ -21,6 +21,10 @@ export const skills = [
     skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
   },
   {
+    name: "Automation & Integrations",
+    skills: ["n8n", "AI Automation", "API Integrations", "Webhook Automation"],
+  },
+  {
     name: "DevOps & Tools",
     skills: [
       "Git",

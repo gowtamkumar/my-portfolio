@@ -17,10 +17,10 @@ export default function Home() {
       // }}
       >
         <div className="text-center z-10 -mt-20">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
             Hey 👋 I am Gowtam,
           </h1>
-          <div className="my-6 text-3xl md:text-5xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
+          <div className="my-6 text-xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
             a{" "}
             <Typewriter
               words={[
@@ -45,13 +45,13 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-center gap-4 mb-10">
             <Link
               href="/projects"
-              className=" bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className=" bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-2 px-5 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               View My Work
             </Link>
             <Link
               href="/about"
-              className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-bold py-2 px-5 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               About Me
             </Link>
