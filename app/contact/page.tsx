@@ -29,7 +29,7 @@ export default function Contact() {
       <main className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 pt-32">
         <div className="w-full max-w-2xl">
           <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
+            <h1 className="text-5xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
               Contact Me
             </h1>
             <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mt-4">

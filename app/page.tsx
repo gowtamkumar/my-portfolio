@@ -20,7 +20,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
             Hey 👋 I am Gowtam,
           </h1>
-          <div className="my-6 text-xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
+          <div className=" text-xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400 h-20 md:h-24">
             a{" "}
             <Typewriter
               words={[
@@ -56,7 +56,7 @@ export default function Home() {
               About Me
             </Link>
           </div>
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-2">
             <Link
               href="https://github.com/gowtamkumar"
               target="_blank"

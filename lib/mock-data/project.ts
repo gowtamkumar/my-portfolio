@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     name: "E-commerce Platform",
-    img: "/ecommerce.png",
+    img: "/ecommerce.svg",
     sourceCode: "https://github.com/gowtamkumar/ecommerce-application",
     url: "",
     description:
