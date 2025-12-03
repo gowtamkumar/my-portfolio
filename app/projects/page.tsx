@@ -3,60 +3,41 @@ import Header from "@/components/Header";
 import { projects } from "@/lib/mock-data/project";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), index * 200);
-    return () => clearTimeout(timer);
-  }, [index]);
-
   return (
     <div
-      className={`group relative rounded-2xl overflow-hidden shadow-lg transform transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-36"
-        }`}
+      className="group relative bg-white dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col h-full"
     >
-      <div className="absolute inset-0 z-0">
+      {/* Image Container */}
+      <div className="relative h-56 overflow-hidden">
         <Image
           src={project.img}
           alt={project.name}
           layout="fill"
           objectFit="cover"
-          className="transition-transform duration-700 ease-in-out group-hover:scale-110"
+          className="transition-transform duration-500 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
-      <div className="relative z-20 flex flex-col justify-end h-full p-6 text-white">
-        <h3 className="text-2xl font-bold mb-2 transition-transform duration-500 ease-in-out group-hover:-translate-y-52">
-          {project.name}
-        </h3>
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out absolute bottom-6 left-6 right-6">
-          <p className="text-gray-300 mb-4 text-sm h-24 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
-            {project.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {project.tech.map((tech: string, idx: number) => (
-              <span
-                key={idx}
-                className="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-          <div className="flex justify-end gap-4">
+
+      {/* Content Container */}
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            {project.name}
+          </h3>
+          <div className="flex gap-3">
             {project.sourceCode && (
               <Link
                 href={project.sourceCode}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 transform hover:scale-105"
+                className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                title="Source Code"
               >
                 <FiGithub className="text-xl" />
-                <span>Source</span>
               </Link>
             )}
             {project.url && (
@@ -64,13 +45,34 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 transform hover:scale-105"
+                className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                title="Live Preview"
               >
                 <FiExternalLink className="text-xl" />
-                <span>Preview</span>
               </Link>
             )}
           </div>
+        </div>
+
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
+          {project.description}
+        </p>
+
+        {/* Tech Stack */}
+        <div className="flex flex-wrap gap-2 mt-auto">
+          {project.tech.slice(0, 5).map((tech: string, idx: number) => (
+            <span
+              key={idx}
+              className="px-3 py-1 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600"
+            >
+              {tech}
+            </span>
+          ))}
+          {project.tech.length > 5 && (
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-700/50 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600">
+              +{project.tech.length - 5}
+            </span>
+          )}
         </div>
       </div>
     </div>
@@ -81,25 +83,20 @@ export default function Projects() {
   return (
     <>
       <Header />
-      <div
-        className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans"
-        style={{
-          backgroundImage: "url(/pattern-dark.20747baf.svg)",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <main className="container mx-auto px-4 pt-32 pb-16">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">
-              My Creations
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <main className="container mx-auto px-4 pt-32 pb-20">
+          {/* Header Section */}
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+              Featured Projects
             </h1>
-            <p className="max-w-2xl mx-auto text-xl md:text-xl text-gray-700 dark:text-gray-300 mt-4">
-              A collection of my favorite projects. Each one is a testament to
-              my passion for building beautiful and functional web experiences.
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              Explore a selection of my recent work, ranging from web applications to complex system architectures.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 h-[500px]">
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
               <ProjectCard key={idx} project={project} index={idx} />
             ))}

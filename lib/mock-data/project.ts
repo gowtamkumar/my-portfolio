@@ -55,4 +55,35 @@ export const projects = [
       "Socket.IO",
     ],
   },
+  {
+    name: "E-commerce Leading Page",
+    img: "/ecommerce-leanding.png",
+    sourceCode: "https://github.com/gowtamkumar",
+    url: "",
+    description: `
+A modern, full-featured E-commerce Leading Page built with **Next.js**, **MongoDB**, and **Tailwind CSS**, designed for high performance and seamless shopping experiences.
+
+**Key Features:**
+- **Product & Media Management:** Add, edit, and showcase products with images and videos.
+- **Global Currency Support:** Easily configure currency for international sales.
+- **Flexible Payment Options:** Accept **Cash on Delivery** and **SSLCommerz** payments with secure processing.
+- **Order Management & Tracking:** Real-time order tracking, order history, and detailed payment records.
+- **Customer Experience:** Intuitive checkout, secure payment, and smooth navigation.
+- **Scalable & Reliable:** Containerized with Docker and optimized for production behind Nginx.
+  
+This project demonstrates expertise in building a professional, secure, and maintainable e-commerce platform ready for real-world deployment.
+  `,
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Nginx",
+      "SSLCOMMERZ",
+      "Payment & Order Management",
+      "Media Management",
+      "Currency Management",
+    ],
+  },
 ];
