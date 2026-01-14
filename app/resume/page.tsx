@@ -1,64 +1,61 @@
 "use client";
 import Header from "@/components/Header";
-import Achievement from "@/components/resume/Achievement";
 import Education from "@/components/resume/Education";
 import Experience from "@/components/resume/Experience";
 import ProjectsSection from "@/components/resume/Projects";
 import ResumeHeader from "@/components/resume/ResumeHeader";
 import Skill from "@/components/resume/Skill";
-import Strengths from "@/components/resume/Strengths";
 import Summary from "@/components/resume/Summary";
-import { useSearchParams } from "next/navigation";
+
+import html2pdf from "html2pdf.js";
+import { useRef } from "react";
 
 export default function Resume() {
-  const searchParams = useSearchParams();
-  const isPrint = searchParams.get("print") === "true";
+  const contentRef = useRef(null);
 
-  const downloadPDF = async () => {
-    try {
-      const res = await fetch("/api/generate-resume");
+  const handleDownloadPdf = () => {
+    const element = contentRef.current;
+    if (!element) return;
 
-      if (!res.ok) {
-        alert("Failed to generate PDF.");
-        return;
-      }
+    // Configuration options for html2pdf
+    const options = {
+      margin: 1,
+      filename: "downloaded-document.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 3 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    };
 
-      const blob = await res.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "gowtamkumar(Javascript Developer).pdf";
-      a.click();
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Error fetching PDF:", error);
-      alert("Failed to download PDF.");
-    }
+    html2pdf()
+      .from(element)
+      .set(options as any)
+      .save();
   };
 
   return (
     <div className="pt-32">
       <Header />
-      {!isPrint && (
-        <div className="max-w-4xl mx-auto flex justify-end py-2">
-          <button
-            onClick={downloadPDF}
-            // className="bg-blue-600 text-white rounded-sm p-1"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            Download PDF
-          </button>
-        </div>
-      )}
+      <div className="max-w-4xl mx-auto flex justify-end py-2">
+        <button
+          onClick={handleDownloadPdf}
+          // className="bg-blue-600 text-white rounded-sm p-1"
+          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-1 px-3 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+        >
+          Download PDF
+        </button>
+      </div>
 
-      <div className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800">
+      <div
+        className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800"
+        ref={contentRef}
+      >
         <ResumeHeader />
         <Summary />
-        <ProjectsSection />
-        <Experience />
         <Skill />
-        <Strengths />
-        <Achievement />
+        <Experience />
+        <ProjectsSection />
+        {/* <Strengths /> */}
+        {/* <Achievement /> */}
         <Education />
       </div>
     </div>

@@ -1,3 +1,11 @@
+export const coreSkills = [
+  "JavaScript, TypeScript",
+  "Node.js, NestJS, Express",
+  "PostgreSQL, Redis, MongoDB",
+  "React, Next.js",
+  "Docker, NGINX, Linux",
+];
+
 export const skills = [
   {
     name: "Programming Languages",

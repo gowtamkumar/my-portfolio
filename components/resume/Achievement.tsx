@@ -6,7 +6,7 @@ export default function Achievement() {
       <ul className="list-disc ml-5 text-sm space-y-1">
         <li>
           <strong>Developing a High-Traffic E-commerce Website:</strong>{" "}
-          frontend that can support over 1700 users per second.
+          Backend that can support over 1700 users per second.
         </li>
         <li>
           <strong>Mentoring Junior Developers:</strong> Provided guidance and

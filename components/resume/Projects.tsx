@@ -28,7 +28,6 @@ export default function ProjectsSection() {
       <div>
         <h3 className="font-semibold text-lg">
           Full Stack Developer — Inventory{" "}
-          {/* <small className="text-sm text-gray-600">(2023 – 2024)</small> */}
         </h3>
         <address className="text-sm">
           Tech Stack: React.js, Nest.js, PostgreSQL
