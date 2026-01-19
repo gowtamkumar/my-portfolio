@@ -46,7 +46,7 @@ export default function Resume() {
       </div>
 
       <div
-        className="max-w-4xl mx-auto bg-white p-8 shadow-lg font-sans text-gray-800"
+        className="max-w-4xl mx-auto bg-white p-6 shadow-lg font-sans text-gray-800"
         ref={contentRef}
       >
         <ResumeHeader />
