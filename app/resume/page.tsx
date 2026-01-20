@@ -4,7 +4,7 @@ import Education from "@/components/resume/Education";
 import Experience from "@/components/resume/Experience";
 import ProjectsSection from "@/components/resume/Projects";
 
-import { backendSkills, backendSummary, coreSkills, frontendSkills, frontendSummary, fullstackSummary } from "@/lib/mock-data/skill";
+import { backendSkillsCategories, backendSummary, frontendSkillsCategories, frontendSummary, fullstackSkillsCategories, fullstackSummary } from "@/lib/mock-data/skill";
 import html2pdf from "html2pdf.js";
 import { useRef, useState } from "react";
 
@@ -50,10 +50,10 @@ export default function Resume() {
     frontend: frontendSummary,
   };
 
-  const skillsMap: Record<ResumeType, string[]> = {
-    fullstack: coreSkills,
-    backend: backendSkills,
-    frontend: frontendSkills,
+  const skillsMap = {
+    fullstack: fullstackSkillsCategories,
+    backend: backendSkillsCategories,
+    frontend: frontendSkillsCategories,
   };
 
   return (
@@ -127,9 +127,14 @@ export default function Resume() {
         {/* Skills */}
         <section className="my-2">
           <h2 className="text-xl font-semibold border-b my-1">Skills</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            {skillsMap[activeTab].join(" • ")}
-          </p>
+          <div className="text-sm text-gray-700 leading-relaxed space-y-1">
+            {skillsMap[activeTab].map((skill, idx) => (
+              <div key={idx} className="flex">
+                <span className="font-bold w-28 shrink-0">{skill.category}:</span>
+                <span>{skill.items}</span>
+              </div>
+            ))}
+          </div>
         </section>
 
         <Experience />

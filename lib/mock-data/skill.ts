@@ -24,6 +24,32 @@ export const frontendSkills = [
   "Git, Webpack, Vite, Performance Optimization",
 ];
 
+// Categorized skills for better resume layout
+export const fullstackSkillsCategories = [
+  { category: "Languages", items: "JavaScript, TypeScript" },
+  { category: "Backend", items: "Node.js, NestJS, Express.js, REST APIs" },
+  { category: "Frontend", items: "React.js, Next.js, Tailwind CSS" },
+  { category: "Database", items: "PostgreSQL, MongoDB, Redis" },
+  { category: "DevOps", items: "Docker, NGINX, Linux, Git" },
+];
+
+export const backendSkillsCategories = [
+  { category: "Languages", items: "TypeScript, JavaScript" },
+  { category: "Frameworks", items: "Node.js, NestJS, Express.js" },
+  { category: "Database", items: "PostgreSQL, MySQL, MongoDB, Redis" },
+  { category: "APIs", items: "REST" },
+  { category: "DevOps", items: "Docker, NGINX, Linux" },
+  { category: "Security", items: "JWT, OAuth, Authentication" },
+];
+
+export const frontendSkillsCategories = [
+  { category: "Languages", items: "TypeScript, JavaScript, HTML5, CSS3" },
+  { category: "Frameworks", items: "React.js, Next.js" },
+  { category: "Styling", items: "Tailwind CSS, Responsive Design" },
+  { category: "State", items: "Redux, Context API" },
+  { category: "Tools", items: "Git, Webpack, Vite, npm" },
+];
+
 export const backendSummary = "Backend Developer with 4+ years of experience building scalable APIs and microservices using Node.js, NestJS, PostgreSQL, and Docker. Skilled in database architecture, authentication systems, real-time applications, and production deployment.";
 
 export const fullstackSummary = "Full Stack JavaScript Engineer with 4+ years of experience building scalable SaaS and eCommerce platforms using Node.js, NestJS, PostgreSQL, Docker, and React. Experienced in backend architecture, API development, authentication systems, and production deployment.";
