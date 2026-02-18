@@ -30,7 +30,7 @@ export const fullstackSkillsCategories = [
   { category: "Backend", items: "Node.js, NestJS, Express.js, REST APIs" },
   { category: "Frontend", items: "React.js, Next.js, Tailwind CSS" },
   { category: "Database", items: "PostgreSQL, MongoDB, Redis" },
-  { category: "DevOps", items: "Docker, NGINX, Linux, Git" },
+  { category: "DevOps", items: "Docker, NGINX, Linux, Git, CI/CD" },
 ];
 
 export const backendSkillsCategories = [
@@ -38,7 +38,7 @@ export const backendSkillsCategories = [
   { category: "Frameworks", items: "Node.js, NestJS, Express.js" },
   { category: "Database", items: "PostgreSQL, MySQL, MongoDB, Redis" },
   { category: "APIs", items: "REST" },
-  { category: "DevOps", items: "Docker, NGINX, Linux" },
+  { category: "DevOps", items: "Docker, NGINX, Linux, CI/CD" },
   { category: "Security", items: "JWT, OAuth, Authentication" },
 ];
 
@@ -50,11 +50,14 @@ export const frontendSkillsCategories = [
   { category: "Tools", items: "Git, Webpack, Vite, npm" },
 ];
 
-export const backendSummary = "Backend Developer with 4+ years of experience building scalable APIs and microservices using Node.js, NestJS, PostgreSQL, and Docker. Skilled in database architecture, authentication systems, real-time applications, and production deployment.";
+export const backendSummary =
+  "Backend Developer with 4+ years of experience building scalable APIs and microservices using Node.js, NestJS, PostgreSQL, and Docker. Skilled in database architecture, authentication systems, real-time applications, and production deployment.";
 
-export const fullstackSummary = "Full Stack JavaScript Engineer with 4+ years of experience building scalable SaaS and eCommerce platforms using Node.js, NestJS, PostgreSQL, Docker, and React. Experienced in backend architecture, API development, authentication systems, and production deployment.";
+export const fullstackSummary =
+  "Full Stack JavaScript Engineer with 4+ years of experience building scalable SaaS and eCommerce platforms using Node.js, NestJS, PostgreSQL, Docker, and React. Experienced in backend architecture, API development, authentication systems, and production deployment.";
 
-export const frontendSummary = "Frontend Developer with 4+ years of experience building responsive, user-friendly web applications using React.js, Next.js, and TypeScript. Skilled in modern CSS frameworks, state management, performance optimization, and creating seamless user experiences.";
+export const frontendSummary =
+  "Frontend Developer with 4+ years of experience building responsive, user-friendly web applications using React.js, Next.js, and TypeScript. Skilled in modern CSS frameworks, state management, performance optimization, and creating seamless user experiences.";
 
 export const skills = [
   {
@@ -101,4 +104,3 @@ export const skills = [
     skills: ["React Native"],
   },
 ];
-
