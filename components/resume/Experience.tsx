@@ -11,23 +11,23 @@ export default function Experience() {
         </h3>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Developed and maintained scalable, responsive web applications
+            Developed and maintained scalable web applications using Node.js, NestJS, and PostgreSQL
           </li>
           <li>
-            Built and integrated RESTful APIs
+            Designed and implemented RESTful APIs for core business features, improving system modularity and performance
           </li>
           <li>
-            Implemented responsive design
+            Built and optimized backend services to ensure high performance and reliability in production environments
           </li>
           <li>
-            Conducted code optimizations
+            Implemented authentication and authorization systems using JWT and secure API practices
           </li>
 
           <li>
-            Handled DevOps tasks, including Docker setup production
+            Containerized applications using Docker and managed deployments with NGINX on Linux servers
           </li>
           <li>
-            Maintained production applications, fixing bugs, improving performance, and delivering feature updates
+            Maintained and enhanced production systems by fixing bugs, improving performance, and delivering new features
           </li>
         </ul>
       </div>

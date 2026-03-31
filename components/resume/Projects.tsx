@@ -4,24 +4,23 @@ export default function ProjectsSection() {
       <h2 className="text-xl font-semibold border-b my-1">Projects</h2>
       <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — E-commerce Application{" "}
+          Full Stack Developer — Saas E-commerce Application
           {/* <small className="text-sm text-gray-600">(2024 – Present)</small> */}
         </h3>
         <address className="text-sm">
-          Tech Stack: Next.js, Express.js, PostgreSQL, SSLCOMMERZ
+          Tech Stack: Next.js, Nest.js, PostgreSQL, SSLCOMMERZ
         </address>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Developed a responsive, full-featured e-commerce platform
+            Built a scalable, full-featured e-commerce platform with modern responsive UI using Next.js and Nest.js.
           </li>
           <li>
-            Implemented cart, checkout, order tracking, and payment integration.
+            Developed RESTful APIs with Nest.js for cart, checkout, order management, and user workflows
           </li>
           <li>
-            Designed dynamic discount modules (global, category, brand-level
-            promotions).
+            Integrated secure payment gateway (SSLCOMMERZ) supporting real-time transaction processing
           </li>
-          <li>Optimized the UI for performance and scalability.</li>
+          <li>Designed flexible discount engine supporting global, category, and brand-level promotions</li>
         </ul>
       </div>
 
@@ -34,14 +33,12 @@ export default function ProjectsSection() {
         </address>
         <ul className="list-disc ml-5 text-sm space-y-1">
           <li>
-            Developed a full-stack Inventory application using React.js,
-            Nest.js, and PostgreSQL.
+            Developed a full-stack inventory management system using React.js (frontend) and NestJS (backend)
           </li>
           <li>
-            Implemented core functionalities including product management, Sale,
-            Purchase, Stock, Loss & Profit,etc.
+            Designed modules for product management, sales, purchases, stock tracking, and profit/loss analysis
           </li>
-          {/* <li>Integrated SSLCOMMERZ payment gateway for secure transactions.</li> */}
+          <li>Implemented REST APIs with NestJS following modular architecture and clean code practices</li>
           <li>
             Project is 100% complete with responsive UI and optimized
             performance.

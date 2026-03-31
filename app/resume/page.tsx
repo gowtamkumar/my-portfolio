@@ -5,7 +5,6 @@ import Experience from "@/components/resume/Experience";
 import ProjectsSection from "@/components/resume/Projects";
 
 import { backendSkillsCategories, backendSummary, frontendSkillsCategories, frontendSummary, fullstackSkillsCategories, fullstackSummary } from "@/lib/mock-data/skill";
-import html2pdf from "html2pdf.js";
 import { useRef, useState } from "react";
 
 type ResumeType = "fullstack" | "backend" | "frontend";
@@ -14,9 +13,11 @@ export default function Resume() {
   const contentRef = useRef(null);
   const [activeTab, setActiveTab] = useState<ResumeType>("fullstack");
 
-  const handleDownloadPdf = () => {
+  const handleDownloadPdf = async () => {
     const element = contentRef.current;
     if (!element) return;
+
+    const html2pdf = (await import("html2pdf.js")).default;
 
     const filenames: Record<ResumeType, string> = {
       fullstack: "Gowtam_Kumar_FullStack_Developer.pdf",
@@ -110,10 +111,10 @@ export default function Resume() {
           <p className="text-lg font-semibold text-gray-700">{jobTitles[activeTab]}</p>
           <div className="text-sm text-gray-600 mt-2">
             <p>
-              <strong>Email:</strong> gowtampaul0@gmail.com | <strong>Phone:</strong> +880 1767-163576
+              <strong>📧</strong> gowtampaul0@gmail.com | <strong>📞</strong> +880 1767-163576
             </p>
             <p>
-              <strong>LinkedIn:</strong> linkedin.com/in/gowtamkumar | <strong>GitHub:</strong> github.com/gowtamkumar
+              <strong>🔗</strong> linkedin.com/in/gowtamkumar |  github.com/gowtamkumar
             </p>
           </div>
         </header>
@@ -130,8 +131,8 @@ export default function Resume() {
           <div className="text-sm text-gray-700 leading-relaxed space-y-1">
             {skillsMap[activeTab].map((skill, idx) => (
               <div key={idx} className="flex">
-                <span className="font-bold w-28 shrink-0">{skill.category}:</span>
-                <span>{skill.items}</span>
+                <span className="font-bold w-28 shrink-0">{skill.category}</span>
+                <span>: {skill.items}</span>
               </div>
             ))}
           </div>
