@@ -4,7 +4,7 @@ export default function ProjectsSection() {
       <h2 className="text-xl font-semibold border-b my-1">Projects</h2>
       <div>
         <h3 className="font-semibold text-lg">
-          Full Stack Developer — Saas E-commerce Application
+          Full Stack Developer — E-commerce Application
           {/* <small className="text-sm text-gray-600">(2024 – Present)</small> */}
         </h3>
         <address className="text-sm">
