@@ -18,7 +18,7 @@ export default function Contact() {
       </h1>
       <p className="mt-5 max-w-xl text-lg text-[var(--muted)]">
         {site.availability}. Freelance systems, full-stack product work, and
-        n8n / AI automation.
+        AI automation.
       </p>
 
       <div className="mt-12 grid gap-4 md:grid-cols-2">

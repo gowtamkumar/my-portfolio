@@ -31,7 +31,7 @@ const principles = [
   {
     index: "03",
     title: "Automation that ships",
-    body: "n8n, MCP, Ollama, webhooks, and API glue for ops that should not be manual. The assistant on this site is the same idea: useful, local, tied to real content.",
+    body: "MCP, Ollama, webhooks, and API glue for ops that should not be manual. The assistant on this site is the same idea: useful, local, tied to real content.",
   },
 ];
 
@@ -62,7 +62,7 @@ const aboutSkills = [
   { name: "Frontend", items: ["Next.js", "React", "Tailwind CSS", "Redux"] },
   { name: "Data", items: ["PostgreSQL", "Row-Level Security", "Redis"] },
   { name: "DevOps", items: ["Docker", "Docker Compose", "NGINX", "Caddy", "CI/CD", "GitHub Actions", "Linux", "Git"] },
-  { name: "Automation", items: ["n8n", "MCP", "Ollama", "Webhooks", "API integrations"] },
+  { name: "Automation", items: ["MCP", "Ollama", "Webhooks", "API integrations"] },
 ];
 
 export default function About() {
@@ -262,8 +262,7 @@ export default function About() {
             </p>
             <h3 className="mt-2 font-display text-3xl">Need a system that holds?</h3>
             <p className="mt-3 max-w-xl text-[var(--muted)]">
-              Freelance or full-time. Product engineering, tenant-safe backends,
-              and n8n automation.
+              Freelance or full-time. Product engineering and tenant-safe backends.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a

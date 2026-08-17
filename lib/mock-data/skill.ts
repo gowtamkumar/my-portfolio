@@ -88,7 +88,7 @@ export const skills = [
   },
   {
     name: "Automation & Integrations",
-    skills: ["n8n", "MCP", "Ollama", "AI Automation", "API Integrations", "Webhook Automation"],
+    skills: ["MCP", "Ollama", "AI Automation", "API Integrations", "Webhook Automation"],
   },
   {
     name: "DevOps & Tools",

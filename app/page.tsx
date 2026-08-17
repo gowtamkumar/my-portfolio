@@ -11,7 +11,6 @@ const stack = [
   "PostgreSQL",
   "Prisma",
   "TypeORM",
-  "N8N",
   "MCP",
   "Ollama",
   "Redis",

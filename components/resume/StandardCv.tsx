@@ -39,11 +39,12 @@ export default function StandardCv() {
 
       <section className="mt-3.5">
         <SectionTitle>Technical Skills</SectionTitle>
-        <div className="space-y-0.5 text-[11.5px] leading-[1.45] text-neutral-800">
+        <div className="cv-skills">
           {cv.skills.map((row) => (
-            <p key={row.category}>
-              <span className="font-semibold">{row.category}:</span> {row.items}
-            </p>
+            <div key={row.category} className="cv-skill-row">
+              <span className="cv-skill-label">{row.category}</span>
+              <span>{row.items}</span>
+            </div>
           ))}
         </div>
       </section>

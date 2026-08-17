@@ -37,13 +37,12 @@ const knowledge: Knowledge[] = [
       "docker",
     ],
     answer:
-      "Core stack: TypeScript, Node.js, NestJS, Next.js, PostgreSQL (including Row-Level Security), Prisma, TypeORM, Redis, Docker, Docker Compose, NGINX, Caddy, CI/CD, GitHub Actions, and Linux. Also React, JWT/RBAC, n8n, MCP, and Ollama.",
+      "Core stack: TypeScript, Node.js, NestJS, Next.js, PostgreSQL (including Row-Level Security), Prisma, TypeORM, Redis, Docker, Docker Compose, NGINX, Caddy, CI/CD, GitHub Actions, and Linux. Also React, JWT/RBAC, MCP, and Ollama.",
   },
   {
     id: "ai",
     keywords: [
       "ai",
-      "n8n",
       "mcp",
       "ollama",
       "automat",
@@ -54,7 +53,7 @@ const knowledge: Knowledge[] = [
       "intelligent",
     ],
     answer:
-      "I build AI automation with n8n, MCP, and Ollama — local models, tool servers, API integrations, and webhook pipelines. I am currently exploring applied AI on top of production NestJS and Next.js systems.",
+      "I build AI automation with MCP and Ollama — local models, tool servers, API integrations, and webhook pipelines. I am currently exploring applied AI on top of production NestJS and Next.js systems.",
   },
   {
     id: "experience",
@@ -95,7 +94,7 @@ const knowledge: Knowledge[] = [
       "demo",
     ],
     answer:
-      "Featured work: Server Monitoring Tools, FileStore, eCommerce Multi-Store SaaS ERP, an e-commerce platform, and a real-time chat app. Open the Work page for details.",
+      "Featured work: Server Monitoring Tools, File Store, eCommerce Multi-Store SaaS ERP, an e-commerce platform, and a real-time chat app. Open the Work page for details.",
   },
   {
     id: "backend",
@@ -127,7 +126,7 @@ const knowledge: Knowledge[] = [
     id: "resume",
     keywords: ["resume", "cv", "print"],
     answer:
-      "The Resume page has a standard A4 CV. Open it and use Print / Save PDF. In the dialog, choose Save as PDF and turn off headers and footers.",
+      "The Resume page has a standard A4 CV. Open it and use Print / Save PDF.",
   },
 ];
 
@@ -140,7 +139,7 @@ export function answerAssistant(input: string): string {
   }
 
   if (greetings.some((g) => text === g || text.startsWith(`${g} `))) {
-    return `Hey — I’m the on-site assistant for ${site.name}. I can talk about his stack, AI/n8n work, projects, or how to get in touch.`;
+    return `Hey — I’m the on-site assistant for ${site.name}. I can talk about his stack, AI work, projects, or how to get in touch.`;
   }
 
   const scored = knowledge
@@ -154,7 +153,7 @@ export function answerAssistant(input: string): string {
     .sort((a, b) => b.score - a.score);
 
   if (scored[0].score === 0) {
-    return `I only know what’s on this site. Try “What is your stack?”, “Tell me about n8n”, or “How do I hire you?” — or email ${site.email}.`;
+    return `I only know what’s on this site. Try “What is your stack?”, “Tell me about Ollama”, or “How do I hire you?” — or email ${site.email}.`;
   }
 
   return scored[0].item.answer;

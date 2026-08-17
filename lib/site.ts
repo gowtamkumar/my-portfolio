@@ -4,7 +4,7 @@ export const site = {
   role: "Full Stack Engineer",
   headline: "I build intelligent web systems.",
   summary:
-    "Full Stack Engineer with 5+ years shipping multi-tenant SaaS and e-commerce. Currently leading Cayura at Astitva Lab Pty Ltd — NestJS, Next.js, PostgreSQL, Prisma, and Docker — plus n8n automation in production.",
+    "Full Stack Engineer with 5+ years shipping multi-tenant SaaS and e-commerce. Currently leading Cayura at Astitva Lab Pty Ltd — NestJS, Next.js, PostgreSQL, Prisma, and Docker.",
   years: "5+",
   location: "Bangladesh",
   availability: "Open for freelance & full-time",
