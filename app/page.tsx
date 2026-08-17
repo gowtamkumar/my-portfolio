@@ -1,3 +1,4 @@
+import { AssistantPanel } from "@/components/AiAssistant";
 import RotatingText from "@/components/RotatingText";
 import { projects } from "@/lib/mock-data/project";
 import { site } from "@/lib/site";
@@ -54,10 +55,10 @@ export default function Home() {
             View systems
           </Link>
           <Link
-            href="/about"
+            href="#assistant"
             className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold hover:border-signal/40 hover:text-signal"
           >
-            About me
+            Ask GK assistant
           </Link>
           <a
             href={`mailto:${site.email}`}
@@ -66,9 +67,6 @@ export default function Home() {
             {site.email}
           </a>
         </div>
-        <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
-          Or open the spark in the corner — on-site AI trained on this portfolio.
-        </p>
 
         <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
           <div>
@@ -102,6 +100,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <AssistantPanel />
 
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-8">
         <div className="mb-10 flex items-end justify-between gap-4">

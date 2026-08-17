@@ -62,8 +62,11 @@ export default function Contact() {
       </div>
 
       <p className="mt-10 font-mono text-xs text-[var(--muted)]">
-        Prefer the assistant? Use the spark control in the corner — it answers
-        from this site, then send email when you are ready.
+        Prefer the assistant?{" "}
+        <a href="/#assistant" className="text-signal hover:underline">
+          Ask GK assistant on the home page
+        </a>
+        , then email when you are ready.
       </p>
     </main>
   );
