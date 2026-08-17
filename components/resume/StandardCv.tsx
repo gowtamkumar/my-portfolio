@@ -1,4 +1,4 @@
-import { resumeDocuments, resumeMeta, type ResumeTrack } from "@/lib/resume-data";
+import { resumeDocument, resumeMeta } from "@/lib/resume-data";
 
 function SectionTitle({ children }: { children: string }) {
   return (
@@ -8,12 +8,12 @@ function SectionTitle({ children }: { children: string }) {
   );
 }
 
-export default function StandardCv({ track }: { track: ResumeTrack }) {
-  const cv = resumeDocuments[track];
+export default function StandardCv() {
+  const cv = resumeDocument;
 
   return (
     <article className="cv-sheet bg-white text-neutral-900">
-      <header className="text-center">
+      <div className="text-center">
         <h1 className="text-[26px] font-bold leading-none tracking-wide text-neutral-900">
           {resumeMeta.name.toUpperCase()}
         </h1>
@@ -30,7 +30,7 @@ export default function StandardCv({ track }: { track: ResumeTrack }) {
           <span className="mx-1.5 text-neutral-400">|</span>
           {resumeMeta.github}
         </p>
-      </header>
+      </div>
 
       <section className="mt-4">
         <SectionTitle>Professional Summary</SectionTitle>
@@ -51,7 +51,7 @@ export default function StandardCv({ track }: { track: ResumeTrack }) {
       <section className="mt-3.5">
         <SectionTitle>Professional Experience</SectionTitle>
         {cv.experience.map((job) => (
-          <div key={`${job.company}-${job.title}`} className="mt-2 first:mt-0">
+          <div key={`${job.company}-${job.title}`} className="cv-block mt-2 first:mt-0">
             <div className="flex flex-wrap items-baseline justify-between gap-x-3">
               <p className="text-[12.5px] font-bold text-neutral-900">
                 {job.title}
@@ -77,7 +77,7 @@ export default function StandardCv({ track }: { track: ResumeTrack }) {
         <SectionTitle>Projects</SectionTitle>
         <div className="space-y-2.5">
           {cv.projects.map((project) => (
-            <div key={project.name}>
+            <div key={project.name} className="cv-block">
               <p className="text-[12.5px] font-bold text-neutral-900">{project.name}</p>
               <p className="text-[11px] italic text-neutral-600">{project.stack}</p>
               <ul className="mt-0.5 list-disc space-y-0.5 pl-4 text-[11.5px] leading-[1.45] text-neutral-800">

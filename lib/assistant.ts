@@ -82,18 +82,20 @@ const knowledge: Knowledge[] = [
       "portfolio",
       "ecommerce",
       "chat",
-      "car",
       "monitor",
       "vps",
       "storage",
       "file",
       "minio",
+      "erp",
+      "saas",
+      "multi-store",
       "work",
       "built",
       "demo",
     ],
     answer:
-      "Featured work: Server Monitoring Tools (VPS CLI + REST), FileStore (secure file storage with encryption and sharing), a full e-commerce platform, a real-time chat app, and a car-dealer hub. Open the Work page for details.",
+      "Featured work: Server Monitoring Tools, FileStore, eCommerce Multi-Store SaaS ERP, an e-commerce platform, and a real-time chat app. Open the Work page for details.",
   },
   {
     id: "backend",
@@ -123,9 +125,9 @@ const knowledge: Knowledge[] = [
   },
   {
     id: "resume",
-    keywords: ["resume", "cv", "pdf", "download"],
+    keywords: ["resume", "cv", "print"],
     answer:
-      "The Resume page has Full Stack and Backend versions, each with a PDF download. Pick the target role before you export.",
+      "The Resume page has a standard A4 CV. Open it and use Print / Save PDF. In the dialog, choose Save as PDF and turn off headers and footers.",
   },
 ];
 

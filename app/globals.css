@@ -83,42 +83,71 @@ body {
 
 @media print {
   @page {
-    size: A4;
-    margin: 0;
+    size: A4 portrait;
+    margin: 12mm 14mm 14mm;
+  }
+
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --fg: #171717;
   }
 
   html,
   body {
     background: #fff !important;
+    color: #171717 !important;
+    height: auto !important;
+    min-height: 0 !important;
     overflow: visible !important;
-    color: #111 !important;
   }
 
-  header,
-  footer,
-  .no-print,
-  .aurora,
-  .site-grid,
-  .noise {
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print {
     display: none !important;
   }
 
-  button[aria-label="Open AI assistant"] {
+  nextjs-portal {
     display: none !important;
   }
 
   main {
+    display: block !important;
     padding: 0 !important;
     margin: 0 !important;
     max-width: none !important;
+    position: static !important;
   }
 
   .cv-sheet {
+    background: #fff !important;
     box-shadow: none !important;
+    color: #171717 !important;
+    height: auto !important;
     margin: 0 !important;
-    width: 210mm !important;
-    min-height: 297mm !important;
-    padding: 16mm 18mm 18mm !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .cv-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  a[href]::after {
+    content: none !important;
   }
 }
 

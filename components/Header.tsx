@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="no-print fixed inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
         <Link href="/" className="group flex items-center gap-2 font-display text-sm font-semibold tracking-tight">
           <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-ink-800 text-[11px] text-signal">

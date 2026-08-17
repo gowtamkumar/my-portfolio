@@ -1,5 +1,3 @@
-export type ResumeTrack = "fullstack" | "backend";
-
 export type ResumeSkillRow = { category: string; items: string };
 
 export type ResumeJob = {
@@ -19,7 +17,6 @@ export type ResumeProject = {
 
 export type ResumeDocument = {
   title: string;
-  filename: string;
   summary: string;
   skills: ResumeSkillRow[];
   experience: ResumeJob[];
@@ -41,7 +38,7 @@ export const resumeMeta = {
 };
 
 const astitva: ResumeJob = {
-  title: "Full Stack Engineer ",
+  title: "Full Stack Engineer",
   company: "Astitva Lab Pty Ltd",
   dates: "April 2026 – Present",
   location: "Australia (Remote)",
@@ -58,7 +55,7 @@ const astitva: ResumeJob = {
   ],
 };
 
-const semicolonFullstack: ResumeJob = {
+const semicolon: ResumeJob = {
   title: "Full Stack JavaScript Developer",
   company: "Semicolon IT Solutions",
   dates: "2021 – April 2026",
@@ -69,19 +66,6 @@ const semicolonFullstack: ResumeJob = {
     "Implemented JWT authentication and Docker + NGINX deployments on Linux",
     "Supported a high-traffic e-commerce backend capable of 1,700+ requests per second",
     "Mentored junior developers while shipping production fixes and new features",
-  ],
-};
-
-const semicolonBackend: ResumeJob = {
-  title: "Backend Developer",
-  company: "Semicolon IT Solutions",
-  dates: "2021 – April 2026",
-  location: "On-site",
-  bullets: [
-    "Built and maintained NestJS and Node.js services backed by PostgreSQL in production",
-    "Designed RESTful APIs for core business domains with a focus on modularity and performance",
-    "Implemented JWT authentication and Docker + NGINX deployments on Linux",
-    "Supported a high-traffic e-commerce backend capable of 1,700+ requests per second",
   ],
 };
 
@@ -103,75 +87,38 @@ const storage: ResumeProject = {
   ],
 };
 
-const ecommerce: ResumeProject = {
-  name: "E-commerce Platform",
-  stack: "Next.js, NestJS, PostgreSQL, SSLCOMMERZ, Docker",
+const erp: ResumeProject = {
+  name: "eCommerce Multi-Store SaaS ERP",
+  stack: "Next.js, NestJS, PostgreSQL, Redis, Docker, SSLCOMMERZ",
   bullets: [
-    "Built a full-featured commerce system covering cart, checkout, orders, and seller workflows",
-    "Integrated SSLCOMMERZ for real-time payment processing and a flexible discount engine",
+    "Designed a multi-tenant SaaS ERP with catalog, inventory, POS, multi-store sync, and subscription billing",
+    "Shipped plan limits, storage add-ons, and usage packs (SKUs, orders, staff, locations) from one admin",
   ],
 };
 
-const projects = [monitoring, storage, ecommerce];
-
-export const resumeDocuments: Record<ResumeTrack, ResumeDocument> = {
-  fullstack: {
-    title: "Full Stack Engineer",
-    filename: "Gowtam_Kumar_FullStack_Engineer.pdf",
-    summary:
-      "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently leading a 4-person team at Astitva Lab Pty Ltd on Cayura, an NDIS disability-care product, using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
-    skills: [
-      { category: "Languages", items: "TypeScript, JavaScript" },
-      {
-        category: "Backend",
-        items:
-          "Node.js, NestJS, Express.js, REST APIs, Prisma, TypeORM, JWT, RBAC",
-      },
-      { category: "Frontend", items: "React.js, Next.js, Tailwind CSS, Redux" },
-      {
-        category: "Database",
-        items: "PostgreSQL, Redis, MongoDB, MySQL",
-      },
-      {
-        category: "DevOps",
-        items:
-          "Docker, Docker Compose, NGINX, Caddy, Linux, Git, CI/CD, GitHub Actions",
-      },
-      { category: "Automation", items: "n8n, MCP, Ollama, API integrations, webhooks" },
-    ],
-    experience: [astitva, semicolonFullstack],
-    projects,
-  },
-  backend: {
-    title: "Backend Engineer",
-    filename: "Gowtam_Kumar_Backend_Engineer.pdf",
-    summary:
-      "Backend Engineer with 5+ years building high-performance APIs and multi-tenant SaaS. Currently leading engineering on Cayura (NDIS) at Astitva Lab Pty Ltd — NestJS, PostgreSQL Row-Level Security, Prisma, Redis, JWT/RBAC, and Docker Compose on Linux. Strong in database isolation, auth, domain modeling, and production operations.",
-    skills: [
-      { category: "Languages", items: "TypeScript, JavaScript" },
-      {
-        category: "Frameworks",
-        items: "Node.js, NestJS, Express.js, Prisma ORM, TypeORM",
-      },
-      {
-        category: "Database",
-        items: "PostgreSQL, Redis, MySQL, MongoDB",
-      },
-      {
-        category: "APIs & Auth",
-        items: "REST, JWT access/refresh, RBAC, WebSocket",
-      },
-      {
-        category: "DevOps",
-        items:
-          "Docker, Docker Compose, NGINX, Caddy, Linux, Git, SSH, CI/CD, GitHub Actions",
-      },
-      {
-        category: "Automation",
-        items: "n8n, MCP, Ollama, webhooks, third-party API integrations",
-      },
-    ],
-    experience: [astitva, semicolonBackend],
-    projects,
-  },
+export const resumeDocument: ResumeDocument = {
+  title: "Full Stack Engineer",
+  summary:
+    "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently leading a 4-person team at Astitva Lab Pty Ltd on Cayura, an NDIS disability-care product, using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
+  skills: [
+    { category: "Languages", items: "TypeScript, JavaScript" },
+    {
+      category: "Backend",
+      items:
+        "Node.js, NestJS, Express.js, REST APIs, Prisma, TypeORM, JWT, RBAC",
+    },
+    { category: "Frontend", items: "React.js, Next.js, Tailwind CSS, Redux" },
+    {
+      category: "Database",
+      items: "PostgreSQL, Redis, MongoDB, MySQL",
+    },
+    {
+      category: "DevOps",
+      items:
+        "Docker, Docker Compose, NGINX, Caddy, Linux, Git, CI/CD, GitHub Actions",
+    },
+    { category: "Automation", items: "n8n, MCP, Ollama, API integrations, webhooks" },
+  ],
+  experience: [astitva, semicolon],
+  projects: [monitoring, storage, erp],
 };
