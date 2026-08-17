@@ -1,34 +1,31 @@
-export const projects = [
-  {
-    name: "Car Dealer",
-    img: "/car-dealer.png",
-    sourceCode: "https://github.com/gowtamkumar/car-dealer",
-    url: "",
-    description:
-      "The Car Enthusiast Hub is a web application designed for automotive enthusiasts to explore, share, and engage with their passion for cars. This platform provides a central hub for users to access a variety of features related to cars, including information about different car models.",
-    tech: [
-      "Nextjs",
-      "Tailwind CSS",
-      "Ant Design",
-      "Node.js",
-      "Nest.js",
-      "PostgreSQL",
-    ],
-  },
+export type Project = {
+  name: string;
+  img: string;
+  sourceCode: string;
+  url: string;
+  description: string;
+  tech: string[];
+  year: string;
+  kind: string;
+};
+
+export const projects: Project[] = [
   {
     name: "E-commerce Platform",
-    img: "/ecommerce.svg",
+    img: "/ecommerce-leanding.png",
     sourceCode: "https://github.com/gowtamkumar/ecommerce-application",
     url: "",
+    year: "2024",
+    kind: "SaaS / Commerce",
     description:
-      "An advanced, scalable e-commerce platform built with a modern tech stack. It features a secure and seamless shopping experience with robust product and order management, an intuitive seller dashboard for tracking sales and profitability, and comprehensive systems for discounts, coupons, and promotions. The platform also includes a customer review system, detailed user profiles, real-time order tracking, and secure payment processing. The entire application is containerized with Docker and deployed behind an Nginx reverse proxy for high performance and reliability.",
+      "An advanced, scalable e-commerce platform with seller dashboards, discounts, reviews, real-time order tracking, and SSLCOMMERZ payments. Containerized with Docker and served behind Nginx.",
     tech: [
       "Next.js",
       "Tailwind CSS",
       "Redux",
       "Node.js",
       "Express.js",
-      "Typeorm",
+      "TypeORM",
       "PostgreSQL",
       "Docker",
       "Nginx",
@@ -40,8 +37,10 @@ export const projects = [
     img: "/chat-application.png",
     sourceCode: "https://github.com/gowtamkumar/chat-application",
     url: "",
+    year: "2024",
+    kind: "Realtime",
     description:
-      "A real-time chat application designed for seamless communication. It supports one-to-one and group messaging with features like media sharing, message reactions, online/offline indicators, and real-time typing status. Built with a modern tech stack, the app ensures secure authentication, persistent conversations, and fast message delivery using WebSockets. The system is containerized with Docker and deployed behind an Nginx reverse proxy for scalability, reliability, and high performance.",
+      "One-to-one and group messaging with media, reactions, presence, and typing indicators over WebSockets. Persistent conversations with Docker + Nginx production setup.",
     tech: [
       "Next.js",
       "Tailwind CSS",
@@ -56,23 +55,32 @@ export const projects = [
     ],
   },
   {
+    name: "Car Dealer",
+    img: "/car-dealer.png",
+    sourceCode: "https://github.com/gowtamkumar/car-dealer",
+    url: "",
+    year: "2023",
+    kind: "Marketplace",
+    description:
+      "A hub for automotive enthusiasts to explore models, share, and engage — Next.js on the front, Nest.js and PostgreSQL behind it.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Ant Design",
+      "Node.js",
+      "Nest.js",
+      "PostgreSQL",
+    ],
+  },
+  {
     name: "E-commerce Leading Page",
     img: "/ecommerce-leanding.png",
     sourceCode: "https://github.com/gowtamkumar",
     url: "",
-    description: `
-A modern, full-featured E-commerce Leading Page built with **Next.js**, **MongoDB**, and **Tailwind CSS**, designed for high performance and seamless shopping experiences.
-
-**Key Features:**
-- **Product & Media Management:** Add, edit, and showcase products with images and videos.
-- **Global Currency Support:** Easily configure currency for international sales.
-- **Flexible Payment Options:** Accept **Cash on Delivery** and **SSLCommerz** payments with secure processing.
-- **Order Management & Tracking:** Real-time order tracking, order history, and detailed payment records.
-- **Customer Experience:** Intuitive checkout, secure payment, and smooth navigation.
-- **Scalable & Reliable:** Containerized with Docker and optimized for production behind Nginx.
-  
-This project demonstrates expertise in building a professional, secure, and maintainable e-commerce platform ready for real-world deployment.
-  `,
+    year: "2025",
+    kind: "Commerce / Payments",
+    description:
+      "High-performance storefront with product media, multi-currency, Cash on Delivery + SSLCommerz, and live order tracking. Built for real-world checkout, not just a landing mock.",
     tech: [
       "Next.js",
       "Tailwind CSS",
@@ -81,9 +89,6 @@ This project demonstrates expertise in building a professional, secure, and main
       "Docker",
       "Nginx",
       "SSLCOMMERZ",
-      "Payment & Order Management",
-      "Media Management",
-      "Currency Management",
     ],
   },
 ];

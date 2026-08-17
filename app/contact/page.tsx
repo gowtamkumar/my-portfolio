@@ -1,105 +1,70 @@
-"use client";
-import Header from "@/components/Header";
 import SocialMedia from "@/components/SocialMedia";
-import { useState } from "react";
+import { site } from "@/lib/site";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: `Hire ${site.name} — ${site.role}.`,
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
-
   return (
-    <>
-      <Header />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 pt-32">
-        <div className="w-full max-w-2xl">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
-              Contact Me
-            </h1>
-            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-700 dark:text-gray-300 mt-4">
-              I&apos;m available for freelance work. Connect with me via phone:{" "}
-              <a
-                href="tel:+919876543210"
-                className="text-blue-600 dark:text-blue-400"
-              >
-                +8801767163576
-              </a>{" "}
-              or email:{" "}
-              <a
-                href="mailto:gowtampaul0@gmail.com"
-                className="text-blue-600 dark:text-blue-400"
-              >
-                gowtampaul0@gmail.com
-              </a>
-            </p>
+    <main className="relative z-10 mx-auto flex min-h-[80svh] max-w-6xl flex-col justify-center px-5 pb-24 pt-28 md:px-8">
+      <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+        Index / Contact
+      </p>
+      <h1 className="mt-3 max-w-3xl font-display text-4xl tracking-tight md:text-6xl">
+        Let’s ship something intelligent.
+      </h1>
+      <p className="mt-5 max-w-xl text-lg text-[var(--muted)]">
+        {site.availability}. Freelance systems, full-stack product work, and
+        n8n / AI automation.
+      </p>
+
+      <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <a
+          href={`mailto:${site.email}`}
+          className="rounded-2xl border border-white/10 bg-[var(--card)] p-8 transition hover:border-signal/40"
+        >
+          <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+            Email
+          </p>
+          <p className="mt-3 font-display text-2xl text-signal">{site.email}</p>
+        </a>
+        <a
+          href={`tel:${site.phoneTel}`}
+          className="rounded-2xl border border-white/10 bg-[var(--card)] p-8 transition hover:border-signal/40"
+        >
+          <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+            Phone
+          </p>
+          <p className="mt-3 font-display text-2xl">{site.phoneDisplay}</p>
+        </a>
+        <a
+          href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hi Gowtam, I want to talk about a project.")}`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-2xl border border-white/10 bg-[var(--card)] p-8 transition hover:border-signal/40"
+        >
+          <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+            WhatsApp
+          </p>
+          <p className="mt-3 font-display text-2xl">Message directly</p>
+        </a>
+        <div className="rounded-2xl border border-white/10 bg-[var(--card)] p-8">
+          <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+            Networks
+          </p>
+          <div className="mt-4">
             <SocialMedia />
           </div>
-          {/* <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                onChange={handleChange}
-                value={formData.name}
-                className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                onChange={handleChange}
-                value={formData.email}
-                className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
-                required
-              />
-            </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              onChange={handleChange}
-              value={formData.subject}
-              className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              onChange={handleChange}
-              value={formData.message}
-              rows={5}
-              className="w-full px-4 py-3 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
-              required
-            ></textarea>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                Send Message
-              </button>
-            </div>
-          </form> */}
         </div>
-      </main>
-    </>
+      </div>
+
+      <p className="mt-10 font-mono text-xs text-[var(--muted)]">
+        Prefer the assistant? Use the spark control in the corner — it answers
+        from this site, then send email when you are ready.
+      </p>
+    </main>
   );
 }

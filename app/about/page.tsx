@@ -1,200 +1,287 @@
-/* eslint-disable react/no-unescaped-entities */
-import Header from "@/components/Header";
 import SocialMedia from "@/components/SocialMedia";
-import { skills } from "@/lib/mock-data/skill";
+import { site } from "@/lib/site";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCode, FaServer } from "react-icons/fa";
 import image from "../../public/gowtamkumar.jpeg";
 
-// Reusable Card Component
-const Card = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
-  <div
-    className={`bg-white dark:bg-gray-800 dark:bg-opacity-60 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:border-blue-500 hover:shadow-blue-500/20 ${className}`}
-  >
-    {children}
-  </div>
-);
+export const metadata: Metadata = {
+  title: "About",
+  description: site.summary,
+};
 
-// Skill Badge Component
-const SkillBadge = ({ skill }: { skill: string }) => (
-  <span className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium px-2 py-1 rounded-full shadow-md transition-all duration-300 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white dark:hover:text-white hover:scale-110 hover:shadow-lg cursor-default">
-    {skill}
-  </span>
-);
+const stats = [
+  { label: "Years shipping", value: site.years },
+  { label: "Team led", value: "4" },
+  { label: "NDIS domains", value: "38" },
+  { label: "Peak RPS", value: "1.7k" },
+];
+
+const principles = [
+  {
+    index: "01",
+    title: "Multi-tenant systems",
+    body: "Isolation at the database, not only in app code. PostgreSQL, per-request organisation context, JWT + RBAC as defense in depth.",
+  },
+  {
+    index: "02",
+    title: "Lead the loop",
+    body: "A 4-person team only ships if planning, review, tests, and release are owned. I break work down and take the last mile to Linux.",
+  },
+  {
+    index: "03",
+    title: "Automation that ships",
+    body: "n8n, webhooks, and API glue for ops that should not be manual. The assistant on this site is the same idea: useful, local, tied to real content.",
+  },
+];
+
+const timeline = [
+  {
+    when: "Apr 2026 — Present",
+    where: "Astitva Lab Pty Ltd · Australia (Remote)",
+    title: "Full Stack Engineer",
+    body: "Cayura — multi-tenant NDIS SaaS. NestJS, Next.js, PostgreSQL, Prisma, Redis, Docker Compose, Caddy.",
+  },
+  {
+    when: "2021 — Apr 2026",
+    where: "Semicolon IT Solutions · On-site",
+    title: "Full Stack JavaScript Developer",
+    body: "Production APIs, commerce, and realtime systems. NestJS, React, PostgreSQL, Docker, NGINX. Mentored juniors.",
+  },
+  {
+    when: "Education",
+    where: "National University, Bangladesh",
+    title: "Bachelor of Social Science (BSS)",
+    body: "English and Bangla. Self-taught engineering practice in production from 2021.",
+  },
+];
+
+const aboutSkills = [
+  { name: "Languages", items: ["TypeScript", "JavaScript"] },
+  { name: "Backend", items: ["NestJS", "Node.js", "Prisma", "TypeORM", "REST", "JWT / RBAC"] },
+  { name: "Frontend", items: ["Next.js", "React", "Tailwind CSS", "Redux"] },
+  { name: "Data", items: ["PostgreSQL", "Row-Level Security", "Redis"] },
+  { name: "DevOps", items: ["Docker", "Docker Compose", "NGINX", "Caddy", "CI/CD", "GitHub Actions", "Linux", "Git"] },
+  { name: "Automation", items: ["n8n", "Webhooks", "API integrations"] },
+];
 
 export default function About() {
-  const whatIDo = [
-    {
-      icon: <FaCode className="text-4xl text-blue-500" />,
-      title: "Frontend Development",
-      description:
-        "Crafting beautiful and responsive user interfaces with modern technologies like React and Next.js.",
-    },
-    {
-      icon: <FaServer className="text-4xl text-green-500" />,
-      title: "Backend Development",
-      description:
-        "Building robust and scalable server-side applications with Node.js, Express, Nest.js, and PostgreSQL, MongoDB",
-    },
-    // { icon: <FaPaintBrush className="text-4xl text-purple-500" />, title: "UI/UX Design", description: "Designing intuitive and engaging user experiences with a focus on clean aesthetics and usability." },
-  ];
-
   return (
-    <>
-      <Header />
-      <div
-        className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans overflow-x-hidden pt-24"
-      // style={{
-      //   backgroundImage: "url(/pattern-dark.20747baf.svg)",
-      //   backgroundSize: "cover",
-      //   backgroundAttachment: "fixed",
-      // }}
-      >
-        <main className="container mx-auto px-4 md:py-16">
-          <div className="flex flex-col lg:flex-row gap-16">
-            {/* Left Column: Sticky Profile Card */}
-            <aside className="lg:w-1/3 lg:sticky top-24 self-start">
-              <Card className="text-center">
-                <div className="relative w-40 h-40 mx-auto mb-6 ring-4 ring-offset-4 ring-offset-white dark:ring-offset-gray-800 ring-blue-500 rounded-full">
-                  <Image
-                    src={image}
-                    alt="Gowtam Kumar"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
-                    placeholder="blur"
-                  />
-                </div>
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                  Gowtam Kumar
-                </h1>
-                <p className="text-xl text-blue-500 dark:text-blue-400">
-                  JavaScript Developer
+    <main className="relative z-10 mx-auto max-w-6xl px-5 pb-24 pt-28 md:px-8">
+      <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+        Index / About
+      </p>
+
+      <div className="mt-8 grid items-start gap-12 lg:grid-cols-[minmax(0,320px)_1fr]">
+        <aside className="lg:sticky lg:top-28">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-[var(--card)]">
+            <div className="relative aspect-[4/5]">
+              <Image
+                src={image}
+                alt={site.name}
+                fill
+                sizes="(min-width: 1024px) 320px, calc(100vw - 2.5rem)"
+                className="object-cover"
+                placeholder="blur"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">
+                  {site.location} · Remote AU
                 </p>
-                <p className="text-gray-600 dark:text-gray-400 mt-5 text-sm max-w-xs mx-auto">
-                  Crafting elegant and efficient solutions in the world of web
-                  development.
-                </p>
-                <SocialMedia />
-                <div className="mt-5">
-                  <Link
-                    href="/resume"
-                    className="block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-center transition-all duration-300 hover:scale-105 shadow-lg"
-                  >
-                    View Resume
-                  </Link>
-                </div>
-              </Card>
-            </aside>
-
-            {/* Right Column: Content */}
-            <div className="lg:w-2/3">
-              <div className="space-y-12">
-                {/* About Me Card */}
-                <Card>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-5 border-b-2 border-blue-500 pb-3 inline-block">
-                    About Me
-                  </h2>
-                  <div className="space-y-4 text-gray-700 dark:text-gray-300 ">
-                    <p>
-                      Hello! I'm a passionate JavaScript developer with a strong
-                      focus on building modern, scalable, and user-friendly web
-                      applications. I thrive on solving complex problems and
-                      turning ideas into reality through clean and efficient
-                      code.
-                    </p>
-                    <p>
-                      I specialize in the JavaScript ecosystem — including
-                      <strong>
-                        {" "}
-                        React, Next.js, Node.js, Express.js, and Nest.js
-                      </strong>{" "}
-                      — with solid experience in{" "}
-                      <strong>
-                        PostgreSQL, Redis, and real-time WebSocket
-                        communication.
-                      </strong>
-                    </p>
-                    <p>
-                      In addition to web development, I work in{" "}
-                      <strong> AI Automation using n8n</strong>, helping
-                      businesses automate workflows, integrate APIs, and build
-                      intelligent automation pipelines that save time and boost
-                      productivity.
-                    </p>
-                    <p>
-                      I love exploring new technologies and continuously
-                      improving my skills to stay ahead in the fast-moving
-                      development landscape.
-                    </p>
-
-                    <p>
-                      Feel free to connect with me or explore my work. <br />
-                      You can reach me at:{" "}
-                      <Link
-                        href="mailto:gowtampaul0@gmail.com"
-                        className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
-                      >
-                        gowtampaul0@gmail.com
-                      </Link>
-                    </p>
-                  </div>
-                </Card>
-
-                {/* What I Do Card */}
-                <Card>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b-2 border-blue-500 pb-3 inline-block">
-                    What I Do
-                  </h2>
-                  <div className="space-y-4">
-                    {whatIDo.map((item, idx) => (
-                      <div key={idx} className="flex items-start space-x-6">
-                        <div className="flex-shrink-0 mt-1">{item.icon}</div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-600 dark:text-gray-400 mt-1">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </Card>
-
-                {/* My Skills Card */}
-                <Card>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b-2 border-blue-500 inline-block">
-                    My Skills
-                  </h2>
-                  <div className="space-y-4">
-                    {skills.map((skillSet, idx) => (
-                      <div key={idx}>
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                          {skillSet.name}
-                        </h3>
-                        <div className="flex flex-wrap gap-1">
-                          {skillSet.skills.map((skill, sIdx) => (
-                            <SkillBadge key={sIdx} skill={skill} />
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </Card>
+                <h1 className="mt-1 font-display text-2xl">{site.name}</h1>
+              </div>
+            </div>
+            <div className="space-y-4 p-5">
+              <p className="text-sm text-[var(--muted)]">{site.role}</p>
+              <SocialMedia />
+              <div className="flex flex-col gap-2">
+                <Link
+                  href="/resume"
+                  className="rounded-full bg-signal py-2.5 text-center text-sm font-semibold text-ink"
+                >
+                  View resume
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-full border border-white/15 py-2.5 text-center text-sm font-semibold hover:border-signal/40 hover:text-signal"
+                >
+                  Hire me
+                </Link>
               </div>
             </div>
           </div>
-        </main>
+        </aside>
+
+        <div className="min-w-0">
+          <p className="inline-flex items-center gap-2 rounded-full border border-signal/30 bg-signal/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+            <span className="h-1.5 w-1.5 rounded-full bg-signal animate-pulse-dot" />
+            {site.availability}
+          </p>
+
+          <h2 className="mt-5 max-w-2xl font-display text-4xl leading-[1.1] tracking-tight md:text-5xl">
+            I lead small teams that ship tenant-safe SaaS.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
+            {site.summary}
+          </p>
+          <p className="mt-4 max-w-2xl leading-relaxed text-[var(--muted)]">
+            I care about systems that stay correct under load: schema, auth,
+            isolation, and the release path. Interfaces in Next.js. Services in
+            NestJS. The database as the last line of tenancy, not an afterthought.
+          </p>
+
+          <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-white/10 py-8 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="font-mono text-[10px] uppercase tracking-widest text-[var(--muted)]">
+                  {stat.label}
+                </dt>
+                <dd className="mt-1 font-display text-3xl">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <section className="mt-12">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+              Now
+            </p>
+            <div className="mt-4 rounded-3xl border border-signal/20 bg-signal/5 p-6 md:p-8">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-display text-2xl">Cayura</h3>
+                  <p className="mt-1 text-sm text-signal">
+                    Astitva Lab Pty Ltd · NDIS · Australia
+                  </p>
+                </div>
+                <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-[var(--muted)]">
+                  Active
+                </span>
+              </div>
+              <p className="mt-4 max-w-2xl leading-relaxed text-[var(--muted)]">
+                Multi-tenant SaaS for the Australian National Disability
+                Insurance Scheme. I lead three developers and a UI/UX designer
+                through planning, review, testing, and deploy — NestJS and
+                Next.js on PostgreSQL, with Row-Level Security so tenants
+                cannot see each other even if application code fails.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  "PostgreSQL",
+                  "Prisma",
+                  "TypeORM",
+                  "JWT + RBAC",
+                  "20+ domains",
+                  "Caddy + TLS",
+                  "15+ competitor studies",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 px-3 py-1 font-mono text-[11px] text-[var(--muted)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+              Practice
+            </p>
+            <h3 className="mt-2 font-display text-2xl">How the work actually happens</h3>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {principles.map((item) => (
+                <article
+                  key={item.index}
+                  className="rounded-2xl border border-white/10 bg-[var(--card)] p-5"
+                >
+                  <p className="font-mono text-[11px] text-signal">{item.index}</p>
+                  <h4 className="mt-2 font-display text-lg">{item.title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                    {item.body}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-14">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+              Path
+            </p>
+            <h3 className="mt-2 font-display text-2xl">A short history</h3>
+            <ol className="mt-6 space-y-0 border-l border-white/10 pl-6">
+              {timeline.map((item) => (
+                <li key={item.when} className="relative pb-8 last:pb-0">
+                  <span className="absolute -left-[29px] top-1.5 h-2.5 w-2.5 rounded-full bg-signal" />
+                  <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+                    {item.when}
+                  </p>
+                  <p className="mt-1 font-display text-xl">{item.title}</p>
+                  <p className="text-sm text-signal">{item.where}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                    {item.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="mt-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+              Stack
+            </p>
+            <h3 className="mt-2 font-display text-2xl">Tools I keep in production</h3>
+            <div className="mt-6 space-y-5">
+              {aboutSkills.map((group) => (
+                <div key={group.name} className="sm:grid sm:grid-cols-[140px_1fr] sm:items-start sm:gap-4">
+                  <h4 className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
+                    {group.name}
+                  </h4>
+                  <div className="mt-2 flex flex-wrap gap-2 sm:mt-0">
+                    {group.items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-white/10 px-3 py-1 text-sm hover:border-signal/40 hover:text-signal"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-14 rounded-3xl border border-white/10 bg-[var(--card)] p-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+              Next
+            </p>
+            <h3 className="mt-2 font-display text-3xl">Need a system that holds?</h3>
+            <p className="mt-3 max-w-xl text-[var(--muted)]">
+              Freelance or full-time. Product engineering, tenant-safe backends,
+              and n8n automation.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={`mailto:${site.email}`}
+                className="rounded-full bg-signal px-5 py-2.5 text-sm font-semibold text-ink"
+              >
+                {site.email}
+              </a>
+              <Link
+                href="/projects"
+                className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold hover:border-signal/40 hover:text-signal"
+              >
+                See systems
+              </Link>
+            </div>
+          </section>
+        </div>
       </div>
-    </>
+    </main>
   );
 }

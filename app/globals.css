@@ -2,15 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-image: url("../public/pattern-dark.20747baf.svg");
-} */
+:root {
+  color-scheme: dark;
+  --bg: #07080c;
+  --fg: #eceef4;
+  --muted: #9aa3b8;
+  --line: rgba(255, 255, 255, 0.08);
+  --card: rgba(18, 20, 28, 0.72);
+  --signal: #5eead4;
+  --pulse: #a78bfa;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+  --bg: #f4f1ea;
+  --fg: #12131a;
+  --muted: #5c6370;
+  --line: rgba(18, 19, 26, 0.1);
+  --card: rgba(255, 255, 255, 0.7);
+}
 
 html,
 body {
+  min-height: 100%;
   overflow-x: hidden;
 }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "ss01" on, "cv11" on;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.28);
+  color: inherit;
+}
+
+.site-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black, transparent 75%);
+}
+
+.aurora {
+  background:
+    radial-gradient(ellipse 70% 50% at 15% -10%, rgba(94, 234, 212, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 0%, rgba(167, 139, 250, 0.16), transparent 50%),
+    radial-gradient(ellipse 40% 30% at 50% 100%, rgba(94, 234, 212, 0.06), transparent 50%);
+}
+
+.noise {
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 .page-break {
   break-after: page;
   page-break-after: always;
+}
+
+.cv-sheet {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 16mm 18mm 18mm;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  box-shadow: 0 24px 80px -32px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 860px) {
+  .cv-sheet {
+    width: 100%;
+    min-height: auto;
+    padding: 28px 20px 32px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    overflow: visible !important;
+    color: #111 !important;
+  }
+
+  header,
+  footer,
+  .no-print,
+  .aurora,
+  .site-grid,
+  .noise {
+    display: none !important;
+  }
+
+  button[aria-label="Open AI assistant"] {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .cv-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    padding: 16mm 18mm 18mm !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

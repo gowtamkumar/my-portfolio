@@ -1,148 +1,99 @@
 "use client";
-import Header from "@/components/Header";
-import Education from "@/components/resume/Education";
-import Experience from "@/components/resume/Experience";
-import ProjectsSection from "@/components/resume/Projects";
 
-import { backendSkillsCategories, backendSummary, frontendSkillsCategories, frontendSummary, fullstackSkillsCategories, fullstackSummary } from "@/lib/mock-data/skill";
+import StandardCv from "@/components/resume/StandardCv";
+import { resumeDocuments, type ResumeTrack } from "@/lib/resume-data";
 import { useRef, useState } from "react";
 
-type ResumeType = "fullstack" | "backend" | "frontend";
+const tabs: { id: ResumeTrack; label: string }[] = [
+  { id: "fullstack", label: "Full stack" },
+  { id: "backend", label: "Backend" },
+];
 
 export default function Resume() {
-  const contentRef = useRef(null);
-  const [activeTab, setActiveTab] = useState<ResumeType>("fullstack");
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState<ResumeTrack>("fullstack");
+  const [busy, setBusy] = useState(false);
 
   const handleDownloadPdf = async () => {
     const element = contentRef.current;
     if (!element) return;
-
-    const html2pdf = (await import("html2pdf.js")).default;
-
-    const filenames: Record<ResumeType, string> = {
-      fullstack: "Gowtam_Kumar_FullStack_Developer.pdf",
-      backend: "Gowtam_Kumar_Backend_Developer.pdf",
-      frontend: "Gowtam_Kumar_Frontend_Developer.pdf",
-    };
-
-    const options = {
-      margin: 1,
-      filename: filenames[activeTab],
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 3 },
-      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-    };
-
-    html2pdf()
-      .from(element)
-      .set(options as any)
-      .save();
-  };
-
-  const jobTitles: Record<ResumeType, string> = {
-    fullstack: "Full Stack JavaScript Developer (Node.js, NestJS, ReactJS)",
-    backend: "Backend Developer (Node.js, NestJS, PostgreSQL)",
-    frontend: "Frontend Developer (React.js, Next.js, TypeScript)",
-  };
-
-  const summaries: Record<ResumeType, string> = {
-    fullstack: fullstackSummary,
-    backend: backendSummary,
-    frontend: frontendSummary,
-  };
-
-  const skillsMap = {
-    fullstack: fullstackSkillsCategories,
-    backend: backendSkillsCategories,
-    frontend: frontendSkillsCategories,
+    setBusy(true);
+    try {
+      const html2pdf = (await import("html2pdf.js")).default;
+      await html2pdf()
+        .from(element)
+        .set({
+          margin: 0,
+          filename: resumeDocuments[activeTab].filename,
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            letterRendering: true,
+            backgroundColor: "#ffffff",
+          },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          pagebreak: { mode: ["css", "legacy"] },
+        })
+        .save();
+    } finally {
+      setBusy(false);
+    }
   };
 
   return (
-    <div className="pt-32">
-      <Header />
+    <main className="relative z-10 mx-auto max-w-[210mm] px-4 pb-24 pt-28 md:px-0">
+      <div className="no-print mb-8 px-1">
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-signal">
+          Index / Resume
+        </p>
+        <h1 className="mt-3 font-display text-4xl tracking-tight md:text-5xl">
+          Curriculum Vitae
+        </h1>
+        <p className="mt-3 text-[var(--muted)]">
+          Standard one-page CV. Choose a target role, then download or print.
+        </p>
 
-      {/* Tabs */}
-      <div className="max-w-4xl mx-auto flex gap-2 mb-4 flex-wrap">
-        <button
-          onClick={() => setActiveTab("fullstack")}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all ${activeTab === "fullstack"
-            ? "bg-blue-600 text-white shadow-lg"
-            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-        >
-          Full Stack
-        </button>
-        <button
-          onClick={() => setActiveTab("backend")}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all ${activeTab === "backend"
-            ? "bg-green-600 text-white shadow-lg"
-            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-        >
-          Backend
-        </button>
-        <button
-          onClick={() => setActiveTab("frontend")}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all ${activeTab === "frontend"
-            ? "bg-purple-600 text-white shadow-lg"
-            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-            }`}
-        >
-          Frontend
-        </button>
-      </div>
-
-      <div className="max-w-4xl mx-auto flex justify-end py-2">
-        <button
-          onClick={handleDownloadPdf}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-1 px-3 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-        >
-          Download PDF
-        </button>
-      </div>
-
-      <div
-        className="max-w-4xl mx-auto bg-white p-6 shadow-lg font-sans text-gray-800"
-        ref={contentRef}
-      >
-        {/* Header */}
-        <header className="mb-4 border-b pb-3">
-          <h1 className="text-2xl font-bold text-gray-900">Gowtam Kumar</h1>
-          <p className="text-lg font-semibold text-gray-700">{jobTitles[activeTab]}</p>
-          <div className="text-sm text-gray-600 mt-2">
-            <p>
-              <strong>📧</strong> gowtampaul0@gmail.com | <strong>📞</strong> +880 1767-163576
-            </p>
-            <p>
-              <strong>🔗</strong> linkedin.com/in/gowtamkumar |  github.com/gowtamkumar
-            </p>
-          </div>
-        </header>
-
-        {/* Summary */}
-        <section className="my-2">
-          <h2 className="text-xl font-semibold border-b my-1">Summary</h2>
-          <p className="text-sm">{summaries[activeTab]}</p>
-        </section>
-
-        {/* Skills */}
-        <section className="my-2">
-          <h2 className="text-xl font-semibold border-b my-1">Skills</h2>
-          <div className="text-sm text-gray-700 leading-relaxed space-y-1">
-            {skillsMap[activeTab].map((skill, idx) => (
-              <div key={idx} className="flex">
-                <span className="font-bold w-28 shrink-0">{skill.category}</span>
-                <span>: {skill.items}</span>
-              </div>
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap gap-2 rounded-full border border-white/10 bg-[var(--card)] p-1">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setActiveTab(tab.id)}
+                className={`rounded-full px-4 py-1.5 text-sm transition ${
+                  activeTab === tab.id
+                    ? "bg-signal text-ink"
+                    : "text-[var(--muted)] hover:text-[var(--fg)]"
+                }`}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
-        </section>
-
-        <Experience />
-        <ProjectsSection />
-        <Education />
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="rounded-full border border-white/15 px-4 py-2 text-sm font-semibold hover:border-signal/40 hover:text-signal"
+            >
+              Print
+            </button>
+            <button
+              type="button"
+              onClick={handleDownloadPdf}
+              disabled={busy}
+              className="rounded-full border border-signal/40 px-4 py-2 text-sm font-semibold text-signal hover:bg-signal hover:text-ink disabled:opacity-60"
+            >
+              {busy ? "Preparing…" : "Download PDF"}
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div ref={contentRef}>
+        <StandardCv track={activeTab} />
+      </div>
+    </main>
   );
 }
-
