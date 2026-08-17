@@ -11,6 +11,46 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Server Monitoring Tools",
+    img: "/server-monitoring-tools.png",
+    sourceCode: "https://github.com/gowtamkumar/server-monitoring-tools",
+    url: "",
+    year: "2026",
+    kind: "DevOps / Observability",
+    description:
+      "VPS monitoring with CLI and REST API: CPU, memory, disk, network, Docker containers, PM2, and service health (NGINX, PHP-FPM). Runs locally or over SSH, with a web dashboard and systemd deploy.",
+    tech: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "SQLite",
+      "Docker",
+      "PM2",
+      "NGINX",
+      "SSH",
+      "systemd",
+    ],
+  },
+  {
+    name: "FileStore",
+    img: "/file-storage-application.png",
+    sourceCode: "https://github.com/gowtamkumar/file-storage-application",
+    url: "",
+    year: "2026",
+    kind: "Storage / SaaS",
+    description:
+      "Secure file storage for modern teams — fast uploads, encryption, sharing, and 64MB files with auto compression. Full-stack app with object storage behind the API.",
+    tech: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "MinIO",
+      "Docker",
+      "NGINX",
+    ],
+  },
+  {
     name: "E-commerce Platform",
     img: "/ecommerce-leanding.png",
     sourceCode: "https://github.com/gowtamkumar/ecommerce-application",

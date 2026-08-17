@@ -85,6 +85,24 @@ const semicolonBackend: ResumeJob = {
   ],
 };
 
+const monitoring: ResumeProject = {
+  name: "Server Monitoring Tools",
+  stack: "Node.js, Express, TypeScript, SQLite, Docker, PM2, NGINX",
+  bullets: [
+    "Built a VPS monitor with CLI and REST API for CPU, memory, disk, network, Docker, PM2, and service status",
+    "Supports local and SSH remote modes, a web dashboard, API-key auth, and systemd deployment",
+  ],
+};
+
+const storage: ResumeProject = {
+  name: "FileStore",
+  stack: "Next.js, NestJS, PostgreSQL, MinIO, Docker",
+  bullets: [
+    "Built self-hosted file storage with upload, folders, sharing, and authenticated download",
+    "Stored objects in S3-compatible MinIO so files sit outside the application server",
+  ],
+};
+
 const ecommerce: ResumeProject = {
   name: "E-commerce Platform",
   stack: "Next.js, NestJS, PostgreSQL, SSLCOMMERZ, Docker",
@@ -94,25 +112,7 @@ const ecommerce: ResumeProject = {
   ],
 };
 
-const chat: ResumeProject = {
-  name: "Real-time Chat Application",
-  stack: "Next.js, NestJS, Socket.IO, PostgreSQL, Docker",
-  bullets: [
-    "Implemented one-to-one and group messaging with presence, typing indicators, and media",
-    "Delivered persistent conversations over WebSockets with Docker and NGINX deployment",
-  ],
-};
-
-const inventory: ResumeProject = {
-  name: "Inventory Management System",
-  stack: "React.js, NestJS, PostgreSQL",
-  bullets: [
-    "Developed product, sales, purchase, stock tracking, and profit/loss modules",
-    "Structured NestJS REST APIs using a modular architecture",
-  ],
-};
-
-const projects = [ecommerce, chat, inventory];
+const projects = [monitoring, storage, ecommerce];
 
 export const resumeDocuments: Record<ResumeTrack, ResumeDocument> = {
   fullstack: {

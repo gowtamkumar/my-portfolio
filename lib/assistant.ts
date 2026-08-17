@@ -83,12 +83,17 @@ const knowledge: Knowledge[] = [
       "ecommerce",
       "chat",
       "car",
+      "monitor",
+      "vps",
+      "storage",
+      "file",
+      "minio",
       "work",
       "built",
       "demo",
     ],
     answer:
-      "Featured work: a full e-commerce platform (Next.js, NestJS, PostgreSQL, SSLCOMMERZ), a real-time chat app (Socket.IO), an inventory system, a car-dealer hub, and an e-commerce landing with payments and order tracking. Open the Work page for details.",
+      "Featured work: Server Monitoring Tools (VPS CLI + REST), FileStore (secure file storage with encryption and sharing), a full e-commerce platform, a real-time chat app, and a car-dealer hub. Open the Work page for details.",
   },
   {
     id: "backend",

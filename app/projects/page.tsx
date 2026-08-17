@@ -19,8 +19,8 @@ export default function Projects() {
         Systems in production
       </h1>
       <p className="mt-4 max-w-2xl text-[var(--muted)]">
-        Commerce platforms, realtime communication, and inventory — designed as
-        APIs first, then given a sharp interface.
+        Observability, commerce, and realtime systems — APIs first, then a
+        sharp interface.
       </p>
 
       <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -36,6 +36,8 @@ export default function Projects() {
                 src={project.img}
                 alt={project.name}
                 fill
+                priority={idx === 0}
+                loading={idx === 0 ? "eager" : "lazy"}
                 className="object-cover transition duration-700 group-hover:scale-105"
                 sizes={
                   idx === 0
