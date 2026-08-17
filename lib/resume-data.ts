@@ -137,7 +137,7 @@ export const resumeDocuments: Record<ResumeTrack, ResumeDocument> = {
         items:
           "Docker, Docker Compose, NGINX, Caddy, Linux, Git, CI/CD, GitHub Actions",
       },
-      { category: "Automation", items: "n8n, API integrations, webhooks" },
+      { category: "Automation", items: "n8n, MCP, Ollama, API integrations, webhooks" },
     ],
     experience: [astitva, semicolonFullstack],
     projects,
@@ -168,7 +168,7 @@ export const resumeDocuments: Record<ResumeTrack, ResumeDocument> = {
       },
       {
         category: "Automation",
-        items: "n8n, webhooks, third-party API integrations",
+        items: "n8n, MCP, Ollama, webhooks, third-party API integrations",
       },
     ],
     experience: [astitva, semicolonBackend],

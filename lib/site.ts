@@ -17,7 +17,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/gowtamkumar/",
     facebook: "https://www.facebook.com/Gowtamkumar17",
   },
-  focus: ["NestJS", "Next.js", "PostgreSQL", "Prisma", "TypeORM"],
+  focus: ["NestJS", "Next.js", "PostgreSQL", "MCP", "Ollama"],
 } as const;
 
 export const nav = [

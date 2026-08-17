@@ -37,13 +37,15 @@ const knowledge: Knowledge[] = [
       "docker",
     ],
     answer:
-      "Core stack: TypeScript, Node.js, NestJS, Next.js, PostgreSQL (including Row-Level Security), Prisma, TypeORM, Redis, Docker, Docker Compose, NGINX, Caddy, CI/CD, GitHub Actions, and Linux. Also React, JWT/RBAC, and n8n automation.",
+      "Core stack: TypeScript, Node.js, NestJS, Next.js, PostgreSQL (including Row-Level Security), Prisma, TypeORM, Redis, Docker, Docker Compose, NGINX, Caddy, CI/CD, GitHub Actions, and Linux. Also React, JWT/RBAC, n8n, MCP, and Ollama.",
   },
   {
     id: "ai",
     keywords: [
       "ai",
       "n8n",
+      "mcp",
+      "ollama",
       "automat",
       "agent",
       "workflow",
@@ -52,7 +54,7 @@ const knowledge: Knowledge[] = [
       "intelligent",
     ],
     answer:
-      "I build AI automation with n8n — API integrations, webhook pipelines, and agent-style workflows that save teams time. I am currently exploring applied AI on top of production NestJS and Next.js systems.",
+      "I build AI automation with n8n, MCP, and Ollama — local models, tool servers, API integrations, and webhook pipelines. I am currently exploring applied AI on top of production NestJS and Next.js systems.",
   },
   {
     id: "experience",

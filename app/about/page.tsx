@@ -31,7 +31,7 @@ const principles = [
   {
     index: "03",
     title: "Automation that ships",
-    body: "n8n, webhooks, and API glue for ops that should not be manual. The assistant on this site is the same idea: useful, local, tied to real content.",
+    body: "n8n, MCP, Ollama, webhooks, and API glue for ops that should not be manual. The assistant on this site is the same idea: useful, local, tied to real content.",
   },
 ];
 
@@ -62,7 +62,7 @@ const aboutSkills = [
   { name: "Frontend", items: ["Next.js", "React", "Tailwind CSS", "Redux"] },
   { name: "Data", items: ["PostgreSQL", "Row-Level Security", "Redis"] },
   { name: "DevOps", items: ["Docker", "Docker Compose", "NGINX", "Caddy", "CI/CD", "GitHub Actions", "Linux", "Git"] },
-  { name: "Automation", items: ["n8n", "Webhooks", "API integrations"] },
+  { name: "Automation", items: ["n8n", "MCP", "Ollama", "Webhooks", "API integrations"] },
 ];
 
 export default function About() {
