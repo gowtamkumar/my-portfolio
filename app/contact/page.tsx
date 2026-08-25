@@ -1,5 +1,5 @@
 import SocialMedia from "@/components/SocialMedia";
-import { site } from "@/lib/site";
+import { site } from "@/lib/about";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

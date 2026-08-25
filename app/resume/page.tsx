@@ -1,6 +1,6 @@
 import PrintCvButton from "@/components/resume/PrintCvButton";
 import StandardCv from "@/components/resume/StandardCv";
-import { resumeDocument, resumeMeta } from "@/lib/resume-data";
+import { resumeDocument, resumeMeta } from "@/lib/resume";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

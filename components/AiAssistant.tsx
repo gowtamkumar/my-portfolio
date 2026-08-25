@@ -1,7 +1,7 @@
 "use client";
 
+import { site } from "@/lib/about";
 import { answerAssistant, suggestedPrompts } from "@/lib/assistant";
-import { site } from "@/lib/site";
 import { usePathname } from "next/navigation";
 import { FormEvent, useRef, useState, type RefObject } from "react";
 import { HiOutlineSparkles } from "react-icons/hi";
@@ -54,11 +54,10 @@ function ChatTranscript({
       {messages.map((m, i) => (
         <div
           key={i}
-          className={`max-w-[90%] rounded-2xl px-3 py-2 leading-relaxed ${
-            m.role === "user"
+          className={`max-w-[90%] rounded-2xl px-3 py-2 leading-relaxed ${m.role === "user"
               ? "ml-auto bg-signal/15 text-[var(--fg)]"
               : "bg-white/5 text-[var(--muted)]"
-          }`}
+            }`}
         >
           {m.text}
         </div>

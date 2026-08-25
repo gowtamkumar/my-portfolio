@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { DM_Sans, IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import AiAssistant from "@/components/AiAssistant";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SiteBackground from "@/components/SiteBackground";
 import ThemeScript from "@/components/ThemeScript";
-import { site } from "@/lib/site";
+import { site } from "@/lib/about";
+import type { Metadata } from "next";
+import { DM_Sans, IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const display = Space_Grotesk({

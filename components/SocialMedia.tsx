@@ -1,4 +1,4 @@
-import { site } from "@/lib/site";
+import { site } from "@/lib/about";
 import Link from "next/link";
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 

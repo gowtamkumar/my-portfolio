@@ -1,4 +1,5 @@
-import { resumeDocument, resumeMeta } from "@/lib/resume-data";
+import { skills } from "@/lib/mock-data/skill";
+import { resumeDocument, resumeMeta } from "@/lib/resume";
 
 function SectionTitle({ children }: { children: string }) {
   return (
@@ -40,10 +41,10 @@ export default function StandardCv() {
       <section className="mt-3.5">
         <SectionTitle>Technical Skills</SectionTitle>
         <div className="cv-skills">
-          {cv.skills.map((row) => (
-            <div key={row.category} className="cv-skill-row">
-              <span className="cv-skill-label">{row.category}</span>
-              <span>{row.items}</span>
+          {skills.map((row) => (
+            <div key={row.name} className="cv-skill-row">
+              <span className="cv-skill-label">{row.name}</span>
+              <span>{row.items.join(", ")}</span>
             </div>
           ))}
         </div>

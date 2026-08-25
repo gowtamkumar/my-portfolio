@@ -1,98 +1,47 @@
-export const coreSkills = [
-  "JavaScript, TypeScript",
-  "Node.js, NestJS, Express",
-  "PostgreSQL, Redis, MongoDB",
-  "React, Next.js",
-  "Docker, NGINX, Linux",
-];
-
-export const backendSkills = [
-  "Node.js, NestJS, Express.js",
-  "PostgreSQL, MySQL, MongoDB, Redis",
-  "RESTful APIs, GraphQL, WebSocket",
-  "Docker, NGINX, Linux, CI/CD",
-  "Authentication (JWT, OAuth), Security",
-  "TypeScript, JavaScript",
-];
-
-export const frontendSkills = [
-  "React.js, Next.js, TypeScript",
-  "Tailwind CSS, CSS3, SCSS",
-  "Redux, Context API, State Management",
-  "Responsive Design, Mobile-First",
-  "RESTful API Integration, GraphQL",
-  "Git, Vite, Performance Optimization",
-];
-
-// Categorized skills for better resume layout
-export const fullstackSkillsCategories = [
-  { category: "Languages", items: "JavaScript, TypeScript" },
-  {
-    category: "Backend",
-    items: "Node.js, NestJS, Express.js, RESTful APIs",
-  },
-  { category: "Frontend", items: "React.js, Next.js, Tailwind CSS" },
-  { category: "Database", items: "PostgreSQL, MongoDB, Redis" },
-  { category: "DevOps", items: "Docker, NGINX, Linux, Git, CI/CD" },
-];
-
-export const backendSkillsCategories = [
-  { category: "Languages", items: "TypeScript, JavaScript" },
-  { category: "Frameworks", items: "Node.js, NestJS, Express.js" },
-  { category: "Database", items: "PostgreSQL, MySQL, MongoDB, Redis" },
-  { category: "APIs", items: "RESTful API design and implementation" },
-  { category: "DevOps", items: "Docker, NGINX, Linux, CI/CD" },
-  { category: "Security", items: "JWT, OAuth, Authentication" },
-];
-
-export const frontendSkillsCategories = [
-  { category: "Languages", items: "TypeScript, JavaScript, HTML5, CSS3" },
-  { category: "Frameworks", items: "React.js, Next.js" },
-  { category: "Styling", items: "Tailwind CSS, Responsive Design" },
-  { category: "State", items: "Redux, Context API" },
-  { category: "Tools", items: "Git, Vite, npm" },
-];
-
-export const backendSummary =
-  "Backend Developer with 4+ years of experience building scalable, high-performance APIs using Node.js, NestJS, and PostgreSQL. Experienced in designing multi-tenant SaaS systems, database architecture, authentication, and production deployment using Docker and NGINX. Strong focus on performance optimization, clean architecture, and real-world problem solving.";
-
-export const fullstackSummary =
-  "Full Stack JavaScript Engineer with 4+ years of experience building scalable SaaS and eCommerce platforms using Node.js, NestJS, PostgreSQL, Docker, and React. Experienced in backend architecture, API development, authentication systems, and production deployment.";
-
-export const frontendSummary =
-  "Frontend Developer with 4+ years of experience building responsive, user-friendly web applications using React.js, Next.js, and TypeScript. Skilled in modern CSS frameworks, state management, performance optimization, and creating seamless user experiences.";
-
 export const skills = [
   {
-    name: "Programming Languages",
-    skills: ["JavaScript", "TypeScript"],
+    name: "Languages",
+    items: ["JavaScript", "TypeScript", "Python"],
   },
   {
-    name: "Web Development",
-    skills: [
+    name: "Frontend",
+    items: [
       "Tailwind CSS",
+      "Responsive Design",
       "React.js",
       "Next.js",
       "Redux",
+    ],
+  },
+  {
+    name: "Backend",
+    items: [
       "Node.js",
       "Express.js",
       "Nest.js",
+      "FastAPI",
       "Prisma",
       "TypeORM",
       "WebSocket",
     ],
   },
   {
-    name: "Database Management",
-    skills: ["PostgreSQL", "Row-Level Security", "MySQL", "MongoDB", "Redis"],
+    name: "Database",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
   },
   {
-    name: "Automation & Integrations",
-    skills: ["MCP", "Ollama", "AI Automation", "API Integrations", "Webhook Automation"],
+    name: "AI",
+    items: [
+      "MCP",
+      "Ollama",
+      "AI Automation",
+      "API Integrations",
+      "Webhook Automation",
+    ],
   },
   {
     name: "DevOps & Tools",
-    skills: [
+    items: [
       "Git",
       "GitHub",
       "Docker",
@@ -110,6 +59,6 @@ export const skills = [
   },
   {
     name: "Other",
-    skills: ["React Native"],
+    items: ["React Native"],
   },
 ];

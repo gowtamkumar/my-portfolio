@@ -1,7 +1,7 @@
 import { AssistantPanel } from "@/components/AiAssistant";
 import RotatingText from "@/components/RotatingText";
+import { site } from "@/lib/about";
 import { projects } from "@/lib/mock-data/project";
-import { site } from "@/lib/site";
 import Link from "next/link";
 
 const stack = [

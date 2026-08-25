@@ -18,7 +18,7 @@ export type ResumeProject = {
 export type ResumeDocument = {
   title: string;
   summary: string;
-  skills: ResumeSkillRow[];
+  // skills: ResumeSkillRow[];
   experience: ResumeJob[];
   projects: ResumeProject[];
 };
@@ -100,28 +100,6 @@ export const resumeDocument: ResumeDocument = {
   title: "Full Stack Engineer",
   summary:
     "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently leading a 4-person team at Astitva Lab Pty Ltd on Cayura, an NDIS disability-care product, using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
-  skills: [
-    { category: "Languages", items: "TypeScript, JavaScript, SQL" },
-    {
-      category: "Backend",
-      items:
-        "Node.js, NestJS, Express.js, REST APIs, Prisma, TypeORM, JWT, RBAC, WebSocket",
-    },
-    { category: "Frontend", items: "React, Next.js, Tailwind CSS, Redux" },
-    {
-      category: "Database",
-      items: "PostgreSQL, Row-Level Security, Redis, MySQL, MongoDB",
-    },
-    {
-      category: "DevOps",
-      items:
-        "Docker, Docker Compose, NGINX, Caddy, Linux, SSH, CI/CD, GitHub Actions",
-    },
-    {
-      category: "Automation",
-      items: "MCP, Ollama, webhooks, API integrations",
-    },
-  ],
   experience: [astitva, semicolon],
   projects: [monitoring, storage, erp],
 };

@@ -1,5 +1,6 @@
 import SocialMedia from "@/components/SocialMedia";
-import { site } from "@/lib/site";
+import { site } from "@/lib/about";
+import { skills } from "@/lib/mock-data/skill";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,14 +57,6 @@ const timeline = [
   },
 ];
 
-const aboutSkills = [
-  { name: "Languages", items: ["TypeScript", "JavaScript"] },
-  { name: "Backend", items: ["NestJS", "Node.js", "Prisma", "TypeORM", "REST", "JWT / RBAC"] },
-  { name: "Frontend", items: ["Next.js", "React", "Tailwind CSS", "Redux"] },
-  { name: "Data", items: ["PostgreSQL", "Row-Level Security", "Redis"] },
-  { name: "DevOps", items: ["Docker", "Docker Compose", "NGINX", "Caddy", "CI/CD", "GitHub Actions", "Linux", "Git"] },
-  { name: "Automation", items: ["MCP", "Ollama", "Webhooks", "API integrations"] },
-];
 
 export default function About() {
   return (
@@ -236,7 +229,7 @@ export default function About() {
             </p>
             <h3 className="mt-2 font-display text-2xl">Tools I keep in production</h3>
             <div className="mt-6 space-y-5">
-              {aboutSkills.map((group) => (
+              {skills.map((group) => (
                 <div key={group.name} className="sm:grid sm:grid-cols-[140px_1fr] sm:items-start sm:gap-4">
                   <h4 className="font-mono text-[11px] uppercase tracking-widest text-[var(--muted)]">
                     {group.name}

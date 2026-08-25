@@ -1,4 +1,4 @@
-import { site } from "./site";
+import { site } from "./about";
 
 type Knowledge = {
   id: string;

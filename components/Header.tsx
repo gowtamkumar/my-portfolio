@@ -1,6 +1,6 @@
 "use client";
 
-import { nav, site } from "@/lib/site";
+import { nav, site } from "@/lib/about";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -40,11 +40,10 @@ export default function Header() {
               <Link
                 key={item.url}
                 href={item.url}
-                className={`rounded-full px-4 py-1.5 text-sm transition ${
-                  active
+                className={`rounded-full px-4 py-1.5 text-sm transition ${active
                     ? "bg-signal/15 text-signal"
                     : "text-[var(--muted)] hover:text-[var(--fg)]"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
