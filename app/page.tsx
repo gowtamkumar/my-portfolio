@@ -2,26 +2,10 @@ import { AssistantPanel } from "@/components/AiAssistant";
 import RotatingText from "@/components/RotatingText";
 import { site } from "@/lib/about";
 import { projects } from "@/lib/mock-data/project";
+import { skills } from "@/lib/mock-data/skill";
 import Link from "next/link";
 
-const stack = [
-  "TypeScript",
-  "NestJS",
-  "Next.js",
-  "PostgreSQL",
-  "Prisma",
-  "TypeORM",
-  "MCP",
-  "Ollama",
-  "Redis",
-  "Docker",
-  "Caddy",
-  "Linux",
-  "Git",
-  "CI/CD",
-  "GitHub Actions",
-  "NGINX",
-];
+const stack = Array.from(new Set(skills.flatMap((group) => group.items)));
 
 export default function Home() {
   return (
@@ -91,10 +75,13 @@ export default function Home() {
         </dl>
       </section>
 
-      <div className="overflow-hidden border-y border-white/10 py-4">
-        <div className="flex w-max animate-marquee gap-10 font-mono text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+      <div className="group overflow-hidden border-y border-white/10 py-4">
+        <div className="flex w-max animate-marquee gap-10 font-mono text-xs uppercase tracking-[0.3em] text-[var(--muted)] group-hover:[animation-play-state:paused] hover:[animation-play-state:paused]">
           {[...stack, ...stack].map((item, i) => (
-            <span key={`${item}-${i}`} className="flex items-center gap-10">
+            <span
+              key={`${item}-${i}`}
+              className="flex items-center gap-10 transition-colors hover:text-signal"
+            >
               {item}
               <span className="text-signal">/</span>
             </span>

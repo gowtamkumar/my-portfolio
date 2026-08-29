@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { label: "Years shipping", value: site.years },
-  { label: "Team led", value: "4" },
-  { label: "NDIS domains", value: "38" },
+  { label: "NDIS platforms", value: "15+" },
   { label: "Peak RPS", value: "1.7k" },
 ];
 
@@ -26,8 +25,8 @@ const principles = [
   },
   {
     index: "02",
-    title: "Lead the loop",
-    body: "A 4-person team only ships if planning, review, tests, and release are owned. I break work down and take the last mile to Linux.",
+    title: "Full lifecycle ownership",
+    body: "A system ships reliably when planning, architecture, tests, and deployment are owned end-to-end all the way to Linux production.",
   },
   {
     index: "03",
@@ -114,7 +113,7 @@ export default function About() {
           </p>
 
           <h2 className="mt-5 max-w-2xl font-display text-4xl leading-[1.1] tracking-tight md:text-5xl">
-            I lead small teams that ship tenant-safe SaaS.
+            I build tenant-safe, scalable web systems.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
             {site.summary}
@@ -154,18 +153,16 @@ export default function About() {
               </div>
               <p className="mt-4 max-w-2xl leading-relaxed text-[var(--muted)]">
                 Multi-tenant SaaS for the Australian National Disability
-                Insurance Scheme. I lead three developers and a UI/UX designer
-                through planning, review, testing, and deploy — NestJS and
-                Next.js on PostgreSQL, with Row-Level Security so tenants
-                cannot see each other even if application code fails.
+                Insurance Scheme. Developing end-to-end features through design,
+                implementation, testing, and deployment — NestJS and Next.js on
+                PostgreSQL, with Row-Level Security so tenants cannot see each
+                other even if application code fails.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {[
                   "PostgreSQL",
                   "Prisma",
-                  "TypeORM",
                   "JWT + RBAC",
-                  "20+ domains",
                   "Caddy + TLS",
                   "15+ competitor studies",
                 ].map((tag) => (

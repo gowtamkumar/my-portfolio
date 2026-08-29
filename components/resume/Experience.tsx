@@ -10,27 +10,31 @@ export default function Experience() {
           </small>
         </h3>
         <p className="text-sm mt-1">
-          Building Cayura — a multi-tenant SaaS platform for the Australian NDIS
-          disability-care sector. Lead a 4-person team (3 developers including
-          self + 1 UI/UX designer), owning task planning, code review, testing,
-          and deployment.
+          Building Cayura — a multi-tenant SaaS platform tailored for the
+          Australian NDIS (National Disability Insurance Scheme) disability-care
+          sector, contributing across backend architecture, frontend applications,
+          and deployment workflows.
         </p>
         <ul className="list-disc ml-5 text-sm space-y-1 mt-1">
           <li>
-            Develop full-stack features with NestJS and Next.js in TypeScript,
-            on PostgreSQL with Prisma, Redis, and Docker Compose behind Caddy
+            Engineered database-level multi-tenant isolation using PostgreSQL
+            Row-Level Security (RLS) with per-request organization context
           </li>
           <li>
-            Own Linux server releases via SSH, Git, and Docker Compose, with
-            Caddy reverse proxy and automatic TLS
+            Architected and shipped modular full-stack features with NestJS,
+            Next.js, and TypeScript on PostgreSQL with Prisma ORM and Redis
           </li>
           <li>
-            Implemented PostgreSQL Row-Level Security for database-level
-            multi-tenant isolation
+            Implemented defense-in-depth authentication with JWT access/refresh
+            tokens, NestJS route guards, and RBAC aligned with PostgreSQL RLS
           </li>
           <li>
-            Built JWT access/refresh auth with NestJS guards and RBAC aligned to
-            PostgreSQL Row-Level Security
+            Orchestrated Linux server infrastructure and continuous releases
+            using Docker Compose, Git, and Caddy with automatic SSL/TLS
+          </li>
+          <li>
+            Conducted competitive and market analysis across 15+ NDIS platforms
+            to define technical architecture and PRDs
           </li>
         </ul>
       </div>

@@ -43,15 +43,13 @@ const astitva: ResumeJob = {
   dates: "April 2026 – Present",
   location: "Australia (Remote)",
   context:
-    "Building Cayura — a multi-tenant SaaS platform for the Australian NDIS (National Disability Insurance Scheme) disability-care sector. Lead a 4-person team (3 developers including self + 1 UI/UX designer), owning task planning, code review, testing, and deployment.",
+    "Building Cayura — a multi-tenant SaaS platform tailored for the Australian NDIS (National Disability Insurance Scheme) disability-care sector, contributing across backend architecture, frontend applications, and deployment workflows.",
   bullets: [
-    "Develop full-stack features with NestJS (backend) and Next.js (frontend) in TypeScript, on PostgreSQL with Prisma ORM, Redis, and Docker Compose behind a Caddy reverse proxy.",
-    "Lead the team across every stage — breaking down tasks, reviewing code, driving testing, and managing releases — keeping a small team shipping consistently.",
-    "Own deployment and server operations: manage releases on a Linux server via SSH, Git, and Docker Compose, with Caddy for reverse proxy and automatic TLS.",
-    "Implemented database-level multi-tenant isolation using PostgreSQL Row-Level Security (RLS) with per-request organisation context — enforcing strict tenant separation at the database layer, not only in application code.",
-    "Built the authentication and session layer: JWT access/refresh token flow with NestJS route guards and role-based access control (RBAC) aligned to RLS policies for defense-in-depth.",
-    "Contributing to domain-driven API and database schema design across core modules (participants, workforce, rostering, compliance) within an architecture spanning 38 functional domains.",
-    "Produced and consolidated competitor and market research across 15+ NDIS platforms, informing the product’s design blueprint, PRD, and technical positioning.",
+    "Engineered database-level multi-tenant isolation using PostgreSQL Row-Level Security (RLS) with per-request organization context, ensuring strict cross-tenant data separation.",
+    "Architected and shipped modular full-stack features using NestJS, Next.js, and TypeScript with Prisma ORM and Redis caching, spanning 38 domain-driven modules (participants, workforce rostering, compliance).",
+    "Implemented defense-in-depth authentication with JWT access/refresh token rotation, NestJS route guards, and granular Role-Based Access Control (RBAC) aligned with PostgreSQL RLS policies.",
+    "Orchestrated Linux server infrastructure and continuous releases using Docker Compose, Git, and Caddy reverse proxy with automated SSL/TLS provisioning.",
+    "Conducted comprehensive competitive and market analysis across 15+ NDIS platforms, translating business requirements into technical blueprints and PRDs.",
   ],
 };
 
@@ -99,7 +97,7 @@ const erp: ResumeProject = {
 export const resumeDocument: ResumeDocument = {
   title: "Full Stack Engineer",
   summary:
-    "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently leading a 4-person team at Astitva Lab Pty Ltd on Cayura, an NDIS disability-care product, using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
+    "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently engineering Cayura at Astitva Lab Pty Ltd (NDIS disability-care platform) using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
   experience: [astitva, semicolon],
   projects: [monitoring, storage, erp],
 };
