@@ -88,9 +88,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-
       <AssistantPanel />
-
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-8">
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
