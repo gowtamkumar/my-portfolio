@@ -12,7 +12,9 @@ const allSkillsFormatted = skills
   .join("\n");
 
 const getSkillItems = (name: string) =>
-  skills.find((s) => s.name.toLowerCase().includes(name.toLowerCase()))?.items.join(", ") || "";
+  skills
+    .find((s) => s.name.toLowerCase().includes(name.toLowerCase()))
+    ?.items.join(", ") || "";
 
 const knowledge: Knowledge[] = [
   {
@@ -70,12 +72,25 @@ const knowledge: Knowledge[] = [
       "prisma",
       "typeorm",
       "websocket",
+      "bullmq",
+      "queue",
+      "queues",
     ],
     answer: `Backend Skills: ${getSkillItems("Backend")}. Focuses on modular NestJS architectures, RESTful APIs, WebSockets, and type-safe Prisma/TypeORM data access.`,
   },
   {
     id: "database",
-    keywords: ["database", "databases", "postgres", "postgresql", "mysql", "mongodb", "redis", "sql", "rls"],
+    keywords: [
+      "database",
+      "databases",
+      "postgres",
+      "postgresql",
+      "mysql",
+      "mongodb",
+      "redis",
+      "sql",
+      "rls",
+    ],
     answer: `Database & Caching: ${getSkillItems("Database")}. Deep experience with PostgreSQL Row-Level Security (RLS) for multi-tenant isolation, and Redis for caching and sessions.`,
   },
   {

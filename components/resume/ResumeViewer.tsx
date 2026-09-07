@@ -1,20 +1,18 @@
 "use client";
 
-import { resumeDocument, resumeMeta } from "@/lib/resume";
 import { skills } from "@/lib/mock-data/skill";
-import Link from "next/link";
+import { resumeDocument, resumeMeta } from "@/lib/resume";
 import { useState } from "react";
 import {
-  FiArrowRight,
-  FiBriefcase,
-  FiCheck,
-  FiCode,
-  FiEye,
-  FiEyeOff,
-  FiFileText,
-  FiMail,
-  FiMapPin,
-  FiPrinter,
+    FiArrowRight,
+    FiBriefcase,
+    FiCode,
+    FiEye,
+    FiEyeOff,
+    FiFileText,
+    FiMail,
+    FiMapPin,
+    FiPrinter
 } from "react-icons/fi";
 import StandardCv from "./StandardCv";
 

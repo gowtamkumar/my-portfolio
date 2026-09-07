@@ -58,12 +58,14 @@ const semicolon: ResumeJob = {
   company: "Semicolon IT Solutions",
   dates: "2021 – April 2026",
   location: "On-site",
+  context:
+    "Spearheaded the engineering of enterprise-grade web applications, high-throughput e-commerce backends, and distributed systems across full software lifecycles.",
   bullets: [
-    "Developed and maintained production web applications using Node.js, NestJS, React, and PostgreSQL",
-    "Designed RESTful APIs for core business features, improving modularity and system performance",
-    "Implemented JWT authentication and Docker + NGINX deployments on Linux",
-    "Supported a high-traffic e-commerce backend capable of 1,700+ requests per second",
-    "Mentored junior developers while shipping production fixes and new features",
+    "Architected and scaled high-concurrency e-commerce backends to sustain heavy traffic volumes, implementing aggressive PostgreSQL indexing and multi-tiered Redis caching.",
+    "Engineered robust, modular RESTful APIs and micro-services leveraging NestJS, Node.js, and TypeScript, decoupling monolithic bottlenecks to dramatically reduce endpoint latency.",
+    "Constructed intuitive, high-performance user interfaces and administrative portals with React, TypeScript, and Tailwind CSS, integrating real-time bidirectional WebSocket event streams.",
+    "Hardened application security via stateless JWT access/refresh token protocols and orchestrated containerized Docker deployments fronted by NGINX reverse proxies on Linux VPS infrastructure.",
+    "Championed engineering excellence by instituting rigorous code review standards, expanding automated test suites, and mentoring junior engineers in idiomatic TypeScript and collaborative Git workflows.",
   ],
 };
 

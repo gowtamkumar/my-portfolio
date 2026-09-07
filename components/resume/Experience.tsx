@@ -45,17 +45,36 @@ export default function Experience() {
             (2021 – April 2026 | On-site)
           </small>
         </h3>
-        <ul className="list-disc ml-5 text-sm space-y-1">
+        <p className="text-sm mt-1">
+          Spearheaded the engineering of enterprise-grade web applications,
+          high-throughput e-commerce backends, and distributed systems across full
+          software lifecycles.
+        </p>
+        <ul className="list-disc ml-5 text-sm space-y-1 mt-1">
           <li>
-            Developed and maintained scalable web applications using Node.js,
-            NestJS, and PostgreSQL
+            Architected and scaled high-concurrency e-commerce backends to
+            sustain heavy traffic volumes, implementing aggressive PostgreSQL
+            indexing and multi-tiered Redis caching
           </li>
           <li>
-            Designed and implemented RESTful APIs for core business features
+            Engineered robust, modular RESTful APIs and micro-services with NestJS,
+            Node.js, and TypeScript, decoupling monolithic bottlenecks to
+            dramatically reduce endpoint latency
           </li>
           <li>
-            Implemented JWT authentication and Docker + NGINX deployments on
-            Linux
+            Constructed intuitive, high-performance user interfaces and
+            administrative portals using React, TypeScript, and Tailwind CSS with
+            real-time bidirectional WebSocket event streams
+          </li>
+          <li>
+            Hardened application security via stateless JWT access/refresh token
+            protocols and orchestrated containerized Docker deployments fronted by
+            NGINX reverse proxies on Linux VPS infrastructure
+          </li>
+          <li>
+            Championed engineering excellence by instituting rigorous code review
+            standards, expanding test coverage, and mentoring junior engineers in
+            idiomatic TypeScript and collaborative Git workflows
           </li>
         </ul>
       </div>

@@ -5,13 +5,7 @@ export const skills = [
   },
   {
     name: "Frontend",
-    items: [
-      "Tailwind CSS",
-      "Responsive Design",
-      "React.js",
-      "Next.js",
-      "Redux",
-    ],
+    items: ["Tailwind CSS", "React.js", "Next.js", "Redux"],
   },
   {
     name: "Backend",
@@ -19,10 +13,10 @@ export const skills = [
       "Node.js",
       "Express.js",
       "Nest.js",
-      "FastAPI",
-      "Prisma",
+      "BullMQ",
       "TypeORM",
       "WebSocket",
+      "FastAPI",
     ],
   },
   {
@@ -31,13 +25,7 @@ export const skills = [
   },
   {
     name: "AI",
-    items: [
-      "MCP",
-      "Ollama",
-      "AI Automation",
-      "API Integrations",
-      "Webhook Automation",
-    ],
+    items: ["MCP", "Ollama", "AI Automation", "API Integrations"],
   },
   {
     name: "DevOps & Tools",
@@ -55,6 +43,8 @@ export const skills = [
       "Postman",
       "Chrome Dev Tools",
       "VSCode",
+      "Cursor",
+      "Anigravity",
     ],
   },
   {

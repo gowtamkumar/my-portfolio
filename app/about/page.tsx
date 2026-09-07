@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const stats = [
   { label: "Years shipping", value: site.years },
   { label: "NDIS platforms", value: "15+" },
-  { label: "Peak RPS", value: "1.7k" },
+  { label: "NDIS domains", value: "38" },
 ];
 
 const principles = [
