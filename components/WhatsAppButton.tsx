@@ -12,6 +12,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
 }) => {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
+  
   return (
     <a
       href={url}
