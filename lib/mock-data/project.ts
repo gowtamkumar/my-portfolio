@@ -18,7 +18,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "DevOps / Observability",
     description:
-      "VPS monitoring with CLI and REST API: CPU, memory, disk, network, Docker containers, PM2, and service health (NGINX, PHP-FPM). Runs locally or over SSH, with a web dashboard and systemd deploy.",
+      "Lightweight VPS infrastructure and observability tool providing dual-mode telemetry (local agent or remote SSH). Streams real-time metrics for CPU, memory, disk I/O, network bandwidth, Docker containers, PM2 processes, and system service health via authenticated REST APIs and an interactive dashboard.",
     tech: [
       "TypeScript",
       "Node.js",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "Storage / SaaS",
     description:
-      "Secure file storage for modern teams — fast uploads, encryption, sharing, and 64MB files with auto compression. Full-stack app with object storage behind the API.",
+      "Enterprise-grade cloud storage and asset management platform decoupling application servers from S3-compatible MinIO object storage. Features high-speed chunked uploads, automated image compression via Sharp, granular folder access permissions, and secure, time-expiring shareable links.",
     tech: [
       "Next.js",
       "NestJS",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "SaaS / ERP",
     description:
-      "Multi-tenant commerce ERP with catalog, inventory, POS, multi-store sync, and subscription billing. Plans, add-ons, and usage limits (SKUs, orders, staff, locations) from one admin.",
+      "Multi-tenant retail ERP and commerce ecosystem engineered for omnichannel branch management. Synchronizes real-time inventory across warehouses and physical outlets, integrating Point of Sale (POS), tiered SaaS subscriptions, dynamic resource quotas (SKUs, staff seats, locations), and automated payment gateways.",
     tech: [
       "Next.js",
       "NestJS",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     year: "2024",
     kind: "SaaS / Commerce",
     description:
-      "An advanced, scalable e-commerce platform with seller dashboards, discounts, reviews, real-time order tracking, and SSLCOMMERZ payments. Containerized with Docker and served behind Nginx.",
+      "High-throughput full-stack commerce engine featuring multi-vendor management, dynamic variant catalogs, and real-time order tracking. Built with Next.js, Express, and PostgreSQL, incorporating flexible promotional discount engines, SSLCOMMERZ payment processing, and containerized Docker deployments behind NGINX.",
     tech: [
       "Next.js",
       "Tailwind CSS",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     year: "2024",
     kind: "Realtime",
     description:
-      "One-to-one and group messaging with media, reactions, presence, and typing indicators over WebSockets. Persistent conversations with Docker + Nginx production setup.",
+      "Scalable real-time communication platform supporting direct messaging, group channels, and WebRTC-powered peer-to-peer audio/video calls with screen sharing. Architected with Next.js, NestJS, Socket.IO, and Redis pub/sub for low-latency state synchronization with persistent PostgreSQL storage.",
     tech: [
       "Next.js",
       "Tailwind CSS",
