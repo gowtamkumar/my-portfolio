@@ -80,7 +80,32 @@ export default function StandardCv() {
         <div className="space-y-2.5">
           {cv.projects.map((project) => (
             <div key={project.name} className="cv-block">
-              <p className="text-[12.5px] font-bold text-neutral-900">{project.name}</p>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                <p className="text-[12.5px] font-bold text-neutral-900">
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline hover:text-neutral-700"
+                    >
+                      {project.name}
+                    </a>
+                  ) : (
+                    project.name
+                  )}
+                </p>
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10.5px] text-neutral-500 hover:text-neutral-800 hover:underline"
+                  >
+                    {project.url.replace(/^https?:\/\/(www\.)?/, "")}
+                  </a>
+                ) : null}
+              </div>
               <p className="text-[11px] italic text-neutral-600">{project.stack}</p>
               <ul className="mt-0.5 list-disc space-y-0.5 pl-4 text-[11.5px] leading-[1.45] text-neutral-800">
                 {project.bullets.map((bullet) => (

@@ -13,6 +13,7 @@ export type ResumeProject = {
   name: string;
   stack: string;
   bullets: string[];
+  url?: string;
 };
 
 export type ResumeDocument = {
@@ -72,6 +73,7 @@ const semicolon: ResumeJob = {
 const monitoring: ResumeProject = {
   name: "Server Monitoring Tools",
   stack: "Node.js, Express, TypeScript, SQLite, Docker, PM2, NGINX",
+  url: "https://github.com/gowtamkumar/server-monitoring-tools",
   bullets: [
     "Built a VPS monitor with CLI and REST API for CPU, memory, disk, network, Docker, PM2, and service status",
     "Supports local and SSH remote modes, a web dashboard, API-key auth, and systemd deployment",
@@ -81,6 +83,7 @@ const monitoring: ResumeProject = {
 const storage: ResumeProject = {
   name: "File Store",
   stack: "Next.js, NestJS, PostgreSQL, MinIO, Docker",
+  url: "https://github.com/gowtamkumar/file-storage-application",
   bullets: [
     "Built self-hosted file storage with upload, folders, sharing, and authenticated download",
     "Stored objects in S3-compatible MinIO so files sit outside the application server",
@@ -90,6 +93,7 @@ const storage: ResumeProject = {
 const erp: ResumeProject = {
   name: "eCommerce Multi-Store SaaS ERP",
   stack: "Next.js, NestJS, PostgreSQL, Redis, Docker, SSLCOMMERZ",
+  url: "https://github.com/gowtamkumar/eCommerce-multi-store-saas-erp",
   bullets: [
     "Designed a multi-tenant SaaS ERP with catalog, inventory, POS, multi-store sync, and subscription billing",
     "Shipped plan limits, storage add-ons, and usage packs (SKUs, orders, staff, locations) from one admin",
