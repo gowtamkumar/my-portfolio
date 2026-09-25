@@ -1,7 +1,7 @@
 export const skills = [
   {
     name: "Languages",
-    items: ["JavaScript", "TypeScript", "Python"],
+    items: ["JavaScript", "TypeScript"],
   },
   {
     name: "Frontend",
@@ -16,7 +16,6 @@ export const skills = [
       "BullMQ",
       "TypeORM",
       "WebSocket",
-      "FastAPI",
     ],
   },
   {
@@ -49,6 +48,6 @@ export const skills = [
   },
   {
     name: "Other",
-    items: ["React Native"],
+    items: ["React Native", "Python"],
   },
 ];

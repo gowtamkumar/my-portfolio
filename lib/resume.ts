@@ -99,7 +99,7 @@ const erp: ResumeProject = {
 export const resumeDocument: ResumeDocument = {
   title: "Full Stack Engineer",
   summary:
-    "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently engineering Cayura at Astitva Lab Pty Ltd (NDIS disability-care platform) using NestJS, Next.js, TypeScript, PostgreSQL (RLS), Prisma, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
+    "Full Stack Engineer with 5+ years of experience building multi-tenant SaaS and eCommerce platforms. Currently engineering Cayura at Astitva Lab Pty Ltd (NDIS disability-care platform) using NestJS, Next.js, TypeScript, PostgreSQL, Redis, and Docker Compose. Previously delivered production systems at Semicolon IT Solutions spanning APIs, authentication, and high-traffic commerce.",
   experience: [astitva, semicolon],
   projects: [monitoring, storage, erp],
 };
