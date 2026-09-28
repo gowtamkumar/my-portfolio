@@ -25,9 +25,20 @@ export default function ProjectsSection() {
               Tech Stack: {project.stack}
             </address>
             <ul className="list-disc ml-5 text-sm space-y-1 mt-1">
-              {project.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
+              {project.bullets.map((bullet) => {
+                const colonIndex = bullet.indexOf(": ");
+                if (colonIndex !== -1) {
+                  return (
+                    <li key={bullet}>
+                      <span className="font-semibold text-gray-900">
+                        {bullet.slice(0, colonIndex)}:
+                      </span>{" "}
+                      {bullet.slice(colonIndex + 2)}
+                    </li>
+                  );
+                }
+                return <li key={bullet}>{bullet}</li>;
+              })}
             </ul>
           </div>
         ))}

@@ -108,9 +108,20 @@ export default function StandardCv() {
               </div>
               <p className="text-[11px] italic text-neutral-600">{project.stack}</p>
               <ul className="mt-0.5 list-disc space-y-0.5 pl-4 text-[11.5px] leading-[1.45] text-neutral-800">
-                {project.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
+                {project.bullets.map((bullet) => {
+                  const colonIndex = bullet.indexOf(": ");
+                  if (colonIndex !== -1) {
+                    return (
+                      <li key={bullet}>
+                        <span className="font-semibold text-neutral-900">
+                          {bullet.slice(0, colonIndex)}:
+                        </span>{" "}
+                        {bullet.slice(colonIndex + 2)}
+                      </li>
+                    );
+                  }
+                  return <li key={bullet}>{bullet}</li>;
+                })}
               </ul>
             </div>
           ))}

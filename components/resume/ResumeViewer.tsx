@@ -77,7 +77,7 @@ export default function ResumeViewer() {
                 </>
               ) : (
                 <>
-                  <FiEye className="text-base" /> View Full Resume
+                  <FiEye className="text-base" /> View Printable A4 CV
                 </>
               )}
             </button>
@@ -92,9 +92,8 @@ export default function ResumeViewer() {
           </div>
         </div>
 
-        {/* Quick Summary View (Visible when full CV is collapsed) */}
-        {!showCv && (
-          <div className="mt-8 border-t border-white/10 pt-6 space-y-6">
+        {/* Overview & Highlights Section */}
+        <div className="mt-8 border-t border-white/10 pt-6 space-y-6">
             <div>
               <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--muted)]">
                 Summary
@@ -140,25 +139,28 @@ export default function ResumeViewer() {
                   </span>
                 </div>
               </div>
+
+          
             </div>
 
             {/* Click to Reveal Callout */}
-            <div
-              onClick={() => setShowCv(true)}
-              className="group cursor-pointer rounded-2xl border border-dashed border-signal/30 bg-signal/[0.03] p-5 text-center transition hover:border-signal hover:bg-signal/[0.06]"
-            >
-              <div className="flex items-center justify-center gap-2 font-display text-base font-medium text-signal">
-                <FiFileText className="text-lg" />
-                <span>Click here to open and review the standard A4 Curriculum Vitae</span>
-                <FiArrowRight className="transition group-hover:translate-x-1" />
+            {!showCv && (
+              <div
+                onClick={() => setShowCv(true)}
+                className="group cursor-pointer rounded-2xl border border-dashed border-signal/30 bg-signal/[0.03] p-5 text-center transition hover:border-signal hover:bg-signal/[0.06]"
+              >
+                <div className="flex items-center justify-center gap-2 font-display text-base font-medium text-signal">
+                  <FiFileText className="text-lg" />
+                  <span>Click here to open and review the standard A4 Curriculum Vitae</span>
+                  <FiArrowRight className="transition group-hover:translate-x-1" />
+                </div>
+                <p className="mt-1 text-xs text-[var(--muted)]">
+                  Formatted for recruitment systems, standard print, and PDF export.
+                </p>
               </div>
-              <p className="mt-1 text-xs text-[var(--muted)]">
-                Formatted for recruitment systems, standard print, and PDF export.
-              </p>
-            </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
 
       {/* Full Standard A4 CV Container */}
       <div

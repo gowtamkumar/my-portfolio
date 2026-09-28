@@ -55,7 +55,6 @@ export const skills = [
       "RBAC",
       "OOP",
       "Zod",
-      "i18n (EN/FR)",
       "Agile",
       "OpenAI / AI APIs",
       "React Native",

@@ -75,8 +75,11 @@ const erp: ResumeProject = {
   stack: "Next.js, NestJS, TypeScript, PostgreSQL, Redis, Docker, SSLCOMMERZ",
   url: "https://github.com/gowtamkumar/eCommerce-multi-store-saas-erp",
   bullets: [
-    "Architected a multi-tenant retail ERP synchronizing catalog, warehouse inventory, and integrated POS across physical branches",
-    "Designed tiered subscription billing with dynamic usage quotas (SKUs, orders, staff seats) and SSLCOMMERZ gateway integration",
+    "Multi-tenancy & ERP: Architected a multi-tenant retail SaaS ERP platform with secure tenant data isolation, centralizing multi-branch operations and catalog distribution",
+    "Warehouse Inventory: Engineered real-time multi-location warehouse stock tracking with automated stock movements, transfer auditing, and low-stock threshold alerts",
+    "Point of Sale (POS): Built an integrated retail POS checkout terminal for physical branches featuring instant barcode scanning and live inventory sync",
+    "Subscription Billing & Usage Quotas: Designed tiered SaaS subscription plans with automated renewals and dynamic quota enforcement (SKUs, orders, staff seats, locations)",
+    "Payment Integration: Implemented end-to-end SSLCOMMERZ payment gateway processing with instant IPN webhook verification and automated subscription provisioning",
   ],
 };
 

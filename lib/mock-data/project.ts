@@ -58,7 +58,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "SaaS / ERP",
     description:
-      "Multi-tenant retail ERP and commerce ecosystem engineered for omnichannel branch management. Synchronizes real-time inventory across warehouses and physical outlets, integrating Point of Sale (POS), tiered SaaS subscriptions, dynamic resource quotas (SKUs, staff seats, locations), and automated payment gateways.",
+      "Multi-tenant retail SaaS ERP engineered for omnichannel commerce. Demonstrates multi-tenancy with secure tenant isolation, real-time warehouse inventory across branches, integrated Point of Sale (POS), tiered SaaS subscription billing, dynamic usage quotas (SKUs, orders, staff seats, locations), and SSLCOMMERZ payment integration.",
     tech: [
       "Next.js",
       "NestJS",
