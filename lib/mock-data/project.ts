@@ -32,6 +32,27 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "Southland Real Estate",
+    img: "/southland-builders.jpg",
+    sourceCode: "",
+    url: "https://southlandbuildersltd.com",
+    year: "2026",
+    kind: "Real Estate / Web Platform",
+    description:
+      "Modern luxury real estate and architectural development platform powered by MongoDB and deployed behind Cloudflare. Features dynamic project showcases, interactive media galleries, detailed floor plans and amenity specifications, client inquiry channels, and edge-optimized performance.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Cloudflare",
+      "REST API",
+      "Swiper",
+    ],
+  },
+  {
     name: "FileStore",
     img: "/file-storage-application.png",
     sourceCode: "https://github.com/gowtamkumar/file-storage-application",

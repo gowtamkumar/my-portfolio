@@ -153,6 +153,9 @@ const knowledge: Knowledge[] = [
       "project",
       "projects",
       "portfolio",
+      "southland",
+      "real estate",
+      "builders",
       "ecommerce",
       "chat",
       "monitor",
@@ -167,7 +170,7 @@ const knowledge: Knowledge[] = [
       "demo",
     ],
     answer:
-      "Featured work: Server Monitoring Tools, File Store, eCommerce Multi-Store SaaS ERP, an e-commerce platform, and a real-time chat app. Open the Work / Projects page for details.",
+      "Featured work: Southland Real Estate, Server Monitoring Tools, File Store, eCommerce Multi-Store SaaS ERP, an e-commerce platform, and a real-time chat app. Open the Work / Projects page for details.",
   },
   {
     id: "contact",
