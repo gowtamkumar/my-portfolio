@@ -53,6 +53,26 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "Enterprise Inventory Management System",
+    img: "/inventory-management-system.jpg",
+    sourceCode: "",
+    url: "https://inventory.semicolonit.com/",
+    year: "2025",
+    kind: "Enterprise / Logistics",
+    description:
+      "Full-stack enterprise inventory system engineered to streamline product lifecycles, stock tracking, and multi-warehouse operations. Features modular NestJS REST APIs, PostgreSQL data persistence, real-time low-stock threshold alerts, valuation auditing, and automated profit/loss reporting.",
+    tech: [
+      "React.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "TypeORM",
+      "Redis",
+      "Docker",
+      "NGINX",
+    ],
+  },
+  {
     name: "FileStore",
     img: "/file-storage-application.png",
     sourceCode: "https://github.com/gowtamkumar/file-storage-application",
