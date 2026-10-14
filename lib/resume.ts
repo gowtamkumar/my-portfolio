@@ -31,6 +31,7 @@ export const resumeMeta = {
   phone: "+880 1767-163576",
   linkedin: "linkedin.com/in/gowtamkumar",
   github: "github.com/gowtamkumar",
+  portfolio: "my-portfolio-six-pi-19.vercel.app",
   education: {
     degree: "Bachelor of Social Science (BSS)",
     school: "National University, Bangladesh",
@@ -94,9 +95,9 @@ const inventory: ResumeProject = {
 };
 
 export const resumeDocument: ResumeDocument = {
-  title: "Full Stack Engineer",
+  title: "Full Stack Developer",
   summary:
-    "Full Stack Engineer with 5+ years of production experience architecting scalable multi-tenant SaaS platforms, high-throughput eCommerce engines, and distributed real-time systems. Expert in TypeScript, NestJS, Next.js, PostgreSQL (RLS), Redis, and Dockerized Linux infrastructure. Proven track record in designing domain-driven backend microservices, robust RBAC/security layers, and responsive web applications with end-to-end DevOps automation.",
+    "Full Stack Developer with 5+ years of production experience architecting scalable multi-tenant SaaS platforms, high-throughput eCommerce engines, and distributed real-time systems. Expert in TypeScript, NestJS, Next.js, PostgreSQL (RLS), Redis, and Dockerized Linux infrastructure. Proven track record in designing domain-driven backend services, robust RBAC/security layers, and responsive web applications with end-to-end DevOps automation.",
   experience: [astitva, semicolon],
   projects: [erp, inventory],
 };

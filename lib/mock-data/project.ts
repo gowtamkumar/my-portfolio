@@ -60,7 +60,7 @@ export const projects: Project[] = [
     year: "2025",
     kind: "Enterprise / Logistics",
     description:
-      "Full-stack enterprise inventory system engineered to streamline product lifecycles, stock tracking, and multi-warehouse operations. Features modular NestJS REST APIs, PostgreSQL data persistence, real-time low-stock threshold alerts, valuation auditing, and automated profit/loss reporting.",
+      "Full-stack enterprise inventory system engineered to streamline product lifecycles, stock tracking, and multi-warehouse operations. Features modular NestJS REST APIs, PostgreSQL data persistence, Cloudflare edge security and caching, real-time low-stock threshold alerts, valuation auditing, and automated profit/loss reporting.",
     tech: [
       "React.js",
       "NestJS",
@@ -68,6 +68,7 @@ export const projects: Project[] = [
       "PostgreSQL",
       "TypeORM",
       "Redis",
+      "Cloudflare",
       "Docker",
       "NGINX",
     ],

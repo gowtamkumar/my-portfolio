@@ -22,14 +22,51 @@ export default function StandardCv() {
         <p className="mt-2 text-[11px] leading-relaxed text-neutral-600">
           {resumeMeta.location}
           <span className="mx-1.5 text-neutral-400">|</span>
-          {resumeMeta.email}
+          <a
+            href={`mailto:${resumeMeta.email}`}
+            className="hover:underline hover:text-neutral-900"
+          >
+            {resumeMeta.email}
+          </a>
           <span className="mx-1.5 text-neutral-400">|</span>
-          {resumeMeta.phone}
+          <a
+            href={`tel:${resumeMeta.phone.replace(/\s+/g, "")}`}
+            className="hover:underline hover:text-neutral-900"
+          >
+            {resumeMeta.phone}
+          </a>
         </p>
         <p className="text-[11px] text-neutral-600">
-          {resumeMeta.linkedin}
+          <a
+            href={`https://${resumeMeta.linkedin.replace(/^https?:\/\//, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline hover:text-neutral-900"
+          >
+            {resumeMeta.linkedin}
+          </a>
           <span className="mx-1.5 text-neutral-400">|</span>
-          {resumeMeta.github}
+          <a
+            href={`https://${resumeMeta.github.replace(/^https?:\/\//, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline hover:text-neutral-900"
+          >
+            {resumeMeta.github}
+          </a>
+          {resumeMeta.portfolio ? (
+            <>
+              <span className="mx-1.5 text-neutral-400">|</span>
+              <a
+                href={`https://${resumeMeta.portfolio.replace(/^https?:\/\//, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-neutral-900"
+              >
+                {resumeMeta.portfolio}
+              </a>
+            </>
+          ) : null}
         </p>
       </div>
 
@@ -42,8 +79,8 @@ export default function StandardCv() {
         <SectionTitle>Technical Skills</SectionTitle>
         <div className="cv-skills">
           {skills.map((row) => (
-            <div key={row.name} className="cv-skill-row">
-              <span className="cv-skill-label">{row.name}</span>
+            <div key={row.name}>
+              <span className="cv-skill-label">{row.name}: </span>
               <span>{row.items.join(", ")}</span>
             </div>
           ))}

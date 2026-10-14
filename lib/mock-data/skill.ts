@@ -1,11 +1,14 @@
 export const skills = [
   {
-    name: "Languages",
-    items: ["JavaScript", "TypeScript"],
-  },
-  {
-    name: "Frontend",
-    items: ["Tailwind CSS", "React.js", "Next.js", "Redux"],
+    name: "Languages & Frontend",
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+      "React.js",
+      "Next.js",
+      "Redux",
+    ],
   },
   {
     name: "Backend",
@@ -21,10 +24,6 @@ export const skills = [
   {
     name: "Database",
     items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
-  },
-  {
-    name: "AI",
-    items: ["MCP", "Ollama", "AI Automation", "API Integrations"],
   },
   {
     name: "DevOps & Tools",
@@ -51,6 +50,8 @@ export const skills = [
   {
     name: "Other",
     items: [
+      "MCP",
+      "Ollama",
       "Multi-tenant Architecture",
       "Event-Driven Design",
       "RESTful API Design",
