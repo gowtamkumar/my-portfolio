@@ -86,11 +86,14 @@ const erp: ResumeProject = {
 
 const inventory: ResumeProject = {
   name: "Enterprise Inventory Management System",
-  stack: "React.js, NestJS, TypeScript, PostgreSQL, TypeORM, Redis",
+  stack: "React.js, NestJS, TypeScript, PostgreSQL, TypeORM, Docker, Redux Toolkit",
   url: "https://inventory.semicolonit.com/",
   bullets: [
-    "Architected a full-stack enterprise inventory system at Semicolon IT Solutions to streamline product lifecycles, stock tracking, and multi-warehouse operations",
-    "Engineered modular NestJS REST APIs with PostgreSQL, implementing real-time low-stock threshold alerts, valuation auditing, and automated profit/loss reporting",
+    "Enterprise Architecture: Architected a modular full-stack inventory platform using NestJS, React, and PostgreSQL with TypeORM, supporting multi-branch retail and central warehouse operations",
+    "Stock & Warehouse Tracking: Engineered multi-warehouse inventory tracking with real-time stock adjustments, transfer auditing, automated batch/unit tracking, and low-stock threshold alerts",
+    "Point of Sale & Billing: Developed an integrated POS checkout terminal featuring instant barcode scanning, flexible tax/discount calculations, order invoicing, and thermal receipt printing",
+    "Accounts & Financial Reporting: Implemented double-entry financial tracking for supplier/customer dues, income/expense ledgers, bank transactions, and automated profit/loss valuation reports",
+    "Data Integrity & DevOps: Enforced ACID-compliant database transactions using TypeORM transactional decorators, structured Winston audit logging, and automated Docker database backup routines",
   ],
 };
 
